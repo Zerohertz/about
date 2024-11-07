@@ -74,7 +74,6 @@ const CreateDescription = ({ description }: PropsWithChildren<{ description: Des
       return (
         <li className={className}>
           <Href url={href} text={content} />
-          <Href url={href} text={content} />
         </li>
       );
     }

@@ -4,7 +4,7 @@ const title = "About Hyogeun Oh (오효근)";
 const description = "About Hyogeun Oh";
 
 const global: Payload = {
-  favicon: "favicon.ico",
+  favicon: "icons/favicon.ico",
   headTitle: title,
   seo: {
     title,
@@ -14,7 +14,7 @@ const global: Payload = {
       description,
       images: [
         {
-          url: "preview.png",
+          url: "images/preview.png",
           alt: "OpenGraphImage.png",
         },
       ],

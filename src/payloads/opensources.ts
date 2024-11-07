@@ -1,10 +1,12 @@
-import Payload from "@/components/opensources/Payload";
+import Payload from "@/components/common/Payload";
 
 const openSources: Payload = {
+  title: "OPEN SOURCES",
   disable: false,
   list: [
     {
       title: "Technical Blog",
+      subTitle: "",
       descriptions: [
         {
           content: "Zerohertz",
@@ -21,6 +23,7 @@ const openSources: Payload = {
     },
     {
       title: "Awesome 병역 특례",
+      subTitle: "",
       descriptions: [
         {
           content: "Zerohertz/awesome-jmy (GitHub)",
@@ -36,6 +39,7 @@ const openSources: Payload = {
     },
     {
       title: "bytedance/SPTSv2",
+      subTitle: "",
       descriptions: [
         {
           content: "bytedance/SPTSv2 (GitHub)",

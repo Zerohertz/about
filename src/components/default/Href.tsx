@@ -1,8 +1,6 @@
-import { PropsWithChildren } from "react";
-
 import Link from "next/link";
 
-const Href = ({ url, text, className = "" }: PropsWithChildren<{ url: string; text?: string; className?: string }>) => {
+const Href = ({ url, text, className = "" }: { url: string; text?: string; className?: string }) => {
   return (
     <Link
       href={url}

@@ -1,13 +1,14 @@
-import Payload from "@/components/publications/Payload";
+import Payload from "@/components/common/Payload";
 
 const publications: Payload = {
+  title: "PUBLICATIONS & PATENTS",
   disable: false,
-
   list: [
     {
       title: "",
       subTitle: "",
-      at: "2023-09",
+      startedAt: "2023-09",
+      onGoing: false,
       descriptions: [
         {
           content: "[Patent] Apparatus and method for predicting coating layer thickness in slot-die coating process",
@@ -29,7 +30,8 @@ const publications: Payload = {
     {
       title: "",
       subTitle: "",
-      at: "2023-01",
+      startedAt: "2023-01",
+      onGoing: false,
       descriptions: [
         {
           content:
@@ -49,7 +51,8 @@ const publications: Payload = {
     {
       title: "",
       subTitle: "",
-      at: "2022-04",
+      startedAt: "2022-04",
+      onGoing: false,
       descriptions: [
         {
           content:

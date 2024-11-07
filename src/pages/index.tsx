@@ -1,13 +1,8 @@
 import { Container } from "reactstrap";
 
-import Educations from "@/components/educations";
-import Experiences from "@/components/experiences";
-import Extras from "@/components/extras";
+import Common from "@/components/common";
 import Introduction from "@/components/introduction";
-import OpenSources from "@/components/opensources";
 import Profile from "@/components/profile";
-import Projects from "@/components/projects";
-import Publications from "@/components/publications";
 import Skills from "@/components/skills";
 import educations from "@/payloads/educations";
 import experiences from "@/payloads/experiences";
@@ -26,12 +21,12 @@ function About() {
       <Profile payload={profile} />
       <Introduction payload={introduction} />
       <Skills payload={skills} />
-      <Experiences payload={experiences} />
-      <Projects payload={projects} />
-      <Publications payload={publications} />
-      <OpenSources payload={openSources} />
-      <Educations payload={educations} />
-      <Extras payload={extras} />
+      <Common payload={experiences} />
+      <Common payload={projects} />
+      <Common payload={publications} />
+      <Common payload={openSources} />
+      <Common payload={educations} />
+      <Common payload={extras} />
     </Container>
   );
 }

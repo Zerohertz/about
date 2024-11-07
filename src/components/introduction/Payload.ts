@@ -1,6 +1,6 @@
-import CommonPayload from "@/components/common/Payload";
+import DefaultPayload from "@/components/default/Payload";
 
-interface Payload extends CommonPayload {
+interface Payload extends DefaultPayload {
   contents: string[];
   signature: string;
   latestUpdated: string;

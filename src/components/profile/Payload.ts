@@ -1,16 +1,15 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
-import CommonPayload from "@/components/common/Payload";
 import Item from "@/components/profile/Item";
 
-interface Payload extends CommonPayload {
+interface Payload {
   image: string;
   name: {
     title: string;
     small?: string;
   };
   contact: Item[];
-  notice: {
+  notice?: {
     title: string;
     icon?: IconDefinition;
   };

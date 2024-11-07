@@ -1,6 +1,7 @@
-import Payload from "@/components/extras/Payload";
+import Payload from "@/components/common/Payload";
 
 const extras: Payload = {
+  title: "EXTRAS",
   disable: false,
   list: [
     {

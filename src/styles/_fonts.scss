@@ -16,7 +16,9 @@ $font-weight-normal: 500;
 $font-weight-bold: 700;
 $font-weight-bolder: 900;
 
-$badge-font-weight: $font-weight-light;
+$line-height-base: 1.6;
+
+$badge-font-weight: $font-weight-lighter;
 
 .font-noto-serif-kr {
   font-family: var(--font-noto-serif-kr), serif;

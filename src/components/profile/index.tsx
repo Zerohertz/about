@@ -1,50 +1,68 @@
-import { PropsWithChildren } from "react";
-import { Col, Row } from "reactstrap";
+import { Alert, Col, Row } from "reactstrap";
 
-import ComponentWrapper from "@/components/common/ComponentWrapper";
-import ProfileContact from "@/components/profile/Contact";
-import ProfileImage from "@/components/profile/Image";
+import Image from "next/image";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import Href from "@/components/default/Href";
+import Item from "@/components/profile/Item";
 import Payload from "@/components/profile/Payload";
 
-function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
-  const { image, contact, name } = payload;
+const Component = ({ payload }: { payload: Payload }) => {
   return (
-    <div className="mt-3 mt-md-5">
-      <Row>
-        <Col md={3} sm={12}>
-          <ProfileImage src={image} />
-        </Col>
-        <Col md={9} sm={12}>
-          {createNameArea(name)}
-          {createProfileContactMap(contact)}
-        </Col>
-      </Row>
+    <Row className="mt-md-5 mt-3">
+      <Col md={4} sm={12}>
+        <Profile src={payload.image} />
+      </Col>
+      <Col md={8} sm={12}>
+        <Name name={payload.name} />
+        <Contacts contacts={payload.contact} />
+      </Col>
+      {payload.notice && (
+        <Alert color="secondary" role="alert" className="mt-3">
+          {payload.notice.icon ? <FontAwesomeIcon className="mr-2" icon={payload.notice.icon} /> : null}{" "}
+          {payload.notice.title}
+        </Alert>
+      )}
+    </Row>
+  );
+};
+
+const Profile = ({ src }: { src: string }) => {
+  return (
+    <div className="text-md-start text-center">
+      <Image className="img-fluid rounded" width={280} height={280} src={src} alt="Profile" />
     </div>
   );
-}
+};
 
-function createNameArea(name: Payload["name"]) {
+const Name = ({ name }: { name: Payload["name"] }) => {
   return (
-    <Row>
-      <Col className="text-md-start text-center">
-        <h1 className="primary ps-md-3">
-          {name.title} <small>{name.small || ""}</small>
-        </h1>
+    <h1 className="primary text-md-start text-center ps-md-3">
+      {name.title} <small>{name.small || ""}</small>
+    </h1>
+  );
+};
+
+const Contacts = ({ contacts }: { contacts: Payload["contact"] }) => {
+  return (
+    <div className="pt-3">
+      {contacts.map((contact, index) => (
+        <Contact key={index.toString()} item={contact} />
+      ))}
+    </div>
+  );
+};
+
+const Contact = ({ item }: { item: Item }) => {
+  return (
+    <Row className="pb-2 pb-md-3">
+      <Col xs={1} className="text-end">
+        <FontAwesomeIcon icon={item.icon} className="icon" />
       </Col>
+      <Col xs="auto">{item.href ? <Href url={item.href} text={item.title} /> : <span>{item.title}</span>}</Col>
     </Row>
   );
-}
+};
 
-function createProfileContactMap(contacts: Payload["contact"]) {
-  return (
-    <Row>
-      <Col className="pt-3">
-        {contacts.map((contact, index) => (
-          <ProfileContact key={index.toString()} payload={contact} />
-        ))}
-      </Col>
-    </Row>
-  );
-}
-
-export default ComponentWrapper(Component);
+export default Component;

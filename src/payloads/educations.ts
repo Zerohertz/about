@@ -1,6 +1,7 @@
-import Payload from "@/components/educations/Payload";
+import Payload from "@/components/common/Payload";
 
 const educations: Payload = {
+  title: "EDUCATIONS",
   disable: false,
   list: [
     {

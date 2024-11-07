@@ -1,16 +1,10 @@
-import { Fragment, PropsWithChildren } from "react";
+import { Fragment } from "react";
 
-import DescriptionType from "@/components/common/DescriptionType";
-import Href from "@/components/common/Href";
-import _Image from "@/components/common/Image";
+import DescriptionType from "@/components/default/DescriptionType";
+import Href from "@/components/default/Href";
+import _Image from "@/components/default/Image";
 
-const Description = ({
-  descriptions,
-  option,
-}: PropsWithChildren<{
-  descriptions: DescriptionType[];
-  option?: { padding?: boolean };
-}>) => {
+const Description = ({ descriptions, option }: { descriptions: DescriptionType[]; option?: { padding?: boolean } }) => {
   return (
     <>
       {descriptions ? (
@@ -36,7 +30,7 @@ const Description = ({
   );
 };
 
-const DescriptionRecursion = ({ descriptions }: PropsWithChildren<{ descriptions: DescriptionType[] }>) => {
+const DescriptionRecursion = ({ descriptions }: { descriptions: DescriptionType[] }) => {
   return (
     <ul>
       {descriptions.map((description, index) => (
@@ -56,7 +50,7 @@ const DescriptionRecursion = ({ descriptions }: PropsWithChildren<{ descriptions
   );
 };
 
-const CreateDescription = ({ description }: PropsWithChildren<{ description: DescriptionType }>) => {
+const CreateDescription = ({ description }: { description: DescriptionType }) => {
   const { content, className, href, image } = description;
   return (
     <>

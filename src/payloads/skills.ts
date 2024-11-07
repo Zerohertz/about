@@ -164,6 +164,7 @@ const etc: Skill = {
 };
 
 const skills: Payload = {
+  title: "SKILLS",
   disable: false,
   skills: [programming, mlops, infra, dataEngineering, database, etc], // ingress
   tooltip: "1: Beginner\n2: Intermediate\n3: Professional",

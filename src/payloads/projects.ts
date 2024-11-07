@@ -1,12 +1,14 @@
-import Payload from "@/components/projects/Payload";
+import Payload from "@/components/common/Payload";
 
 const projects: Payload = {
+  title: "PROJECTS",
   disable: false,
   list: [
     {
       title: "Development and CI/CD Pipeline Construction of Python Library",
+      subTitle: "Personal Project",
       startedAt: "2023-11",
-      where: "Personal Project",
+      onGoing: true,
       descriptions: [
         {
           content: "Zerohertz/zerohertzLib (GitHub)",
@@ -48,9 +50,9 @@ const projects: Payload = {
     },
     {
       title: "Python Library for Pre/Post-Processing, Visualization, and Model Backend",
+      subTitle: "AgileSoDA",
       startedAt: "2023-10",
       endedAt: "2024-09",
-      where: "AgileSoDA",
       descriptions: [
         {
           content:
@@ -77,9 +79,9 @@ const projects: Payload = {
     },
     {
       title: "AI-based OCR Solution, TwinReader",
+      subTitle: "AgileSoDA",
       startedAt: "2023-02",
       endedAt: "2024-09",
-      where: "AgileSoDA",
       descriptions: [
         {
           content:
@@ -114,9 +116,9 @@ const projects: Payload = {
     },
     {
       title: "Information Extraction Model Development for Trade Document Processing",
+      subTitle: "AgileSoDA",
       startedAt: "2024-02",
       endedAt: "2024-05",
-      where: "AgileSoDA",
       descriptions: [
         {
           content:
@@ -138,9 +140,9 @@ const projects: Payload = {
     },
     {
       title: "AI-based Automotive Damage and Depth Recognition Product, TwinCar",
+      subTitle: "AgileSoDA",
       startedAt: "2023-11",
       endedAt: "2024-02",
-      where: "AgileSoDA",
       descriptions: [
         { content: "Developed a vehicle type classification model for PoC execution." },
         {
@@ -152,9 +154,9 @@ const projects: Payload = {
     },
     {
       title: "AI Diagnostic Service for Burn Patients",
+      subTitle: "AgileSoDA",
       startedAt: "2023-04",
       endedAt: "2023-11",
-      where: "AgileSoDA",
       descriptions: [
         {
           content: "Developed models for segmentation of burn areas and severity diagnosis in burn patients.",
@@ -167,9 +169,9 @@ const projects: Payload = {
     },
     {
       title: "On-premise Kubernetes Cluster",
+      subTitle: "Personal Project",
       startedAt: "2023-08",
       endedAt: "2023-09",
-      where: "Personal Project",
       descriptions: [
         {
           content: "Zerohertz/k8s-on-premise (GitHub)",
@@ -204,9 +206,9 @@ const projects: Payload = {
     },
     {
       title: "Mosaic Classification",
+      subTitle: "BOAZ",
       startedAt: "2023-01",
       endedAt: "2023-07",
-      where: "BOAZ",
       descriptions: [
         {
           content: "Team-BoonMoSa (GitHub)",
@@ -222,9 +224,9 @@ const projects: Payload = {
     },
     // {
     //   title: '',
+    //   subTitle: 'Konkuk University',
     //   startedAt: '2018-06',
     //   endedAt: '2023-01',
-    //   where: 'Konkuk University',
     //   descriptions: [
     //     {
     //       content:

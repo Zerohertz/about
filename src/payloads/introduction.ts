@@ -1,8 +1,8 @@
 import Payload from "@/components/introduction/Payload";
 
 const introduction: Payload = {
+  title: "INTRODUCTION",
   disable: false,
-
   contents: [
     "🌱 Continuously Growing Engineer",
     "With a passion for learning and growth, I have been running a technical blog since 2018 on topics like Kubernetes, PyTorch, and Airflow, achieving 1,500+ monthly active users (MAU). I have participated in 10+ study groups, enjoying exploring the core principles of technology and applying them to solve real-world challenges.",

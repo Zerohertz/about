@@ -3,10 +3,12 @@ import { Container } from "reactstrap";
 import Experiences from "@/components/experiences";
 import Introduction from "@/components/introduction";
 import Profile from "@/components/profile";
+import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import experiences from "@/payloads/experiences";
 import introduction from "@/payloads/introduction";
 import profile from "@/payloads/profile";
+import projects from "@/payloads/projects";
 import skills from "@/payloads/skills";
 import { notoSerifKR } from "@/styles/fonts";
 
@@ -17,6 +19,7 @@ function About() {
       <Introduction payload={introduction} />
       <Skills payload={skills} />
       <Experiences payload={experiences} />
+      <Projects payload={projects} />
     </Container>
   );
 }

@@ -1,7 +1,7 @@
 {
   "name": "about",
   "version": "0.1.0",
-  "prefix": "about-nightly",
+  "prefix": "about",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",

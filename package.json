@@ -1,6 +1,7 @@
 {
   "name": "about",
   "version": "0.1.0",
+  "prefix": "about-nightly",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -9,16 +10,32 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028",
-    "next": "15.0.2"
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "bootstrap": "^5.3.3",
+    "luxon": "^3.5.0",
+    "next": "^15.0.2",
+    "next-seo": "^6.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "reactstrap": "^9.2.3",
+    "sass": "1.77.6"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/luxon": "^3.4.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.2"
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.0.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "typescript": "^5"
   }
 }

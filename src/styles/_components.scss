@@ -1,0 +1,22 @@
+.name {
+  color: #000;
+}
+
+.signature {
+  font-size: 1.5em;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.skill-heading {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.tooltip-inner {
+  white-space: pre-wrap;
+}

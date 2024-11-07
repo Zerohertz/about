@@ -1,0 +1,9 @@
+html,
+body {
+  word-wrap: break-word;
+  word-break: keep-all;
+  line-height: 1.8;
+
+  // NOTE: 이거 필요한지 모르겠음;;
+  // font-family: var(--font-sans-serif-kr);
+}

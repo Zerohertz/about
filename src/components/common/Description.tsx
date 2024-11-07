@@ -1,9 +1,8 @@
 import { Fragment, PropsWithChildren } from "react";
 
-import Image from "next/image";
-
 import DescriptionType from "@/components/common/DescriptionType";
 import Href from "@/components/common/Href";
+import _Image from "@/components/common/Image";
 
 const Description = ({
   descriptions,
@@ -58,57 +57,21 @@ const DescriptionRecursion = ({ descriptions }: PropsWithChildren<{ descriptions
 };
 
 const CreateDescription = ({ description }: PropsWithChildren<{ description: DescriptionType }>) => {
-  const maxWidth = 1000;
-  const { content, className, href, postImage, postHref } = description;
-  const component = (() => {
-    if (href && postImage) {
-      return (
-        <li className={className}>
-          <Href url={href} text={content} />
-          <br />
-          <Image className="img-fluid" src={postImage} alt={postImage} width={maxWidth} height={maxWidth} />
-        </li>
-      );
-    }
-    if (href) {
-      return (
-        <li className={className}>
-          <Href url={href} text={content} />
-        </li>
-      );
-    }
-    if (postHref && postImage) {
-      return (
-        <li className={className}>
-          {content} <Href url={postHref} text={postHref} /> <br />
-          <Image className="img-fluid" src={postImage} alt={postImage} width={maxWidth} height={maxWidth} />
-        </li>
-      );
-    }
-    if (postHref) {
-      return (
-        <li className={className}>
-          {content} <Href url={postHref} text={postHref} />
-        </li>
-      );
-    }
-    if (postImage) {
-      return (
-        <li className={className}>
-          {content}
-          <br />
-          <Image className="img-fluid" src={postImage} alt={postImage} width={maxWidth} height={maxWidth} />
-        </li>
-      );
-    }
-    return (
-      <>
-        <meta name="format-detection" content="telephone=no" />
-        <li className={className}>{content}</li>
-      </>
-    );
-  })();
-  return component;
+  const { content, className, href, image } = description;
+  return (
+    <>
+      <meta name="format-detection" content="telephone=no" />
+      <li className={className}>
+        {href ? <Href url={href} text={content} /> : content}
+        {image && (
+          <>
+            <br />
+            <_Image src={image} />
+          </>
+        )}
+      </li>
+    </>
+  );
 };
 
 export default Description;

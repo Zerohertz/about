@@ -2,12 +2,14 @@ import { Container } from "reactstrap";
 
 import Experiences from "@/components/experiences";
 import Introduction from "@/components/introduction";
+import OpenSources from "@/components/opensources";
 import Profile from "@/components/profile";
 import Projects from "@/components/projects";
 import Publications from "@/components/publications";
 import Skills from "@/components/skills";
 import experiences from "@/payloads/experiences";
 import introduction from "@/payloads/introduction";
+import openSources from "@/payloads/opensources";
 import profile from "@/payloads/profile";
 import projects from "@/payloads/projects";
 import publications from "@/payloads/publications";
@@ -23,6 +25,7 @@ function About() {
       <Experiences payload={experiences} />
       <Projects payload={projects} />
       <Publications payload={publications} />
+      <OpenSources payload={openSources} />
     </Container>
   );
 }

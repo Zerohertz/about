@@ -2,8 +2,7 @@ interface Description {
   content: string;
   className?: string;
   href?: string;
-  postImage?: string;
-  postHref?: string;
+  image?: string;
   descriptions?: Description[];
 }
 

@@ -1,5 +1,10 @@
 <div align="center">
+    <h2>🎉 About Me! 🎉</h2>
     <img src="https://shields.io/badge/React-18-61DAFB?logo=react&style=for-the-badge&logoColor=61DAFB"/> <img src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=nextdotjs&logoColor=000000"/> <img src="https://img.shields.io/badge/Sass-1.77-CC6699?style=for-the-badge&logo=sass&logoColor=CC6699"/> <img src="https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=7952B3"/>
+    <br/>
+    <a href="https://github.com/Zerohertz/about/actions/workflows/nextjs.yml">
+        <img src="https://github.com/Zerohertz/about/actions/workflows/nextjs.yml/badge.svg"/>
+    </a>
 </div>
 
 ---
@@ -22,6 +27,5 @@ $ npx create-next-app about
 
 </details>
 
-- [원작자](https://github.com/uyu423)
-- [코드 출처](https://github.com/uyu423/resume-nextjs)
-- [TypeDoc](https://uyu423.github.io/resume-nextjs/typedoc/)
+- Original Repository: [uyu423/resume-nextjs](https://github.com/uyu423/resume-nextjs)
+- Legacy Repository: [Zerohertz/about-v1](https://github.com/Zerohertz/about-v1)

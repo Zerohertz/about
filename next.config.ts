@@ -2,15 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  output: "export",
+  distDir: "out",
   images: {
-    dangerouslyAllowSVG: true,
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "img.shields.io",
-        pathname: "/**",
-      },
-    ],
+    // https://nextjs.org/docs/messages/export-image-api
+    unoptimized: true,
   },
 };
 

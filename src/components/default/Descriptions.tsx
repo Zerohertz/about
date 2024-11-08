@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 
-import DescriptionType from "@/components/default/DescriptionType";
+import Description from "@/components/default/Description";
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
 
-const Description = ({ descriptions, option }: { descriptions: DescriptionType[]; option?: { padding?: boolean } }) => {
+const Descriptions = ({ descriptions, option }: { descriptions: Description[]; option?: { padding?: boolean } }) => {
   return (
     <>
       {descriptions ? (
@@ -13,7 +13,7 @@ const Description = ({ descriptions, option }: { descriptions: DescriptionType[]
             <Fragment key={`${description.content}-${descIndex}`}>
               <CreateDescription description={description} key={`description-${description.content}-${descIndex}`} />
               {description.descriptions ? (
-                <DescriptionRecursion
+                <RecursiveDescription
                   descriptions={description.descriptions}
                   key={`description-recursion-${description.content}-${descIndex}`}
                 />
@@ -30,14 +30,14 @@ const Description = ({ descriptions, option }: { descriptions: DescriptionType[]
   );
 };
 
-const DescriptionRecursion = ({ descriptions }: { descriptions: DescriptionType[] }) => {
+const RecursiveDescription = ({ descriptions }: { descriptions: Description[] }) => {
   return (
     <ul>
       {descriptions.map((description, index) => (
         <Fragment key={`${description.content}-${index}`}>
           <CreateDescription description={description} key={`description-${description.content}-${index}`} />
           {description.descriptions ? (
-            <DescriptionRecursion
+            <RecursiveDescription
               descriptions={description.descriptions}
               key={`description-recursion-${description.content}-${index}`}
             />
@@ -50,7 +50,7 @@ const DescriptionRecursion = ({ descriptions }: { descriptions: DescriptionType[
   );
 };
 
-const CreateDescription = ({ description }: { description: DescriptionType }) => {
+const CreateDescription = ({ description }: { description: Description }) => {
   const { content, className, href, image } = description;
   return (
     <>
@@ -68,4 +68,4 @@ const CreateDescription = ({ description }: { description: DescriptionType }) =>
   );
 };
 
-export default Description;
+export default Descriptions;

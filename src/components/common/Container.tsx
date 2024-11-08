@@ -2,7 +2,7 @@ import { Badge, Col, Row } from "reactstrap";
 
 import Item from "@/components/common/Item";
 import Payload from "@/components/common/Payload";
-import Description from "@/components/default/Description";
+import Descriptions from "@/components/default/Descriptions";
 import Href from "@/components/default/Href";
 import { dateTimeToString, getDuration, stringToDateTime } from "@/utils/DateTime";
 
@@ -28,7 +28,7 @@ const Grid = ({ item, index, period }: { item: Item; index: number; period?: boo
           <Title item={item} />
           {item.subTitle ? <i className="gray mt-md-5">{item.subTitle}</i> : null}
           {item.keywords ? <Keywords keywords={item.keywords} /> : null}
-          {item.descriptions ? <Description descriptions={item.descriptions} /> : null}
+          {item.descriptions ? <Descriptions descriptions={item.descriptions} /> : null}
         </Col>
       </Row>
     </>

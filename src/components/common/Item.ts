@@ -1,4 +1,4 @@
-import Description from "@/components/default/DescriptionType";
+import Description from "@/components/default/Description";
 
 type ItemBase = {
   title: string;

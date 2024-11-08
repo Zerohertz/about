@@ -6,7 +6,7 @@ import _Image from "@/components/default/Image";
 
 const Descriptions = ({ descriptions, option }: { descriptions: Description[]; option?: { padding?: boolean } }) => {
   return (
-    <>
+    <div className="mt-1">
       {descriptions ? (
         <ul className={option?.padding ? "pt-2" : ""}>
           {descriptions.map((description, descIndex) => (
@@ -26,7 +26,7 @@ const Descriptions = ({ descriptions, option }: { descriptions: Description[]; o
       ) : (
         ""
       )}
-    </>
+    </div>
   );
 };
 

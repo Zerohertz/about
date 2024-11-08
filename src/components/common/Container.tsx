@@ -26,7 +26,7 @@ const Grid = ({ item, index, period }: { item: Item; index: number; period?: boo
         </Col>
         <Col sm={12} md={9}>
           <Title item={item} />
-          {item.subTitle ? <i className="gray mt-md-5">{item.subTitle}</i> : null}
+          {item.subTitle ? <i className="gray">{item.subTitle}</i> : null}
           {item.keywords ? <Keywords keywords={item.keywords} /> : null}
           {item.descriptions ? <Descriptions descriptions={item.descriptions} /> : null}
         </Col>
@@ -43,7 +43,7 @@ const Keywords = ({ keywords }: { keywords: string[] }) => {
     <>
       <br />
       {keywords.map((keyword, index) => (
-        <Badge className="me-1 mb-2" key={index.toString()} color="secondary">
+        <Badge className="me-1" key={index.toString()} color="secondary">
           {keyword}
         </Badge>
       ))}

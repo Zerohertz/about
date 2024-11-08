@@ -27,6 +27,10 @@ const global: Payload = {
       },
     },
   },
+  analytics: {
+    google: "G-ZCW0CR8M8X",
+    naver: "7e701a42aec008",
+  },
 };
 
 export default global;

@@ -70,6 +70,7 @@ const projects: Payload = {
           content:
             "Addressed inefficiencies in post-processing due to Python-native functions with high time complexity by optimizing them with Cython-native functions and improving time complexity. (inference time decreased by 74.12%)",
           href: "https://github.com/Zerohertz/pan_pp.pytorch/tree/SpeedImprovement",
+          className: "name",
           image: "images/plfp-0.png",
         },
         {
@@ -105,6 +106,7 @@ const projects: Payload = {
           content:
             "Reduced inference time for a text detection model, where frequent calls made optimization critical, by utilizing TensorRT-based quantization. (inference time decreased by 87.31%)",
           href: "https://github.com/Zerohertz/PANPP/tree/TensorRT",
+          className: "name",
           image: "images/abos-2.png",
         },
         {

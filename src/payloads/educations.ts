@@ -6,6 +6,7 @@ const educations: Payload = {
   list: [
     {
       title: "Konkuk University, Seoul, Korea",
+      href: "https://grad.konkuk.ac.kr/",
       subTitle: "M.S. in Mechanical Design and Production Engineering",
       startedAt: "2021-03",
       endedAt: "2023-02",
@@ -21,6 +22,7 @@ const educations: Payload = {
     },
     {
       title: "Konkuk University, Seoul, Korea",
+      href: "https://www.konkuk.ac.kr/",
       subTitle: "B.S. in Department of Mechanical Engineering",
       startedAt: "2017-03",
       endedAt: "2021-02",

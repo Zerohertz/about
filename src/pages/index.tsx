@@ -9,6 +9,7 @@ import experiences from "@/payloads/experiences";
 import extras from "@/payloads/extras";
 import introduction from "@/payloads/introduction";
 import openSources from "@/payloads/opensources";
+import presentations from "@/payloads/presentations";
 import profile from "@/payloads/profile";
 import projects from "@/payloads/projects";
 import publications from "@/payloads/publications";
@@ -24,6 +25,7 @@ function About() {
       <Common payload={experiences} />
       <Common payload={projects} />
       <Common payload={publications} />
+      <Common payload={presentations} />
       <Common payload={openSources} />
       <Common payload={educations} />
       <Common payload={extras} />

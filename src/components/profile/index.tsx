@@ -30,8 +30,8 @@ const Component = ({ payload }: { payload: Payload }) => {
 
 const Profile = ({ src }: { src: string }) => {
   return (
-    <div className="text-md-start text-center">
-      <Image className="img-fluid rounded" width={280} height={280} src={src} alt="Profile" />
+    <div className="text-md-start text-center mb-md-0 mb-3">
+      <Image className="img-fluid rounded" src={src} alt="Profile" width={280} height={280} quality={100} />
     </div>
   );
 };

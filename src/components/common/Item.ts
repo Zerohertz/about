@@ -1,9 +1,9 @@
 import Description from "@/components/default/Description";
 
 type ItemBase = {
-  title: string;
+  title?: string;
   href?: string;
-  subTitle: string;
+  subTitle?: string;
   keywords?: string[];
   descriptions?: Description[];
 };

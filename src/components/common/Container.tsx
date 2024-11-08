@@ -35,24 +35,15 @@ const Grid = ({ item, index, period }: { item: Item; index: number; period?: boo
   );
 };
 
-const Keywords = ({ keywords }: { keywords: string[] }) => {
-  if (!keywords) {
-    return null;
-  }
-  return (
-    <>
-      <br />
-      {keywords.map((keyword, index) => (
-        <Badge className="me-1" key={index.toString()} color="secondary">
-          {keyword}
-        </Badge>
-      ))}
-    </>
-  );
-};
-
 const Left = ({ item, period }: { item: Item; period?: boolean }) => {
   if (!item.startedAt) {
+    if (item.href) {
+      return (
+        <h4>
+          <Href className="gray" url={item.href} text={item.title} />
+        </h4>
+      );
+    }
     return <h4 className="gray">{item.title}</h4>;
   }
   const startedAt = stringToDateTime(item.startedAt);
@@ -106,6 +97,22 @@ const Title = ({ item }: { item: Item }) => {
     return <h4>{item.title}</h4>;
   }
   return null;
+};
+
+const Keywords = ({ keywords }: { keywords: string[] }) => {
+  if (!keywords) {
+    return null;
+  }
+  return (
+    <>
+      <br />
+      {keywords.map((keyword, index) => (
+        <Badge className="me-1" key={index.toString()} color="secondary">
+          {keyword}
+        </Badge>
+      ))}
+    </>
+  );
 };
 
 export default Container;

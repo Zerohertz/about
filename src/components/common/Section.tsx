@@ -31,6 +31,9 @@ const TotalPeriod = ({ payload }: { payload: Payload }) => {
   const totalDuration = () => {
     const durations = payload.list
       .map((item) => {
+        if (!item.title) {
+          return null;
+        }
         if (item.title.includes("Lab")) {
           return null;
         }

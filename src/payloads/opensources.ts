@@ -6,12 +6,8 @@ const openSources: Payload = {
   list: [
     {
       title: "Technical Blog",
-      subTitle: "",
+      href: "https://zerohertz.github.io/",
       descriptions: [
-        {
-          content: "Zerohertz",
-          href: "https://zerohertz.github.io/",
-        },
         {
           content:
             "Customized a technical blog based on the Hexo NexT theme to document and share solutions to challenges encountered during personal learning and professional work.",
@@ -23,7 +19,6 @@ const openSources: Payload = {
     },
     {
       title: "Awesome 병역 특례",
-      subTitle: "",
       descriptions: [
         {
           content: "Zerohertz/awesome-jmy (GitHub)",
@@ -39,18 +34,14 @@ const openSources: Payload = {
     },
     {
       title: "bytedance/SPTSv2",
-      subTitle: "",
+      href: "src/payloads/presentations.ts",
       descriptions: [
-        {
-          content: "bytedance/SPTSv2 (GitHub)",
-          href: "https://github.com/bytedance/SPTSv2/pulls?q=author%3AZerohertz",
-          image: "https://img.shields.io/github/stars/bytedance/SPTSv2.svg?style=popout",
-        },
         {
           content: "Resolving Python dependencies.",
         },
         {
           content: "Solving tensor dimension erros and generalizing prediction, evaluation, and visualization.",
+          image: "https://img.shields.io/github/stars/bytedance/SPTSv2.svg?style=popout",
         },
       ],
     },

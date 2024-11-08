@@ -7,25 +7,39 @@
     </a>
 </div>
 
----
-
 <details>
-<summary>
-Project Setup
+<summary align="center">
+<h2>
+🧑🏻‍🎨 나만의 about page 수정하는 방법! 🧑🏻‍🎨
+</h2>
 </summary>
 
-```bash
-$ npx create-next-app about
-✔ Would you like to use TypeScript? … Yes
-✔ Would you like to use ESLint? … Yes
-✔ Would you like to use Tailwind CSS? … No
-✔ Would you like your code inside a `src/` directory? … Yes
-✔ Would you like to use App Router? (recommended) … No
-✔ Would you like to use Turbopack for next dev? … Yes
-✔ Would you like to customize the import alias (@/* by default)? … No
-```
+> TBI
 
 </details>
+
+<details align="center">
+<summary>
+<h2>
+🧑🏻‍💻 나만의 about page 배포하는 방법! 🧑🏻‍💻
+</h2>
+</summary>
+
+> ![step 1.](https://github.com/user-attachments/assets/1d40bc3f-c3f2-4968-9fb4-fce99fbd558e)
+> 현재 repository를 fork한다. (최종적으로 배포되는 위치는 `${USERNAME}.github.io/${REPOSITORY_NAME}`)
+
+> ![step 2.](https://github.com/user-attachments/assets/236b8bf6-7068-4a5c-a628-8ead2b90b3a8)
+> GitHub Pages에 설정을 GitHub Actions로 바꾼다.
+
+> ![step 3.](https://github.com/user-attachments/assets/d8aaa52b-6150-4904-b2df-8713dec36754)
+> GitHub Actions를 허용하고 실행한다.
+
+> ![step 4.](https://github.com/user-attachments/assets/742f63fc-845d-46fb-8b91-866f4b888764)
+> 배포 끝!
+
+</details>
+
+---
 
 - Original Repository: [uyu423/resume-nextjs](https://github.com/uyu423/resume-nextjs)
 - Legacy Repository: [Zerohertz/about-v1](https://github.com/Zerohertz/about-v1)

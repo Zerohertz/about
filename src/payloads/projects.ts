@@ -25,17 +25,17 @@ const projects: Payload = {
         {
           content:
             "To reduce time consumption and inefficiency from reimplementing commonly used functions, developed and published a custom Python library on PyPI and GitHub Releases to enhance efficiency and code reusability across projects.",
-          image: "images/dacp-0.png",
+          image: "/images/dacp-0.png",
         },
         {
           content:
             "Built a GitHub Actions-based CI/CD pipeline (migrated from Jenkins) to automate repetitive tasks such as formatting, unit testing, and deployment, streamlining the process for feature additions and bug fixes.",
-          image: "images/dacp-1.png",
+          image: "/images/dacp-1.png",
         },
         {
           content:
             "To prevent unnecessary deployments from non-production changes like documentation updates, implemented a detailed branching strategy on GitHub and set up dedicated pipelines for code segregation.",
-          image: "images/dacp-2.png",
+          image: "/images/dacp-2.png",
         },
         {
           content:
@@ -44,7 +44,7 @@ const projects: Payload = {
         {
           content:
             "Ensured easy access to comprehensive project guidelines and function usage by creating a Sphinx-based documentation pipeline, deploying it via GitHub Pages for consistent and up-to-date project documentation.",
-          image: "images/dacp-3.png",
+          image: "/images/dacp-3.png",
         },
       ],
     },
@@ -70,7 +70,7 @@ const projects: Payload = {
           content:
             "Addressed inefficiencies in post-processing due to Python-native functions with high time complexity by optimizing them with Cython-native functions and improving time complexity. (inference time decreased by 74.12%)",
           href: "https://github.com/Zerohertz/pan_pp.pytorch/tree/SpeedImprovement",
-          image: "images/plfp-0.png",
+          image: "/images/plfp-0.png",
         },
         {
           content: "Developed a unified class and inheritance structure for Triton Inference Server.",
@@ -94,23 +94,23 @@ const projects: Payload = {
         {
           content:
             "Implemented a pipeline using GitLab CI and Kubernetes to separate backend dependencies from code and weights, deploying through the Kubernetes sidecar pattern, which resolved versioning challenges and significantly reduced build times for the model backend.",
-          image: "images/abos-0.png",
+          image: "/images/abos-0.png",
         },
         {
           content:
             "Faced with excessive GPU usage during model deployment, resolved the issue by identifying and fixing a memory leak through GPU resource monitoring and logging. (GPU memory usage reduced by 47.9%)",
-          image: "images/abos-1.png",
+          image: "/images/abos-1.png",
         },
         {
           content:
             "Reduced inference time for a text detection model, where frequent calls made optimization critical, by utilizing TensorRT-based quantization. (inference time decreased by 87.31%)",
           href: "https://github.com/Zerohertz/PANPP/tree/TensorRT",
-          image: "images/abos-2.png",
+          image: "/images/abos-2.png",
         },
         {
           content:
             "Encountered low accuracy in document rotation classification, addressed by performing batch inference on image tensors rotated in four directions and averaging the results. (improved accuracy by 2.01%p)",
-          image: "images/abos-3.png",
+          image: "/images/abos-3.png",
         },
       ],
     },
@@ -163,7 +163,7 @@ const projects: Payload = {
         },
         {
           content: "Designed and developed an API for model deployment using Triton Inference Server.",
-          image: "images/adsf-0.png",
+          image: "/images/adsf-0.png",
         },
       ],
     },
@@ -176,12 +176,12 @@ const projects: Payload = {
         {
           content: "Zerohertz/k8s-on-premise (GitHub)",
           href: "https://github.com/Zerohertz/k8s-on-premise",
-          image: "images/opkc-0.png",
+          image: "/images/opkc-0.png",
         },
         {
           content: "Blog posts",
           href: "https://zerohertz.github.io/tags/home-server/",
-          image: "images/opkc-1.png",
+          image: "/images/opkc-1.png",
         },
         {
           content:
@@ -213,12 +213,12 @@ const projects: Payload = {
         {
           content: "Team-BoonMoSa (GitHub)",
           href: "https://github.com/Team-BoonMoSa",
-          image: "images/mc-0.gif",
+          image: "/images/mc-0.gif",
         },
         { content: "Developed a YOLOv5 based logo segmentation model." },
         {
           content: "Constructed a model deployment server on Amazon EC2 Inf1.",
-          image: "images/mc-1.png",
+          image: "/images/mc-1.png",
         },
       ],
     },

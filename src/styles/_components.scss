@@ -11,6 +11,12 @@
   height: 20px;
 }
 
+.image {
+  width: fit-content;
+  max-width: 90%;
+  height: auto;
+}
+
 .skill-heading {
   display: flex;
   gap: 8px;

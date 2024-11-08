@@ -55,8 +55,8 @@ const CreateDescription = ({ description }: { description: Description }) => {
   return (
     <>
       <meta name="format-detection" content="telephone=no" />
-      <li className={className}>
-        {href ? <Href url={href} text={content} /> : content}
+      <li>
+        {href ? <Href className={className} url={href} text={content} /> : content}
         {image && (
           <>
             <br />

@@ -15,26 +15,27 @@
 </summary>
 
 > Page: 기본적으로 아래와 같은 구성을 가지며 `Profile`, `Introduction`, `Skills`를 제외한 나머지 component들은 `Common`을 통해 구현
-> https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/pages/index.tsx#L19-L34
+> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/pages/index.tsx#L19-L34>
 
 > Global: Meta data, analytics 등 전역 설정
-> https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/global.ts#L6-L34
+> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/global.ts#L6-L34>
 
 > Profile: 이름, 사진 및 관련 링크
-> https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/profile.ts#L7-L49
+> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/profile.ts#L7-L49>
 
 > Introduction: 자기소개
-> https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/introduction.ts#L3-L18
+> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/introduction.ts#L3-L18>
 
+<!-- prettier-ignore -->
 > Skills: 경험한 기술들
-> https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/skills.ts#L4-L36
-> https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/skills.ts#L166-L171
+> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/skills.ts#L4-L36>
+> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/skills.ts#L166-L171>
 
 > Common: 다양하게 custom 가능한 항목들
-> https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/experiences.ts#L3-L99
+> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/experiences.ts#L3-L99>
 
 > Color: 주요한 색상 변경은 아래의 값들을 변경하여 설정
-> https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/styles/_colors.scss#L3-L6
+> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/styles/_colors.scss#L3-L6>
 
 </details>
 

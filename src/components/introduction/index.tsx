@@ -2,10 +2,12 @@ import { Badge } from "reactstrap";
 
 import { DateTime } from "luxon";
 
+import { parisienne } from "@/styles/fonts";
+
+import { dateTimeToString, stringToDateTime } from "@/utils/DateTime";
+
 import ComponentWrapper from "@/components/default/ComponentWrapper";
 import Payload from "@/components/introduction/Payload";
-import { parisienne } from "@/styles/fonts";
-import { dateTimeToString, stringToDateTime } from "@/utils/DateTime";
 
 const Component = ({ payload }: { payload: Payload }) => {
   const latestUpdated = stringToDateTime(payload.latestUpdated, true);

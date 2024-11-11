@@ -3,8 +3,9 @@ import { Badge, Col, Row } from "reactstrap";
 
 import { DateTime, Duration } from "luxon";
 
-import Payload from "@/components/common/Payload";
 import { stringToDateTime } from "@/utils/DateTime";
+
+import Payload from "@/components/common/Payload";
 
 const Section = ({ payload, children }: PropsWithChildren<{ payload: Payload }>) => {
   return (

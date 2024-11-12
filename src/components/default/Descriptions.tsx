@@ -72,12 +72,7 @@ const CreateDescription = ({ description }: { description: Description }) => {
             {content}
           </ReactMarkdown>
         )}
-        {image && (
-          <>
-            <br />
-            <_Image src={image} />
-          </>
-        )}
+        {image && <_Image src={image} />}
       </li>
     </>
   );

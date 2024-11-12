@@ -139,7 +139,7 @@ const Keywords = ({ keywords }: { keywords: string[] }) => {
     return null;
   }
   return (
-    <>
+    <div className="mb-1">
       {keywords.map((keyword, index) => (
         <span className="me-1" key={index.toString()}>
           <_Image
@@ -147,7 +147,7 @@ const Keywords = ({ keywords }: { keywords: string[] }) => {
           />
         </span>
       ))}
-    </>
+    </div>
   );
 };
 

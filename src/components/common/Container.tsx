@@ -112,7 +112,7 @@ const Title = ({ item }: { item: Item }) => {
   if (item.title && item.href) {
     return (
       <h4>
-        <Href className="name" href={item.href}>
+        <Href className="black" href={item.href}>
           {item.title}
         </Href>
       </h4>

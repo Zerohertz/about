@@ -1,5 +1,7 @@
 import { Badge, Col, Row } from "reactstrap";
 
+import colors from "@/styles/colors.module.scss";
+
 import { dateTimeToString, getDuration, stringToDateTime } from "@/utils/DateTime";
 
 import Item from "@/components/common/Item";
@@ -54,7 +56,9 @@ const Left = ({ item, period }: { item: Item; period?: boolean }) => {
               </h4>
             </Col>
             <Col md={12} xs={3} className="text-md-end text-center">
-              <_Image src={`https://img.shields.io/github/stars/${item.title}.svg?style=flat-square`} />
+              <_Image
+                src={`https://img.shields.io/github/stars/${item.title}?style=flat&logo=github&logoColor=000000&label=GitHub%20%F0%9F%8C%9F&labelColor=gray&color=${colors.primary.replace("#", "")}`}
+              />
             </Col>
           </Row>
         );

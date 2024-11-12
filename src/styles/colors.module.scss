@@ -7,14 +7,6 @@ $info: #0a0a80;
 $code-color: $primary;
 $code-bg-color: #f5f0f0;
 
-.primary {
-  color: $primary;
-}
-
-.gray {
-  color: gray;
-}
-
-.black {
-  color: #000;
+:export {
+  primary: $primary;
 }

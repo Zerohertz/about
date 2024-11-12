@@ -9,6 +9,7 @@ import Payload from "@/components/common/Payload";
 import Descriptions from "@/components/default/Descriptions";
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
+import getReplacedKeyword from "@/components/global/keywords";
 
 const Container = ({ payload }: { payload: Payload }) => {
   return (
@@ -136,9 +137,11 @@ const Keywords = ({ keywords }: { keywords: string[] }) => {
     <>
       <br />
       {keywords.map((keyword, index) => (
-        <Badge className="me-1" key={index.toString()} color="secondary">
-          {keyword}
-        </Badge>
+        <span className="me-1" key={index.toString()}>
+          <_Image
+            src={`https://img.shields.io/badge/${keyword}-white?style=flat&logo=${getReplacedKeyword(keyword)}&logoColor=white&color=${colors.secondary.replace("#", "")}`}
+          />
+        </span>
       ))}
     </>
   );

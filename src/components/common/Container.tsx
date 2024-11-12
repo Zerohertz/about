@@ -48,14 +48,14 @@ const Left = ({ item, period }: { item: Item; period?: boolean }) => {
       if (item.title.includes("/") && item.href.includes("github.com")) {
         return (
           <Row>
-            <Col md={12} xs={9}>
+            <Col md={12} xs={8}>
               <h4 className="fs-5">
                 <Href className="gray" href={item.href}>
                   {item.title}
                 </Href>
               </h4>
             </Col>
-            <Col md={12} xs={3} className="text-md-end text-center">
+            <Col md={12} xs={4} className="text-md-end text-center">
               <_Image
                 src={`https://img.shields.io/github/stars/${item.title}?style=flat&logo=github&logoColor=000000&label=GitHub%20%F0%9F%8C%9F&labelColor=gray&color=${colors.primary.replace("#", "")}`}
               />

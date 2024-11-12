@@ -13,7 +13,7 @@ const educations: Payload = {
       descriptions: [
         {
           content:
-            "Thesis: [A study on feature variable density for a highly efficient diagnosis model of rotary machine in roll-to-roll continuous process](https://konkuk.dcollection.net/public_resource/pdf/200000652381_20241031221138.pdf)",
+            "Thesis: [A study on feature variable density for a highly efficient diagnosis model of rotary machine in roll-to-roll continuous process](https://library.konkuk.ac.kr/search/i-discovery/2111877)",
         },
         { content: "Advisor: Changwoo Lee" },
         { content: "GPA: 4.15 / 4.5" },

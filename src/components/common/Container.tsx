@@ -88,12 +88,12 @@ const Left = ({ item, period }: { item: Item; period?: boolean }) => {
         </Col>
         <Col md={12} xs={5} className="text-md-end text-center">
           {period && (
-            <>
+            <div className="text-end">
               <Badge className="me-1" color="primary">
-                Current
+                Present
               </Badge>
               <Badge color="info">{getDuration(startedAt, undefined)}</Badge>
-            </>
+            </div>
           )}
         </Col>
       </Row>

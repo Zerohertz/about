@@ -61,7 +61,7 @@ const Left = ({ item, period }: { item: Item; period?: boolean }) => {
                 </Href>
               </h4>
             </Col>
-            <Col md={12} xs={4} className="text-md-end text-center">
+            <Col md={12} xs={4} className="text-md-end text-end">
               <_Image
                 src={`https://img.shields.io/github/stars/${item.title}?style=flat&logo=github&logoColor=000000&label=GitHub%20%F0%9F%8C%9F&labelColor=gray&color=${colors.primary.replace("#", "")}`}
               />

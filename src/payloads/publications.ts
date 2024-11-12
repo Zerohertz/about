@@ -5,14 +5,12 @@ const publications: Payload = {
   disable: false,
   list: [
     {
-      title: "",
-      subTitle: "",
       startedAt: "2023-09",
       onGoing: false,
       descriptions: [
         {
-          content: "[Patent] Apparatus and method for predicting coating layer thickness in slot-die coating process",
-          href: "https://patents.google.com/patent/KR20230120780A",
+          content:
+            "[Patent] [Apparatus and method for predicting coating layer thickness in slot-die coating process](https://patents.google.com/patent/KR20230120780A)",
           descriptions: [
             {
               content: "Inventor: Changwoo Lee, Minho Jo, Yoonjae Lee, Hyogeun Oh",
@@ -28,15 +26,12 @@ const publications: Payload = {
       ],
     },
     {
-      title: "",
-      subTitle: "",
       startedAt: "2023-01",
       onGoing: false,
       descriptions: [
         {
           content:
-            "[SCI(E)] Classification and Redundancy Quantitative Evaluation Algorithm for Highly Efficient Fault Diagnosis of Rotary Machines in Roll-to-Roll systems",
-          href: "https://www.sciencedirect.com/science/article/pii/S0263224122014889?via=ihub",
+            "[SCI(E)] [Classification and Redundancy Quantitative Evaluation Algorithm for Highly Efficient Fault Diagnosis of Rotary Machines in Roll-to-Roll systems](https://www.sciencedirect.com/science/article/pii/S0263224122014889)",
           descriptions: [
             {
               content: "Author: Hyogeun Oh, Jaehyun Noh, Changbeom Joo, Gyoujin Cho, Jeongdai Jo, Changwoo Lee",
@@ -56,8 +51,7 @@ const publications: Payload = {
       descriptions: [
         {
           content:
-            "[SCI(E)] Feature Selection Algorithm Based on Density and Distance for Fault Diagnosis Applied to a Roll-to-Roll Manufacturing System",
-          href: "https://academic.oup.com/jcde/article/9/2/805/6573580",
+            "[SCI(E)] [Feature Selection Algorithm Based on Density and Distance for Fault Diagnosis Applied to a Roll-to-Roll Manufacturing System](https://academic.oup.com/jcde/article/9/2/805/6573580)",
           descriptions: [
             {
               content: "Author: Hyogeun Oh, Yoonjae Lee, Jongsu Lee, Changbeom Joo, Changwoo Lee",

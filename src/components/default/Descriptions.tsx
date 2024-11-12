@@ -6,11 +6,11 @@ import Description from "@/components/default/Description";
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
 
-const Descriptions = ({ descriptions, option }: { descriptions: Description[]; option?: { padding?: boolean } }) => {
+const Descriptions = ({ descriptions }: { descriptions: Description[] }) => {
   return (
     <>
       {descriptions ? (
-        <ul className={option?.padding ? "pt-2" : ""}>
+        <ul>
           {descriptions.map((description, descIndex) => (
             <Fragment key={`${description.content}-${descIndex}`}>
               <CreateDescription description={description} key={`description-${description.content}-${descIndex}`} />

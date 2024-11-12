@@ -13,7 +13,7 @@ const openSources: Payload = {
             "Customized a technical blog based on the Hexo NexT theme to document and share solutions to challenges encountered during personal learning and professional work.",
         },
         {
-          content: "Achieved 1,500 MAU and 2,600 monthly page views by consistently writing over 200 posts since 2018.",
+          content: "Achieved 1,500 MAU and 2,600 monthly page views by consistently writing 200+ posts since 2018.",
         },
       ],
     },
@@ -23,11 +23,11 @@ const openSources: Payload = {
       descriptions: [
         {
           content:
-            "Implemented an automated data ingestion and preprocessing pipeline leveraging GitHub Actions to enhance data workflow efficiency.",
+            "Implemented an automated data ingestion and preprocessing pipeline using GitHub Actions to enhance data workflow efficiency.",
         },
         {
           content:
-            "Delivered actionable insights to technical research personnel (전문연구요원) through data visualizations created with Matplotlib, supporting decision-making from multiple analytical perspectives.",
+            "Delivered insights to technical research personnel (전문연구요원) through data visualizations created with `matplotlib`, supporting decision-making from multiple analytical perspectives.",
         },
       ],
     },
@@ -37,11 +37,11 @@ const openSources: Payload = {
       descriptions: [
         {
           content:
-            "Implemented an automated data ingestion and preprocessing pipeline leveraging GitHub Actions to enhance data workflow efficiency.",
+            "Implemented an automated data ingestion and preprocessing pipeline using GitHub Actions to enhance data workflow efficiency.",
         },
         {
           content:
-            "Delivered actionable insights to skilled industrial personnel (산업기능요원) through data visualizations created with Matplotlib, supporting decision-making from multiple analytical perspectives.",
+            "Delivered insights to skilled industrial personnel (산업기능요원) through data visualizations created with `matplotlib`, supporting decision-making from multiple analytical perspectives.",
         },
       ],
     },
@@ -50,12 +50,11 @@ const openSources: Payload = {
       href: "https://github.com/streamlit/streamlit/issues?q=author%3AZerohertz",
       descriptions: [
         {
-          content:
-            "Dentified and verified a dependency mismatch with `Image.Resampling.BILINEAR` usage, accessible only in `Pillow >=9.1.0`.",
+          content: "Identified and verified a dependency mismatch with `Image.Resampling.BILINEAR` (`Pillow >=9.1.0`).",
         },
         {
           content:
-            "Conducted version testing and recommended updating Streamlit’s requirements to prevent compatibility issues, improving reliability for developers.",
+            "Conducted version testing and recommended an update to Streamlit’s requirements, improving reliability for developers by preventing compatibility issues.",
         },
       ],
     },
@@ -69,7 +68,7 @@ const openSources: Payload = {
         },
         {
           content:
-            "Corrected variable type mismatch by aligning the depths variable to a list type for consistency with its default value, enhancing code clarity and reducing runtime errors.",
+            "Corrected variable type mismatch by aligning the `depths` variable to a list type for consistency with its default value, enhancing code clarity and reducing runtime errors.",
         },
         {
           content:
@@ -81,10 +80,11 @@ const openSources: Payload = {
         },
         {
           content:
-            "Resolved IndexError in training with customized data by fixing shape mismatches in GT data when augmenting datasets, ensuring stability in SPTSv2’s data handling.",
+            "Resolved `IndexError` during training with customized data by fixing shape mismatches in GT data, ensuring stability in data handling.",
         },
         {
-          content: "Solving tensor dimension erros and generalizing prediction, evaluation, and visualization.",
+          content:
+            "Addressed tensor dimension errors and generalized prediction, evaluation, and visualization processes.",
         },
       ],
     },

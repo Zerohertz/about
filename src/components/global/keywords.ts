@@ -5,6 +5,12 @@ const keywordMap = new Map([
   ["Tibero", "oracle"],
   ["Research", "internetarchive"],
   ["Machine Learning", "openai"],
+  ["Triton Inference Server", "nvidia"],
+  ["Label Studio", "materialdesignicons"],
+  ["Gradio", "huggingface"],
+  ["Traefik", "traefikproxy"],
+  ["Argo CD", "argo"],
+  ["Amazon EC2", "amazonec2"],
 ]);
 
 const getReplacedKeyword = (keyword: string): string => {

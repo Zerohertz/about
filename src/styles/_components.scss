@@ -23,6 +23,14 @@
   white-space: pre-wrap;
 }
 
-.markdown p {
-  margin: 0;
+.markdown {
+  p {
+    margin: 0;
+  }
+  code {
+    font-size: 0.8em;
+    background-color: $code-bg-color;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+  }
 }

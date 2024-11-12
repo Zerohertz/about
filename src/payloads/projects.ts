@@ -9,6 +9,7 @@ const projects: Payload = {
       subTitle: "Personal Project",
       startedAt: "2023-11",
       onGoing: true,
+      keywords: ["Python", "PyTest", "Sphinx", "Jenkins", "GitHub Actions", "Codecov", "PyPI"],
       descriptions: [
         {
           content: "Zerohertz/zerohertzLib (GitHub)",
@@ -53,6 +54,7 @@ const projects: Payload = {
       subTitle: "AgileSoDA",
       startedAt: "2023-10",
       endedAt: "2024-09",
+      keywords: ["Python", "PyTest", "Sphinx", "Numpy", "OpenCV", "PyTorch", "Triton Inference Server"],
       descriptions: [
         {
           content:
@@ -81,6 +83,7 @@ const projects: Payload = {
       subTitle: "AgileSoDA",
       startedAt: "2023-02",
       endedAt: "2024-09",
+      keywords: ["Python", "PyTorch", "Docker", "Kubernetes", "Triton Inference Server", "GitLab", "DVC", "MinIO"],
       descriptions: [
         {
           content:
@@ -117,6 +120,7 @@ const projects: Payload = {
       subTitle: "AgileSoDA",
       startedAt: "2024-02",
       endedAt: "2024-05",
+      keywords: ["Python", "PyTorch", "Docker", "Kubernetes", "Triton Inference Server", "Label Studio", "Streamlit"],
       descriptions: [
         {
           content:
@@ -141,6 +145,7 @@ const projects: Payload = {
       subTitle: "AgileSoDA",
       startedAt: "2023-11",
       endedAt: "2024-02",
+      keywords: ["Python", "PyTorch", "Docker", "Kubernetes", "Triton Inference Server", "Streamlit"],
       descriptions: [
         { content: "Developed a vehicle type classification model for PoC execution." },
         {
@@ -155,6 +160,7 @@ const projects: Payload = {
       subTitle: "AgileSoDA",
       startedAt: "2023-04",
       endedAt: "2023-11",
+      keywords: ["Python", "PyTorch", "Docker", "Kubernetes", "Triton Inference Server", "FastAPI", "Gradio"],
       descriptions: [
         {
           content: "Developed models for segmentation of burn areas and severity diagnosis in burn patients.",
@@ -170,6 +176,7 @@ const projects: Payload = {
       subTitle: "Personal Project",
       startedAt: "2023-08",
       endedAt: "2023-09",
+      keywords: ["Kubernetes", "Traefik", "Prometheus", "Grafana", "Apache Airflow", "Argo CD", "Jenkins"],
       descriptions: [
         {
           content: "Zerohertz/k8s-on-premise (GitHub)",
@@ -207,6 +214,7 @@ const projects: Payload = {
       subTitle: "BOAZ",
       startedAt: "2023-01",
       endedAt: "2023-07",
+      keywords: ["Python", "PyTorch", "Docker", "Triton Inference Server", "Amazon EC2", "FastAPI"],
       descriptions: [
         {
           content: "Team-BoonMoSa (GitHub)",

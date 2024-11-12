@@ -27,7 +27,7 @@ const openSources: Payload = {
         },
         {
           content:
-            "Delivered insights to technical research personnel (전문연구요원) through data visualizations created with `matplotlib`, supporting decision-making from multiple analytical perspectives.",
+            "Delivered insights to technical research personnel (전문연구요원) through data visualizations created with `Matplotlib`, supporting decision-making from multiple analytical perspectives.",
         },
       ],
     },
@@ -41,7 +41,7 @@ const openSources: Payload = {
         },
         {
           content:
-            "Delivered insights to skilled industrial personnel (산업기능요원) through data visualizations created with `matplotlib`, supporting decision-making from multiple analytical perspectives.",
+            "Delivered insights to skilled industrial personnel (산업기능요원) through data visualizations created with `Matplotlib`, supporting decision-making from multiple analytical perspectives.",
         },
       ],
     },

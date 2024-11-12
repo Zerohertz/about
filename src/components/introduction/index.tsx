@@ -1,12 +1,14 @@
 import { Badge } from "reactstrap";
 
 import { DateTime } from "luxon";
+import ReactMarkdown from "react-markdown";
 
 import { parisienne } from "@/styles/fonts";
 
 import { dateTimeToString, stringToDateTime } from "@/utils/DateTime";
 
 import ComponentWrapper from "@/components/default/ComponentWrapper";
+import Href from "@/components/default/Href";
 import Payload from "@/components/introduction/Payload";
 
 const Component = ({ payload }: { payload: Payload }) => {
@@ -16,7 +18,14 @@ const Component = ({ payload }: { payload: Payload }) => {
     <div className="mt-md-5 mt-4">
       <h2 className="primary mb-3">{payload.title}</h2>
       {payload.contents.map((content, index) => (
-        <p key={index.toString()}>{content}</p>
+        <ReactMarkdown
+          key={index.toString()}
+          components={{
+            a: Href,
+          }}
+        >
+          {content}
+        </ReactMarkdown>
       ))}
       <p className="text-end">
         <small>Latest Updated</small>{" "}

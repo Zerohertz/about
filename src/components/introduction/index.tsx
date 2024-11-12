@@ -15,7 +15,7 @@ const Component = ({ payload }: { payload: Payload }) => {
   const latestUpdated = stringToDateTime(payload.latestUpdated, true);
   const latestUpdatedByNow = Math.floor(DateTime.local().diff(latestUpdated).milliseconds / 1000 / 60 / 60 / 24);
   return (
-    <div className="mt-md-5 mt-4">
+    <div className="mt-md-5 mt-4 mb-md-5 mb-5">
       <h2 className="primary mb-3">{payload.title}</h2>
       {payload.contents.map((content, index) => (
         <ReactMarkdown

@@ -7,7 +7,7 @@ import ToolTip from "@/components/skills/ToolTip";
 
 const Component = ({ payload }: { payload: Payload }) => {
   return (
-    <div className="mt-5">
+    <div className="mt-md-5 mt-5 mb-md-5 mb-5">
       <Row className="pb-3">
         <Col>
           <h2 className="skill-heading">

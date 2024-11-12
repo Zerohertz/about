@@ -9,7 +9,7 @@ import Payload from "@/components/common/Payload";
 
 const Section = ({ payload, children }: PropsWithChildren<{ payload: Payload }>) => {
   return (
-    <div className="mt-md-5 mt-3 mb-md-5 mb-3">
+    <div className="mt-md-5 mt-5 mb-md-5 mb-5">
       <Row className="pb-3">
         <Col>
           <div className="d-flex align-items-center">

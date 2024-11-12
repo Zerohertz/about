@@ -10,7 +10,7 @@ import Payload from "@/components/profile/Payload";
 
 const Component = ({ payload }: { payload: Payload }) => {
   return (
-    <Row className="mt-md-5 mt-3">
+    <Row className="mt-md-5 mt-3 mb-md-5 mb-4">
       <Col md={4} sm={12}>
         <Profile src={payload.image} />
       </Col>

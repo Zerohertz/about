@@ -60,7 +60,7 @@ const Contact = ({ item }: { item: Item }) => {
       <Col xs={1} className="text-end">
         <FontAwesomeIcon icon={item.icon} className="icon" />
       </Col>
-      <Col xs="auto">{item.href ? <Href url={item.href} text={item.title} /> : <span>{item.title}</span>}</Col>
+      <Col xs="auto">{item.href ? <Href href={item.href}>{item.title}</Href> : <span>{item.title}</span>}</Col>
     </Row>
   );
 };

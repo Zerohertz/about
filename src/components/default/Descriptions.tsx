@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 
+import ReactMarkdown from "react-markdown";
+
 import Description from "@/components/default/Description";
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
@@ -56,7 +58,20 @@ const CreateDescription = ({ description }: { description: Description }) => {
     <>
       <meta name="format-detection" content="telephone=no" />
       <li>
-        {href ? <Href className={className} url={href} text={content} /> : content}
+        {href ? (
+          <Href className={className} href={href}>
+            {content}
+          </Href>
+        ) : (
+          <ReactMarkdown
+            className="markdown"
+            components={{
+              a: Href,
+            }}
+          >
+            {content}
+          </ReactMarkdown>
+        )}
         {image && (
           <>
             <br />

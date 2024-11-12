@@ -48,7 +48,9 @@ const Left = ({ item, period }: { item: Item; period?: boolean }) => {
           <Row>
             <Col md={12} xs={9}>
               <h4 className="fs-5">
-                <Href className="gray" url={item.href} text={item.title} />
+                <Href className="gray" href={item.href}>
+                  {item.title}
+                </Href>
               </h4>
             </Col>
             <Col md={12} xs={3} className="text-md-end text-center">
@@ -59,7 +61,9 @@ const Left = ({ item, period }: { item: Item; period?: boolean }) => {
       }
       return (
         <h4>
-          <Href className="gray fs-5" url={item.href} text={item.title} />
+          <Href className="gray fs-5" href={item.href}>
+            {item.title}
+          </Href>
         </h4>
       );
     }
@@ -108,7 +112,9 @@ const Title = ({ item }: { item: Item }) => {
   if (item.title && item.href) {
     return (
       <h4>
-        <Href className="name" url={item.href} text={item.title} />
+        <Href className="name" href={item.href}>
+          {item.title}
+        </Href>
       </h4>
     );
   }

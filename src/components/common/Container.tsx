@@ -6,6 +6,7 @@ import Item from "@/components/common/Item";
 import Payload from "@/components/common/Payload";
 import Descriptions from "@/components/default/Descriptions";
 import Href from "@/components/default/Href";
+import _Image from "@/components/default/Image";
 
 const Container = ({ payload }: { payload: Payload }) => {
   return (
@@ -38,10 +39,27 @@ const Grid = ({ item, index, period }: { item: Item; index: number; period?: boo
 
 const Left = ({ item, period }: { item: Item; period?: boolean }) => {
   if (!item.startedAt) {
+    if (!item.title) {
+      return null;
+    }
     if (item.href) {
+      if (item.title.includes("/") && item.href.includes("github.com")) {
+        return (
+          <Row>
+            <Col md={12} xs={9}>
+              <h4 className="fs-5">
+                <Href className="gray" url={item.href} text={item.title} />
+              </h4>
+            </Col>
+            <Col md={12} xs={3} className="text-md-end text-center">
+              <_Image src={`https://img.shields.io/github/stars/${item.title}.svg?style=flat-square`} />
+            </Col>
+          </Row>
+        );
+      }
       return (
         <h4>
-          <Href className="gray" url={item.href} text={item.title} />
+          <Href className="gray fs-5" url={item.href} text={item.title} />
         </h4>
       );
     }

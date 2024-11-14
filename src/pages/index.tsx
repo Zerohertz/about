@@ -1,7 +1,5 @@
 import { Container } from "reactstrap";
 
-import { notoSerifKR } from "@/styles/fonts";
-
 import Common from "@/components/common";
 import Introduction from "@/components/introduction";
 import Profile from "@/components/profile";
@@ -20,7 +18,7 @@ import skills from "@/payloads/skills";
 
 function About() {
   return (
-    <Container className={`${notoSerifKR.variable} font-noto-serif-kr`}>
+    <Container>
       <Profile payload={profile} />
       <Introduction payload={introduction} />
       <Skills payload={skills} />

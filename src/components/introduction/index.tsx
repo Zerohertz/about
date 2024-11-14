@@ -3,8 +3,6 @@ import { Badge } from "reactstrap";
 import { DateTime } from "luxon";
 import ReactMarkdown from "react-markdown";
 
-import { parisienne } from "@/styles/fonts";
-
 import { dateTimeToString, stringToDateTime } from "@/utils/DateTime";
 
 import ComponentWrapper from "@/components/default/ComponentWrapper";
@@ -31,7 +29,7 @@ const Component = ({ payload }: { payload: Payload }) => {
         <small>Latest Updated</small>{" "}
         <Badge color="secondary">{`${dateTimeToString(latestUpdated, true)} (D+${latestUpdatedByNow})`}</Badge>
       </p>
-      <p className={`${parisienne.variable} font-parisienne signature text-end`}>{payload.signature}</p>
+      <p className={"signature text-end"}>{payload.signature}</p>
     </div>
   );
 };

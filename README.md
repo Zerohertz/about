@@ -65,37 +65,36 @@
 <h4 align="center">Theme</h4>
 
 > To change the primary colors, adjust the values in the following file:
-> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/styles/_colors.scss#L3-L6>
+> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/styles/colors.module.scss#L3-L8>
 
 <!-- prettier-ignore -->
 > Update the font settings in the following files:<br/>
-> [`src/assets/fonts`](https://github.com/Zerohertz/about/tree/main/src/assets/fonts)
-> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/styles/fonts.ts#L3-L18>
-> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/pages/index.tsx#L21>
+> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/pages/_document.tsx#L9-L15>
+> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/styles/_fonts.scss#L4-L12>
 
 <h4 align="center">Layout</h4>
 
 > In the code below, you can configure the layout for the entire about page.
-> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/pages/index.tsx#L19-L34>
+> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/pages/index.tsx#L19-L34>
 
 <h4 align="center">Information</h4>
 
 > Global
-> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/global.ts#L6-L34>
+> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/payloads/global.ts#L6-L34>
 
 > Profile
-> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/profile.ts#L7-L49>
+> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/payloads/profile.ts#L7-L49>
 
 > Introduction
-> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/introduction.ts#L3-L18>
+> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/payloads/introduction.ts#L3-L18>
 
 <!-- prettier-ignore -->
 > Skills
-> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/skills.ts#L4-L36>
-> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/skills.ts#L166-L171>
+> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/payloads/skills.ts#L4-L36>
+> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/payloads/skills.ts#L166-L171>
 
 > Common
-> <https://github.com/Zerohertz/about/blob/89283eb6e61598a36cf36debe99d89c3f611a35e/src/payloads/experiences.ts#L3-L99>
+> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/payloads/experiences.ts#L3-L97>
 
 </details>
 

@@ -1,7 +1,7 @@
 import Payload from "@/components/global/Payload";
 
 const title = "About Hyogeun Oh (오효근)";
-const description = "About Hyogeun Oh";
+const description = "⚡️ About Hyogeun Oh ⚡️";
 
 const global: Payload = {
   favicon: "icons/favicon.ico",
@@ -14,8 +14,8 @@ const global: Payload = {
       description,
       images: [
         {
-          url: "images/preview.png",
-          alt: "OpenGraphImage.png",
+          url: "props/zerohertz_red_og.png",
+          alt: "Open Graph Image",
         },
       ],
       type: "profile",

@@ -89,6 +89,20 @@ const openSources: Payload = {
       ],
     },
     {
+      title: "next-theme/hexo-theme-next",
+      href: "https://github.com/next-theme/hexo-theme-next/issues?q=author%3AZerohertz",
+      descriptions: [
+        {
+          content:
+            "Added a `motion.duration` parameter in [Hexo](https://github.com/hexojs)'s NexT theme `_config.yml`, enabling flexible configuration of motion animation duration.",
+        },
+        {
+          content:
+            "Modified `source/js/motion.js` to retrieve `motion.duration` dynamically, with a default value fallback for robustness.",
+        },
+      ],
+    },
+    {
       title: "kubernetes/website",
       href: "https://github.com/kubernetes/website/issues?q=author%3AZerohertz",
       descriptions: [

@@ -9,10 +9,6 @@ const programming: Skill = {
       level: 3,
     },
     {
-      title: "MATLAB",
-      level: 3,
-    },
-    {
       title: "Java",
       level: 2,
     },
@@ -21,11 +17,7 @@ const programming: Skill = {
       level: 2,
     },
     {
-      title: "Cython",
-      level: 2,
-    },
-    {
-      title: "R",
+      title: "TypeScript",
       level: 2,
     },
     {
@@ -142,24 +134,14 @@ const database: Skill = {
 const etc: Skill = {
   category: "Etc",
   items: [
-    {
-      title: "Ansys",
-    },
-    {
-      title: "Arduino",
-    },
-    {
-      title: "Catia",
-    },
-    {
-      title: "LabVIEW",
-    },
-    {
-      title: "Raspberry Pi",
-    },
-    {
-      title: "Unreal Engine",
-    },
+    { title: "Ansys" },
+    { title: "Arduino" },
+    { title: "Catia" },
+    { title: "LabVIEW" },
+    { title: "MATLAB" },
+    { title: "R" },
+    { title: "Raspberry Pi" },
+    { title: "Unreal Engine" },
   ],
 };
 

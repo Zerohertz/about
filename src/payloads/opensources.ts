@@ -5,60 +5,6 @@ const openSources: Payload = {
   disable: false,
   list: [
     {
-      title: "Technical Blog",
-      href: "https://zerohertz.github.io/",
-      descriptions: [
-        {
-          content:
-            "Customized a technical blog based on the Hexo NexT theme to document and share solutions to challenges encountered during personal learning and professional work.",
-        },
-        {
-          content: "Achieved 1,500 MAU and 2,600 monthly page views by consistently writing 200+ posts since 2018.",
-        },
-      ],
-    },
-    {
-      title: "Zerohertz/awesome-jmy",
-      href: "https://github.com/Zerohertz/awesome-jmy",
-      descriptions: [
-        {
-          content:
-            "Implemented an automated data ingestion and preprocessing pipeline using GitHub Actions to enhance data workflow efficiency.",
-        },
-        {
-          content:
-            "Delivered insights to technical research personnel (전문연구요원) through data visualizations created with `Matplotlib`, supporting decision-making from multiple analytical perspectives.",
-        },
-      ],
-    },
-    {
-      title: "Zerohertz/awesome-sgy",
-      href: "https://github.com/Zerohertz/awesome-sgy",
-      descriptions: [
-        {
-          content:
-            "Implemented an automated data ingestion and preprocessing pipeline using GitHub Actions to enhance data workflow efficiency.",
-        },
-        {
-          content:
-            "Delivered insights to skilled industrial personnel (산업기능요원) through data visualizations created with `Matplotlib`, supporting decision-making from multiple analytical perspectives.",
-        },
-      ],
-    },
-    {
-      title: "streamlit/streamlit",
-      href: "https://github.com/streamlit/streamlit/issues?q=author%3AZerohertz",
-      descriptions: [
-        {
-          content: "Identified and verified a dependency mismatch with `Image.Resampling.BILINEAR` (`Pillow >=9.1.0`).",
-        },
-        {
-          content:
-            "Conducted version testing and recommended an update to Streamlit’s requirements, improving reliability for developers by preventing compatibility issues.",
-        },
-      ],
-    },
-    {
       title: "bytedance/SPTSv2",
       href: "https://github.com/bytedance/SPTSv2/issues?q=author%3AZerohertz",
       descriptions: [
@@ -89,6 +35,19 @@ const openSources: Payload = {
       ],
     },
     {
+      title: "streamlit/streamlit",
+      href: "https://github.com/streamlit/streamlit/issues?q=author%3AZerohertz",
+      descriptions: [
+        {
+          content: "Identified and verified a dependency mismatch with `Image.Resampling.BILINEAR` (`Pillow >=9.1.0`).",
+        },
+        {
+          content:
+            "Conducted version testing and recommended an update to Streamlit’s requirements, improving reliability for developers by preventing compatibility issues.",
+        },
+      ],
+    },
+    {
       title: "next-theme/hexo-theme-next",
       href: "https://github.com/next-theme/hexo-theme-next/issues?q=author%3AZerohertz",
       descriptions: [
@@ -108,6 +67,47 @@ const openSources: Payload = {
       descriptions: [
         {
           content: "Contributed minor wording refinements to improve grammatical accuracy.",
+        },
+      ],
+    },
+    {
+      title: "Technical Blog",
+      href: "https://zerohertz.github.io/",
+      descriptions: [
+        {
+          content:
+            "Customized a technical blog based on the Hexo NexT theme to document and share solutions to challenges encountered during personal learning and professional work.",
+        },
+        {
+          content: "Achieved 1,500+ MAU and 2,600+ monthly page views by consistently writing 200+ posts since 2018.",
+        },
+      ],
+    },
+    {
+      title: "Zerohertz/awesome-jmy",
+      href: "https://github.com/Zerohertz/awesome-jmy",
+      descriptions: [
+        {
+          content:
+            "Implemented an automated data ingestion and preprocessing pipeline using GitHub Actions to enhance data workflow efficiency.",
+        },
+        {
+          content:
+            "Delivered insights to technical research personnel (전문연구요원) through data visualizations created with Matplotlib, supporting decision-making from multiple analytical perspectives.",
+        },
+      ],
+    },
+    {
+      title: "Zerohertz/awesome-sgy",
+      href: "https://github.com/Zerohertz/awesome-sgy",
+      descriptions: [
+        {
+          content:
+            "Implemented an automated data ingestion and preprocessing pipeline using GitHub Actions to enhance data workflow efficiency.",
+        },
+        {
+          content:
+            "Delivered insights to skilled industrial personnel (산업기능요원) through data visualizations created with Matplotlib, supporting decision-making from multiple analytical perspectives.",
         },
       ],
     },

@@ -41,6 +41,14 @@
   white-space: pre-wrap;
 }
 
+.github-repo-short {
+  @extend .fs-5;
+}
+
+.github-repo-long {
+  font-size: 1.1rem;
+}
+
 .markdown {
   p {
     margin: 0;

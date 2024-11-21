@@ -14,7 +14,7 @@ const global: Payload = {
       description,
       images: [
         {
-          url: "props/zerohertz_red_og.png",
+          url: "props/zerohertz-black-red-og.png",
           alt: "Open Graph Image",
         },
       ],

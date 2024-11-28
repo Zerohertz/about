@@ -8,11 +8,9 @@ enum LUXON_DATE_FORMAT {
   KINDNESS_FULL = "DDDD",
 }
 
-export const stringToDateTime = (time: string, day: boolean = false) => {
-  if (day) {
-    return DateTime.fromFormat(time, LUXON_DATE_FORMAT.YYYY_LL_DD);
-  }
-  return DateTime.fromFormat(time, LUXON_DATE_FORMAT.YYYY_LL);
+export const stringToDateTime = (time: string) => {
+  const format = time.length > 7 ? LUXON_DATE_FORMAT.YYYY_LL_DD : LUXON_DATE_FORMAT.YYYY_LL;
+  return DateTime.fromFormat(time, format);
 };
 
 export const dateTimeToString = (time: DateTime, day: boolean = false) => {

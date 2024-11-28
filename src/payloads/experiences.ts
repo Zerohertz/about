@@ -10,8 +10,8 @@ const experiences: Payload = {
       title: "Tmax WAPL",
       href: "https://tmaxcore.ai/",
       subTitle: "Backend Engineer",
-      startedAt: "2024-09",
-      onGoing: true,
+      startedAt: "2024-09-09",
+      endedAt: "2024-11-29",
       keywords: ["Java", "Tibero", "Docker", "Kubernetes"],
       descriptions: [
         {
@@ -28,8 +28,8 @@ const experiences: Payload = {
       title: "AgileSoDA",
       href: "http://www.agilesoda.com/",
       subTitle: "Machine Learning Research Engineer",
-      startedAt: "2023-02",
-      endedAt: "2024-09",
+      startedAt: "2023-02-01",
+      endedAt: "2024-09-03",
       keywords: ["Python", "Docker", "Kubernetes", "Research", "Machine Learning"],
       descriptions: [
         {

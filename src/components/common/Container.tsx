@@ -107,7 +107,11 @@ const Left = ({ item, period }: { item: Item; period?: boolean }) => {
           <h4 className="gray">{`${dateTimeToString(startedAt)} ~ ${dateTimeToString(endedAt)}`}</h4>
         </Col>
         <Col md={12} xs={3} className="text-md-end text-center">
-          {period && <Badge color="info">{getDuration(startedAt, endedAt)}</Badge>}
+          {period && (
+            <div className="text-end">
+              <Badge color="info">{getDuration(startedAt, endedAt)}</Badge>
+            </div>
+          )}
         </Col>
       </Row>
     );

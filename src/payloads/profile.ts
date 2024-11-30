@@ -5,7 +5,7 @@ import { faBolt, faEnvelope, faScroll } from "@fortawesome/free-solid-svg-icons"
 import Payload from "@/components/profile/Payload";
 
 const profile: Payload = {
-  image: "props/profile.jpg",
+  image: "props/profile.webp",
   name: {
     title: "Hyogeun Oh",
     small: "(오효근)",

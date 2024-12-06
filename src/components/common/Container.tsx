@@ -147,7 +147,7 @@ const Keywords = ({ keywords }: { keywords: string[] }) => {
       {keywords.map((keyword, index) => (
         <span className="me-1" key={index.toString()}>
           <_Image
-            src={`https://img.shields.io/badge/${keyword}-white?style=flat&logo=${getReplacedKeyword(keyword)}&logoColor=white&color=${colors.secondary.replace("#", "")}`}
+            src={`https://img.shields.io/badge/${keyword}-white?style=flat&logo=${getReplacedKeyword(keyword)}&logoColor=white&color=${colors.primary.replace("#", "")}`}
           />
         </span>
       ))}

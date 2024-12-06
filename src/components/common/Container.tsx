@@ -77,7 +77,9 @@ const Left = ({ item, period }: { item: Item; period?: boolean }) => {
         </h4>
       );
     }
-    return <h4 className="gray">{item.title}</h4>;
+    return (
+      <h4 className={`gray ${item.title.length > 25 ? "github-repo-long" : "github-repo-short"}`}>{item.title}</h4>
+    );
   }
   const startedAt = stringToDateTime(item.startedAt);
   if (item.onGoing) {

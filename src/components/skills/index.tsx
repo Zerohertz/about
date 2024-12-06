@@ -10,8 +10,12 @@ const Component = ({ payload }: { payload: Payload }) => {
     <div className="mt-md-5 mt-5 mb-md-5 mb-5">
       <Row className="pb-3">
         <Col>
-          <h2 className="skill-heading">
-            <span className="primary">{payload.title}</span>
+          <h2 className="skill-heading" id="SKILLS">
+            <span>
+              <a className="primary" href="#SKILLS">
+                {payload.title}
+              </a>
+            </span>
             <ToolTip content={payload.tooltip} />
           </h2>
         </Col>

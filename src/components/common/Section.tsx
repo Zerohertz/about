@@ -13,7 +13,11 @@ const Section = ({ payload, children }: PropsWithChildren<{ payload: Payload }>)
       <Row className="pb-3">
         <Col>
           <div className="d-flex align-items-center">
-            <h2 className="primary">{payload.title || "UNKNOWN"}</h2>
+            <h2 id={payload.title}>
+              <a className="primary" href={`#${payload.title}`}>
+                {payload.title || "UNKNOWN"}
+              </a>
+            </h2>
             <TotalPeriod payload={payload} />
           </div>
         </Col>

@@ -56,7 +56,7 @@ const Left = ({ item, period }: { item: Item; period?: boolean }) => {
           <Row>
             <Col md={12} xs={8}>
               <h4 className={`${item.title.length > 25 ? "github-repo-long" : "github-repo-short"}`}>
-                <Href className="gray" href={item.href}>
+                <Href className="gray" src={item.href}>
                   {item.title}
                 </Href>
               </h4>
@@ -71,7 +71,7 @@ const Left = ({ item, period }: { item: Item; period?: boolean }) => {
       }
       return (
         <h4>
-          <Href className="gray github-repo-short" href={item.href}>
+          <Href className="gray github-repo-short" src={item.href}>
             {item.title}
           </Href>
         </h4>
@@ -126,7 +126,7 @@ const Title = ({ item }: { item: Item }) => {
   if (item.title && item.href) {
     return (
       <h4>
-        <Href className="black" href={item.href}>
+        <Href className="black" src={item.href}>
           {item.title}
         </Href>
       </h4>

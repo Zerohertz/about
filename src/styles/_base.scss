@@ -32,6 +32,11 @@ a {
     color: $primary;
     background-size: 100% 2px;
   }
+  &:focus {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 li a,

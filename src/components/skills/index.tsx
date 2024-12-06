@@ -10,9 +10,9 @@ const Component = ({ payload }: { payload: Payload }) => {
     <div className="mt-md-5 mt-5 mb-md-5 mb-5">
       <Row className="pb-3">
         <Col>
-          <h2 className="skill-heading" id="SKILLS">
+          <h2 className="skill-heading" id="skills">
             <span>
-              <a className="primary" href="#SKILLS">
+              <a className="primary" href="#skills">
                 {payload.title}
               </a>
             </span>

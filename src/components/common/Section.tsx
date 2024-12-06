@@ -8,13 +8,14 @@ import { stringToDateTime } from "@/utils/DateTime";
 import Payload from "@/components/common/Payload";
 
 const Section = ({ payload, children }: PropsWithChildren<{ payload: Payload }>) => {
+  const id = payload.title.replace(" & ", "-").replace(" ", "-").toLowerCase();
   return (
     <div className="mt-md-5 mt-5 mb-md-5 mb-5">
       <Row className="pb-3">
         <Col>
           <div className="d-flex align-items-center">
-            <h2 id={payload.title}>
-              <a className="primary" href={`#${payload.title}`}>
+            <h2 id={id}>
+              <a className="primary" href={`#${id}`}>
                 {payload.title || "UNKNOWN"}
               </a>
             </h2>

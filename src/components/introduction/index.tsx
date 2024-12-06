@@ -14,8 +14,8 @@ const Component = ({ payload }: { payload: Payload }) => {
   const latestUpdatedByNow = Math.floor(DateTime.local().diff(latestUpdated).milliseconds / 1000 / 60 / 60 / 24);
   return (
     <div className="mt-md-5 mt-4 mb-md-5 mb-5">
-      <h2 className="mb-3" id="INTRODUCTION">
-        <a className="primary" href="#INTRODUCTION">
+      <h2 className="mb-3" id="introduction">
+        <a className="primary" href="#introduction">
           {payload.title}
         </a>
       </h2>

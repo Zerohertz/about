@@ -2,15 +2,15 @@ import { PropsWithChildren } from "react";
 
 import Link from "next/link";
 
-const Href = ({ className = "", src, children }: PropsWithChildren<{ className?: string; src?: string }>) => {
+const Href = ({ className = "", href, children }: PropsWithChildren<{ className?: string; href?: string }>) => {
   return (
     <Link
       className={`link-underline link-underline-opacity-0 link-underline-opacity-100-hover ${className}`}
-      href={src || "#"}
+      href={href || "#"}
       target="_blank"
       rel="noreferrer noopener"
     >
-      {children || src}
+      {children || href}
     </Link>
   );
 };

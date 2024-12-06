@@ -59,7 +59,7 @@ const CreateDescription = ({ description }: { description: Description }) => {
       <meta name="format-detection" content="telephone=no" />
       <li>
         {href ? (
-          <Href className={className} src={href}>
+          <Href className={className} href={href}>
             {content}
           </Href>
         ) : (

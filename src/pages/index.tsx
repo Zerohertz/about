@@ -24,9 +24,9 @@ function About() {
       <Skills payload={skills} />
       <Common payload={experiences} />
       <Common payload={projects} />
+      <Common payload={openSources} />
       <Common payload={publications} />
       <Common payload={presentations} />
-      <Common payload={openSources} />
       <Common payload={educations} />
       <Common payload={extras} />
     </Container>

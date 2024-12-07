@@ -23,8 +23,9 @@ export const dateTimeToString = (time: DateTime, day: boolean = false) => {
 };
 
 export const getDuration = (from: DateTime, to: DateTime = DateTime.local()) => {
-  const diff = to.plus({ month: 1 }).diff(from);
-  const totalMonths = Math.floor(diff.as("months"));
+  from = from.startOf("month");
+  to = to.plus({ month: 1 }).startOf("month");
+  const totalMonths = to.diff(from, "months").months;
   const years = Math.floor(totalMonths / 12);
   const months = totalMonths % 12;
   if (years === 0) {

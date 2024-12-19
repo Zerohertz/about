@@ -13,7 +13,7 @@ const extras: Payload = {
     },
     {
       title: "전문연구요원",
-      subTitle: "AgileSoDA, Tmax WAPL",
+      subTitle: "AgileSoDA, Tmax WAPL, MINDs and Company",
       startedAt: "2023-02-28",
       endedAt: "2026-02-27",
     },

@@ -7,6 +7,14 @@ const experiences: Payload = {
   currentAndPeriod: true,
   list: [
     {
+      title: "MINDs and Company",
+      href: "https://mnc.ai/",
+      subTitle: "Machine Learning Engineer",
+      startedAt: "2024-12-16",
+      onGoing: true,
+      keywords: ["Python", "FastAPI", "vLLM", "Docker", "Kubernetes"],
+    },
+    {
       title: "Tmax WAPL",
       href: "https://tmaxcore.ai/",
       subTitle: "Backend Engineer",

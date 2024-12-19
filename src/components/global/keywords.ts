@@ -11,6 +11,7 @@ const keywordMap = new Map([
   ["Traefik", "traefikproxy"],
   ["Argo CD", "argo"],
   ["Amazon EC2", "amazonec2"],
+  ["vLLM", "vonage"],
 ]);
 
 const getReplacedKeyword = (keyword: string): string => {

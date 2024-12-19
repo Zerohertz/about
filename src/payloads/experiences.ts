@@ -12,7 +12,7 @@ const experiences: Payload = {
       subTitle: "Machine Learning Engineer",
       startedAt: "2024-12-16",
       onGoing: true,
-      keywords: ["Python", "FastAPI", "vLLM", "Docker", "Kubernetes"],
+      keywords: ["Python", "FastAPI", "vLLM", "PyTorch", "Docker", "Kubernetes"],
     },
     {
       title: "Tmax WAPL",
@@ -20,7 +20,7 @@ const experiences: Payload = {
       subTitle: "Backend Engineer",
       startedAt: "2024-09-09",
       endedAt: "2024-11-29",
-      keywords: ["Java", "Tibero", "Docker", "Kubernetes"],
+      keywords: ["Java", "Tibero", "Docker", "Kubernetes", "Grafana"],
       descriptions: [
         {
           content:
@@ -38,7 +38,16 @@ const experiences: Payload = {
       subTitle: "Machine Learning Research Engineer",
       startedAt: "2023-02-01",
       endedAt: "2024-09-03",
-      keywords: ["Python", "Docker", "Kubernetes", "Research", "Machine Learning"],
+      keywords: [
+        "Python",
+        "PyTorch",
+        "Triton Inference Server",
+        "FastAPI",
+        "Docker",
+        "Kubernetes",
+        "GitHub Actions",
+        "Grafana",
+      ],
       descriptions: [
         {
           content:
@@ -62,6 +71,7 @@ const experiences: Payload = {
       subTitle: "Research Student",
       startedAt: "2021-03",
       endedAt: "2023-02",
+      keywords: ["MATLAB", "Python", "PyTorch", "C++", "LabVIEW", "Ansys"],
       descriptions: [
         {
           content:
@@ -81,7 +91,6 @@ const experiences: Payload = {
         //     "Performed computational fluid dynamics (CFD) simulations based on tension and temperature in roll-to-roll continuous processes.",
         // },
       ],
-      keywords: ["Python", "C++", "MATLAB", "LabVIEW", "Ansys", "Machine Learning"],
     },
     {
       title: "SiM Lab. (Smart intelligent Manufacturing system Laboratory)",
@@ -89,8 +98,8 @@ const experiences: Payload = {
       subTitle: "Research Intern",
       startedAt: "2019-11",
       endedAt: "2021-02",
+      keywords: ["MATLAB", "Python", "PyTorch", "LabVIEW", "Ansys"],
       descriptions: [{ content: "Developed bearing condition diagnostic model and graphic user interface." }],
-      keywords: ["MATLAB", "Research", "Machine Learning"],
     },
     {
       title: "MRV Lab. (Medical Robotics and Virtual Reality Laboratory)",
@@ -98,8 +107,8 @@ const experiences: Payload = {
       subTitle: "Research Intern",
       startedAt: "2018-06",
       endedAt: "2019-11",
+      keywords: ["Unreal Engine", "C++", "Python"],
       descriptions: [{ content: "Developed virtual reality environments based on C++ and Unreal Engine." }],
-      keywords: ["Unreal Engine", "C++"],
     },
   ],
 };

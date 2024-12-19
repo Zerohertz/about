@@ -94,7 +94,7 @@ const Left = ({ item, period }: { item: Item; period?: boolean }) => {
               <Badge className="me-1" color="primary">
                 Present
               </Badge>
-              <Badge color="info">{getDuration(startedAt, undefined)}</Badge>
+              <Badge color="secondary">{getDuration(startedAt, undefined)}</Badge>
             </div>
           )}
         </Col>
@@ -111,7 +111,7 @@ const Left = ({ item, period }: { item: Item; period?: boolean }) => {
         <Col md={12} xs={3} className="text-md-end text-center">
           {period && (
             <div className="text-end">
-              <Badge color="info">{getDuration(startedAt, endedAt)}</Badge>
+              <Badge color="secondary">{getDuration(startedAt, endedAt)}</Badge>
             </div>
           )}
         </Col>
@@ -149,7 +149,8 @@ const Keywords = ({ keywords }: { keywords: string[] }) => {
       {keywords.map((keyword, index) => (
         <span className="me-1" key={index.toString()}>
           <_Image
-            src={`https://img.shields.io/badge/${keyword}-white?style=flat&logo=${getReplacedKeyword(keyword)}&logoColor=white&color=${colors.primary.replace("#", "")}`}
+            // src={`https://img.shields.io/badge/${keyword}-white?style=flat&logo=${getReplacedKeyword(keyword)}&logoColor=white&color=${colors.primary.replace("#", "")}`}
+            src={`https://img.shields.io/badge/${keyword}-black?style=flat&logo=${getReplacedKeyword(keyword)}`}
           />
         </span>
       ))}

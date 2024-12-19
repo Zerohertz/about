@@ -1,7 +1,7 @@
 // https://simpleicons.org/
 const keywordMap = new Map([
   ["Java", "coffeescript"],
-  ["MATLAB", "mcdonalds"],
+  ["MATLAB", "nuxtdotjs"],
   ["Tibero", "oracle"],
   ["Research", "internetarchive"],
   ["Machine Learning", "openai"],

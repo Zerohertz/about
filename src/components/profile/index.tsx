@@ -15,8 +15,10 @@ const Component = ({ payload }: { payload: Payload }) => {
         <Profile src={payload.image} />
       </Col>
       <Col md={8} sm={12}>
-        <Name name={payload.name} />
-        <Contacts contacts={payload.contact} />
+        <div className="ms-md-3">
+          <Name name={payload.name} />
+          <Contacts contacts={payload.contact} />
+        </div>
       </Col>
       {payload.notice && (
         <Alert color="secondary" role="alert" className="mt-3">
@@ -38,7 +40,7 @@ const Profile = ({ src }: { src: string }) => {
 
 const Name = ({ name }: { name: Payload["name"] }) => {
   return (
-    <h1 className="primary text-md-start text-center ps-md-3">
+    <h1 className="primary text-md-start text-center">
       {name.title} <small>{name.small || ""}</small>
     </h1>
   );
@@ -57,10 +59,13 @@ const Contacts = ({ contacts }: { contacts: Payload["contact"] }) => {
 const Contact = ({ item }: { item: Item }) => {
   return (
     <Row className="pb-2 pb-md-3">
-      <Col xs={1} className="text-end">
-        <FontAwesomeIcon icon={item.icon} className="icon" />
+      <Col xs="auto">
+        <span className="ps-md-1" />
+        <Href href={item.href}>
+          <FontAwesomeIcon icon={item.icon} className="icon" />
+          <span>{item.title}</span>
+        </Href>
       </Col>
-      <Col xs="auto">{item.href ? <Href href={item.href}>{item.title}</Href> : <span>{item.title}</span>}</Col>
     </Row>
   );
 };

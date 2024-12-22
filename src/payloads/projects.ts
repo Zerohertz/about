@@ -90,7 +90,7 @@ const projects: Payload = {
         "FastAPI",
         "Docker",
         "Kubernetes",
-        "GitLab",
+        "GitHub Actions",
         "DVC",
         "MinIO",
       ],

@@ -12,7 +12,7 @@ const experiences: Payload = {
       subTitle: "Machine Learning Engineer",
       startedAt: "2024-12-16",
       onGoing: true,
-      keywords: ["Python", "FastAPI", "vLLM", "PyTorch", "Docker", "Kubernetes"],
+      keywords: ["Python", "FastAPI", "vLLM", "PyTorch", "Docker", "Kubernetes", "Apache JMeter"],
     },
     {
       title: "Tmax WAPL",

@@ -15,7 +15,8 @@ function App({ Component, pageProps }: AppProps) {
       <NextSeo {...global.seo} />
       <Head>
         <title>{global.headTitle}</title>
-        <link rel="shortcut icon" href={global.favicon} />
+        <link rel="icon" href={global.favicon} />
+        <link rel="apple-touch-icon" href={global.favicon} />
       </Head>
       <Component {...pageProps} />
       {/* Google Analytics */}

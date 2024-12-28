@@ -21,9 +21,6 @@ function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
       {/* Google Analytics */}
       {global.analytics && global.analytics.google && (
-        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-ZCW0CR8M8X" />
-      )}
-      {global.analytics && global.analytics.google && (
         <Script strategy="afterInteractive" id="google-analytics">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -34,9 +31,6 @@ function App({ Component, pageProps }: AppProps) {
         </Script>
       )}
       {/* Naver Analytics */}
-      {global.analytics && global.analytics.naver && (
-        <Script strategy="afterInteractive" src="//wcs.naver.net/wcslog.js" type="text/javascript" />
-      )}
       {global.analytics && global.analytics.naver && (
         <Script strategy="afterInteractive" id="naver-analytics" type="text/javascript">
           {`

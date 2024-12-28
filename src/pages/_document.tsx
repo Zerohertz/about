@@ -1,4 +1,7 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
+
+import global from "@/payloads/global";
 
 class DocumentImpl extends Document {
   render() {
@@ -13,6 +16,14 @@ class DocumentImpl extends Document {
             href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&family=Parisienne&display=swap"
             rel="stylesheet"
           />
+          {/* Google Analytics */}
+          {global.analytics && global.analytics.google && (
+            <Script strategy="beforeInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-ZCW0CR8M8X" />
+          )}
+          {/* Naver Analytics */}
+          {global.analytics && global.analytics.naver && (
+            <Script strategy="beforeInteractive" src="//wcs.naver.net/wcslog.js" type="text/javascript" />
+          )}
         </Head>
         <body>
           <Main />

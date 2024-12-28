@@ -18,12 +18,36 @@
 > found 0 vulnerabilities
 >
 > # Run ESLint to check and automatically fix linting issues
-> $ npx next lint --fix
+> $ npm run lint --fix
+>
+> > about@1.0.1 lint
+> > next lint
+>
 > ✔ No ESLint warnings or errors
 >
-> # Build the project for production
-> $ npx next build
+> # Start the Next.js development server on the specified port
+> $ npm run dev -- -p ${PORT}
+>
+> > about@1.0.1 dev
+> > next dev -p ${PORT}
+>
 >    ▲ Next.js 15.0.3
+>    - Local:        http://localhost:${PORT}
+>
+>  ✓ Starting...
+>  ✓ Ready in 1145ms
+>  ○ Compiling / ...
+>  ✓ Compiled / in 5.4s (797 modules)
+>  GET / 200 in 5754ms
+>
+> # Build the project for production
+> $ npm run build
+>
+> > about@1.0.1 build
+> > next build
+>
+>    ▲ Next.js 15.0.3
+>
 >  ✓ Linting and checking validity of types
 >    Creating an optimized production build ...
 >  ✓ Compiled successfully
@@ -32,27 +56,19 @@
 >  ✓ Collecting build traces
 >  ✓ Exporting (3/3)
 >  ✓ Finalizing page optimization
+>
 > Route (pages)                             Size     First Load JS
-> ┌ ○ /                                     71.9 kB         154 kB
-> ├   └ css/dd0fb6a5e3482504.css            360 B
+> ┌ ○ / (318 ms)                            108 kB          191 kB
+> ├   └ css/ef46db3751d8e999.css            20 B
 > ├   /_app                                 0 B            82.5 kB
-> └ ○ /404                                  189 B          82.7 kB
-> + First Load JS shared by all             113 kB
+> └ ○ /404                                  189 B          82.6 kB
+> + First Load JS shared by all             114 kB
 >   ├ chunks/framework-a6b3d2fb26bce5d1.js  44.8 kB
 >   ├ chunks/main-2fb7f6c0f1a1dc8d.js       33.2 kB
->   ├ css/c46f95bc3df4fa4f.css              30.6 kB
->   └ other shared chunks (total)           4.48 kB
-> ○  (Static)  prerendered as static content
+>   ├ css/056cdcce871cc97e.css              31.1 kB
+>   └ other shared chunks (total)           4.46 kB
 >
-> # Start the Next.js development server on the specified port
-> $ npx next dev -p ${PORT}
->    ▲ Next.js 15.0.3
->    - Local:        http://localhost:${PORT}
->  ✓ Starting...
->  ✓ Ready in 1149ms
->  ○ Compiling / ...
->  ✓ Compiled / in 5.3s (634 modules)
->  GET / 200 in 5566ms
+> ○  (Static)  prerendered as static content
 > ```
 
 <details>

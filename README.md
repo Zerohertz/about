@@ -20,7 +20,7 @@
 > # Run ESLint to check and automatically fix linting issues
 > $ npm run lint --fix
 >
-> > about@1.0.1 lint
+> > about@1.0.3 lint
 > > next lint
 >
 > ✔ No ESLint warnings or errors
@@ -28,7 +28,7 @@
 > # Start the Next.js development server on the specified port
 > $ npm run dev -- -p ${PORT}
 >
-> > about@1.0.1 dev
+> > about@1.0.3 dev
 > > next dev -p ${PORT}
 >
 >    ▲ Next.js 15.0.3
@@ -43,7 +43,7 @@
 > # Build the project for production
 > $ npm run build
 >
-> > about@1.0.1 build
+> > about@1.0.3 build
 > > next build
 >
 >    ▲ Next.js 15.0.3
@@ -81,36 +81,36 @@
 <h4 align="center">Theme</h4>
 
 > To change the primary colors, adjust the values in the following file:
-> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/styles/colors.module.scss#L3-L8>
+> <https://github.com/Zerohertz/about/blob/8a5a08fa4ba63cf0d63b283335bf24ecc1fc9ce3/src/styles/colors.module.scss#L3-L8>
 
 <!-- prettier-ignore -->
 > Update the font settings in the following files:<br/>
-> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/pages/_document.tsx#L9-L15>
-> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/styles/_fonts.scss#L4-L12>
+> <https://github.com/Zerohertz/about/blob/8a5a08fa4ba63cf0d63b283335bf24ecc1fc9ce3/src/pages/_document.tsx#L12-L18>
+> <https://github.com/Zerohertz/about/blob/8a5a08fa4ba63cf0d63b283335bf24ecc1fc9ce3/src/styles/_fonts.scss#L4-L12>
 
 <h4 align="center">Layout</h4>
 
 > In the code below, you can configure the layout for the entire about page.
-> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/pages/index.tsx#L19-L34>
+> <https://github.com/Zerohertz/about/blob/8a5a08fa4ba63cf0d63b283335bf24ecc1fc9ce3/src/pages/index.tsx#L19-L34>
 
 <h4 align="center">Information</h4>
 
 > Global
-> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/payloads/global.ts#L6-L34>
+> <https://github.com/Zerohertz/about/blob/8a5a08fa4ba63cf0d63b283335bf24ecc1fc9ce3/src/payloads/global.ts#L6-L34>
 
 > Profile
-> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/payloads/profile.ts#L7-L49>
+> <https://github.com/Zerohertz/about/blob/8a5a08fa4ba63cf0d63b283335bf24ecc1fc9ce3/src/payloads/profile.ts#L7-L49>
 
 > Introduction
-> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/payloads/introduction.ts#L3-L18>
+> <https://github.com/Zerohertz/about/blob/8a5a08fa4ba63cf0d63b283335bf24ecc1fc9ce3/src/payloads/introduction.ts#L3-L18>
 
 <!-- prettier-ignore -->
 > Skills
-> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/payloads/skills.ts#L4-L36>
-> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/payloads/skills.ts#L166-L171>
+> <https://github.com/Zerohertz/about/blob/8a5a08fa4ba63cf0d63b283335bf24ecc1fc9ce3/src/payloads/skills.ts#L4-L28>
+> <https://github.com/Zerohertz/about/blob/8a5a08fa4ba63cf0d63b283335bf24ecc1fc9ce3/src/payloads/skills.ts#L148-L153>
 
 > Common
-> <https://github.com/Zerohertz/about/blob/a4f7bd5bde5b80619fa5fb65a1e21553b85b9ac6/src/payloads/experiences.ts#L3-L97>
+> <https://github.com/Zerohertz/about/blob/8a5a08fa4ba63cf0d63b283335bf24ecc1fc9ce3/src/payloads/experiences.ts#L3-L114>
 
 </details>
 

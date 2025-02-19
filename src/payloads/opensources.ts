@@ -5,6 +5,26 @@ const openSources: Payload = {
   disable: false,
   list: [
     {
+      title: "fastapi/fastapi",
+      href: "https://github.com/fastapi/fastapi/issues?q=author%3AZerohertz%20OR%20reviewed-by%3AZerohertz%20",
+      descriptions: [
+        {
+          content:
+            "Reviewed and enhanced the Korean FastAPI documentation by addressing missing content and improving formatting.",
+        },
+        { content: "Fixed issues in FastAPI docs by updating code for the latest version." },
+      ],
+    },
+    {
+      title: "microsoft/DeepSpeed",
+      href: "https://github.com/microsoft/DeepSpeed/issues?q=author%3AZerohertz",
+      descriptions: [
+        {
+          content: "Remove duplicate declaration of pandas in `Dockerfile`.",
+        },
+      ],
+    },
+    {
       title: "bytedance/SPTSv2",
       href: "https://github.com/bytedance/SPTSv2/issues?q=author%3AZerohertz",
       descriptions: [

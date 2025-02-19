@@ -12,7 +12,31 @@ const experiences: Payload = {
       subTitle: "Machine Learning Engineer",
       startedAt: "2024-12-16",
       onGoing: true,
-      keywords: ["Python", "vLLM", "FastAPI", "Docker", "Kubernetes", "Apache JMeter"],
+      keywords: [
+        "Python",
+        "FastAPI",
+        "Hugging Face",
+        "vLLM",
+        "DeepSpeed",
+        "MariaDB",
+        "Docker",
+        "Kubernetes",
+        "Apache JMeter",
+      ],
+      descriptions: [
+        {
+          content:
+            "Designed and implemented a GPU resource scheduler, a Kubernetes resource controller, and comprehensive LLM lifecycle management modules for the GenOS LLMOps product, enhancing resource efficiency and system reliability.",
+        },
+        {
+          content:
+            "Developed distributed training and serving pipelines for large language models (LLMs) and vision-language models (VLMs) on a Kubernetes platform, which improved scalability and boosted performance.",
+        },
+        {
+          content:
+            "Collaborated closely with the R&D team to productize cutting-edge model training code, streamlining integration and accelerating time-to-market for advanced machine learning solutions.",
+        },
+      ],
     },
     {
       title: "Tmax WAPL",

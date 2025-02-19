@@ -1,8 +1,8 @@
 // https://simpleicons.org/
 const keywordMap = new Map([
   ["Java", "coffeescript"],
-  ["MATLAB", "nuxtdotjs"],
-  ["Tibero", "oracle"],
+  ["MATLAB", "codeclimate"],
+  ["Tibero", "solid"],
   ["Research", "internetarchive"],
   ["Machine Learning", "openai"],
   ["Triton Inference Server", "nvidia"],
@@ -12,6 +12,7 @@ const keywordMap = new Map([
   ["Argo CD", "argo"],
   ["Amazon EC2", "amazonec2"],
   ["vLLM", "vonage"],
+  ["DeepSpeed", "rocket"],
 ]);
 
 const getReplacedKeyword = (keyword: string): string => {

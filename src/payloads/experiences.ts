@@ -30,7 +30,7 @@ const experiences: Payload = {
         },
         {
           content:
-            "Developed distributed training and serving pipelines for large language models (LLMs) and large multimodal models (LMMs) on a Kubernetes platform, which improved scalability and boosted performance.",
+            "Developed distributed training and serving pipelines for large language models (LLMs) and multimodal large language models (MLLMs) on a Kubernetes platform, which improved scalability and boosted performance.",
         },
         {
           content:

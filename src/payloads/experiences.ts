@@ -7,8 +7,8 @@ const experiences: Payload = {
   currentAndPeriod: true,
   list: [
     {
-      title: "MINDs and Company",
-      href: "https://mnc.ai/",
+      title: "GenON",
+      href: "https://genon.ai/",
       subTitle: "Machine Learning Engineer",
       startedAt: "2024-12-16",
       onGoing: true,

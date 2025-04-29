@@ -4,6 +4,28 @@ const projects: Payload = {
   title: "PROJECTS",
   disable: false,
   list: [
+    // {
+    //   title: "LLMOps Solution, GenOS",
+    //   subTitle: "GenON",
+    //   startedAt: "2024-12",
+    //   onGoing: true,
+    //   keywords: [
+    //     "Python",
+    //     "FastAPI",
+    //     "Hugging Face",
+    //     "vLLM",
+    //     "DeepSpeed",
+    //     "MariaDB",
+    //     "Docker",
+    //     "Kubernetes",
+    //     "Apache JMeter",
+    //   ],
+    //   descriptions: [
+    //     {
+    //       content: "",
+    //     },
+    //   ],
+    // },
     {
       title: "Development and CI/CD Pipeline Construction of Python Library",
       subTitle: "Personal Project",

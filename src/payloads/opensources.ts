@@ -16,6 +16,16 @@ const openSources: Payload = {
       ],
     },
     {
+      title: "vllm-project/vllm",
+      href: "https://github.com/vllm-project/vllm/issues?q=author%3AZerohertz%20OR%20reviewed-by%3AZerohertz%20",
+      descriptions: [
+        {
+          content:
+            "Fixed inconsistent spacing in the compilation configuration help text, improving documentation formatting consistency.",
+        },
+      ],
+    },
+    {
       title: "microsoft/DeepSpeed",
       href: "https://github.com/microsoft/DeepSpeed/issues?q=author%3AZerohertz",
       descriptions: [

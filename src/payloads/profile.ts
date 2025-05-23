@@ -1,5 +1,5 @@
 import { faGithub, faGoogle, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faBolt, faEnvelope, faScroll } from "@fortawesome/free-solid-svg-icons";
+import { faBolt, faCoffee, faEnvelope, faScroll } from "@fortawesome/free-solid-svg-icons";
 // import { faSeedling } from "@fortawesome/free-solid-svg-icons";
 
 import Payload from "@/components/profile/Payload";
@@ -40,6 +40,11 @@ const profile: Payload = {
       title: "Google Scholar",
       href: "https://scholar.google.com/citations?user=TxiJyc0AAAAJ",
       icon: faGoogle,
+    },
+    {
+      title: "Coffee Chat",
+      href: "https://cal.com/zerohertz?redirect=false",
+      icon: faCoffee,
     },
   ],
   // notice: {

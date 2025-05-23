@@ -1,5 +1,5 @@
 import { faGithub, faGoogle, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faBolt, faCoffee, faEnvelope, faScroll } from "@fortawesome/free-solid-svg-icons";
+import { faBolt, faCoffee, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 // import { faSeedling } from "@fortawesome/free-solid-svg-icons";
 
 import Payload from "@/components/profile/Payload";
@@ -25,11 +25,6 @@ const profile: Payload = {
       title: "Tech Blog",
       href: "https://zerohertz.github.io/",
       icon: faBolt,
-    },
-    {
-      title: "Resume",
-      href: "https://cloud.zerohertz.xyz/s/kHm6ckdnj9SH2pW",
-      icon: faScroll,
     },
     {
       title: "LinkedIn",

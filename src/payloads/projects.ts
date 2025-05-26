@@ -5,6 +5,48 @@ const projects: Payload = {
   disable: false,
   list: [
     {
+      title: "LLMOps Solution, GenOS",
+      subTitle: "GenON",
+      startedAt: "2024-12",
+      onGoing: true,
+      keywords: [
+        "Python",
+        "FastAPI",
+        "Hugging Face",
+        "vLLM",
+        "DeepSpeed",
+        "MariaDB",
+        "Docker",
+        "Kubernetes",
+        "Prometheus",
+        "Grafana",
+        "Apache JMeter",
+      ],
+      descriptions: [
+        {
+          content:
+            "Conducted continuous evaluation and benchmarking of state-of-the-art Large Language Models (LLMs) to determine optimal computing resource requirements and configuration parameters for training and inference deployment.",
+        },
+        {
+          content:
+            "Designed and developed microservices architecture (MSA) enabling distributed training and serving configuration through intuitive web-based user interfaces.",
+        },
+        {
+          content:
+            "Implemented Prometheus operator integration and developed comprehensive Grafana dashboards to enhance observability and monitoring capabilities for LLM serving infrastructure.",
+          image: "images/llmops-solution-genos-0.webp",
+        },
+        {
+          content:
+            "Resolved ephemeral storage limitations by migrating from object storage to Network File System (NFS) provisioner, improving system reliability and performance.",
+        },
+        {
+          content:
+            "Led strategic planning and architectural design for Model Context Protocol (MCP) feature integration and implementation.",
+        },
+      ],
+    },
+    {
       title: "Development and CI/CD Pipeline Construction of Python Library",
       subTitle: "Personal Project",
       startedAt: "2023-11",

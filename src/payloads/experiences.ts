@@ -21,6 +21,8 @@ const experiences: Payload = {
         "MariaDB",
         "Docker",
         "Kubernetes",
+        "Prometheus",
+        "Grafana",
         "Apache JMeter",
       ],
       descriptions: [

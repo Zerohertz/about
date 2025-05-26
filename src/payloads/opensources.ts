@@ -5,6 +5,28 @@ const openSources: Payload = {
   disable: false,
   list: [
     {
+      title: "vllm-project/vllm",
+      href: "https://github.com/vllm-project/vllm/issues?q=author%3AZerohertz%20OR%20reviewed-by%3AZerohertz%20",
+      descriptions: [
+        {
+          content:
+            "Led comprehensive documentation modernization initiative by converting legacy Sphinx-style directives to MkDocs-compatible format, improving cross-referencing and API documentation linking.",
+        },
+        {
+          content:
+            "Resolved critical markdown rendering issues by implementing proper list indentation configuration in `pymarkdown`, enhancing documentation readability for MkDocs-based system.",
+        },
+        {
+          content:
+            "Updated deprecation message for `--enable-reasoning` argument, correcting version reference from non-existent `v0.8.6` to accurate `v0.9.0` deprecation timeline.",
+        },
+        {
+          content:
+            "Conducted comprehensive performance analysis comparing [v0 vs. v1 engines](https://github.com/vllm-project/vllm/issues/17540) and [version stability](https://github.com/vllm-project/vllm/issues/18619) (`v0.8.4` vs. `v0.8.5.post1`) across multi-GPU environments, providing detailed technical documentation for engine optimization and issue reproduction.",
+        },
+      ],
+    },
+    {
       title: "fastapi/fastapi",
       href: "https://github.com/fastapi/fastapi/issues?q=author%3AZerohertz%20OR%20reviewed-by%3AZerohertz%20",
       descriptions: [
@@ -13,16 +35,6 @@ const openSources: Payload = {
             "Reviewed and enhanced the Korean FastAPI documentation by addressing missing content and improving formatting.",
         },
         { content: "Fixed issues in FastAPI docs by updating code for the latest version." },
-      ],
-    },
-    {
-      title: "vllm-project/vllm",
-      href: "https://github.com/vllm-project/vllm/issues?q=author%3AZerohertz%20OR%20reviewed-by%3AZerohertz%20",
-      descriptions: [
-        {
-          content:
-            "Fixed inconsistent spacing in the compilation configuration help text, improving documentation formatting consistency.",
-        },
       ],
     },
     {

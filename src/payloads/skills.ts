@@ -9,16 +9,16 @@ const programming: Skill = {
       level: 3,
     },
     {
-      title: "Java",
-      level: 2,
-    },
-    {
       title: "C, C++",
       level: 2,
     },
     {
-      title: "TypeScript",
+      title: "JavaScript, TypeScript",
       level: 2,
+    },
+    {
+      title: "Java",
+      level: 1,
     },
     {
       title: "Go",
@@ -33,6 +33,10 @@ const mlops: Skill = {
     {
       title: "Triton Inference Server",
       level: 3,
+    },
+    {
+      title: "vLLM",
+      level: 2,
     },
     {
       title: "TensorRT",
@@ -117,15 +121,15 @@ const database: Skill = {
   category: "Database",
   items: [
     {
-      title: "PostgreSQL",
+      title: "SQL",
       level: 2,
     },
     {
-      title: "MySQL",
+      title: "Redis",
       level: 1,
     },
     {
-      title: "Redis",
+      title: "MongoDB",
       level: 1,
     },
   ],

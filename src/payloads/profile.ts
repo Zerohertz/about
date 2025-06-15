@@ -1,4 +1,6 @@
 import { faGithub, faGoogle, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faDev } from "@fortawesome/free-brands-svg-icons/faDev";
+import { faHashnode } from "@fortawesome/free-brands-svg-icons/faHashnode";
 import { faBolt, faCoffee, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 // import { faSeedling } from "@fortawesome/free-solid-svg-icons";
 
@@ -30,6 +32,16 @@ const profile: Payload = {
       title: "LinkedIn",
       href: "https://www.linkedin.com/in/hyogeunoh/",
       icon: faLinkedin,
+    },
+    {
+      title: "Dev.to",
+      href: "https://dev.to/zerohertz",
+      icon: faDev,
+    },
+    {
+      title: "Hashnode",
+      href: "https://zerohertz.hashnode.dev",
+      icon: faHashnode,
     },
     {
       title: "Google Scholar",

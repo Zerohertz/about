@@ -31,12 +31,25 @@ const extras: Payload = {
       ],
     },
     {
-      title: "Baekjoon Online Judge",
-      href: "https://www.acmicpc.net/user/zerohertz",
+      title: "Extra Links",
       descriptions: [
         {
-          content: "Top 3.39% (Platinum V)",
+          content: "Dev.to",
+          href: "https://dev.to/zerohertz",
+        },
+        {
+          content: "Hashnode",
+          href: "https://zerohertz.hashnode.dev",
+        },
+        {
+          content: "Baekjoon Online Judge (BOJ)",
+          descriptions: [{ content: "Top 3.39% (Platinum V)" }],
           href: "https://solved.ac/profile/zerohertz",
+        },
+        { content: "LeetCode", href: "https://leetcode.com/u/Zerohertz/" },
+        {
+          content: "X",
+          href: "https://x.com/zerohertzkr",
         },
       ],
     },

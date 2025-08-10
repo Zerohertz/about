@@ -5,7 +5,7 @@ const presentations: Payload = {
   disable: false,
   list: [
     {
-      title: "Open Source LLM: From vLLM to Production",
+      title: "Open Source LLMs, from vLLM to Production",
       href: "https://lu.ma/lahqslya",
       subTitle: "Instruct.KR Summer 2025 Meetup",
       startedAt: "2025-08-02",

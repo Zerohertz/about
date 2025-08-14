@@ -5,6 +5,24 @@ const presentations: Payload = {
   disable: false,
   list: [
     {
+      title: "Exploring vLLM’s OpenAI-Compatible Server",
+      href: "https://2025.pycon.kr/presentations/b00a81cd-4ea3-4ec6-a658-d5e7f54c6d3f",
+      subTitle: "PyCon Korea 2025 Tutorial",
+      startedAt: "2025-08-15",
+      onGoing: false,
+      descriptions: [
+        { content: "vLLM의 OpenAI-Compatible Server 톺아보기" },
+        {
+          content: "GitHub",
+          href: "https://github.com/Zerohertz/PyCon_KR_2025_Tutorial_vLLM",
+        },
+        {
+          content: "SlideShare",
+          href: "https://www.slideshare.net/slideshow/vllm-openal-compatible-server-pycon-korea-tutorial-2025-d250/282436716",
+        },
+      ],
+    },
+    {
       title: "Open Source LLMs, from vLLM to Production",
       href: "https://lu.ma/lahqslya",
       subTitle: "Instruct.KR Summer 2025 Meetup",

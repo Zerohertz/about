@@ -18,7 +18,7 @@ const presentations: Payload = {
         },
         {
           content: "SlideShare",
-          href: "https://www.slideshare.net/slideshow/vllm-openal-compatible-server-pycon-korea-tutorial-2025-d250/282436716",
+          href: "https://www.slideshare.net/slideshow/exploring-vllm-s-openai-compatible-server-pycon-korea-tutorial-2025/282444625",
         },
       ],
     },

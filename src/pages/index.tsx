@@ -1,38 +1,18 @@
-import { Container } from "reactstrap";
+import { useEffect } from "react";
 
-import Common from "@/components/common";
-import LanguageToggle from "@/components/common/LanguageToggle";
-import Introduction from "@/components/introduction";
-import Profile from "@/components/profile";
-import Skills from "@/components/skills";
+import { getCurrentLanguage, setCurrentLanguage } from "@/utils/GlobalLanguage";
 
-import educations from "@/payloads/educations";
-import experiences from "@/payloads/experiences";
-import extras from "@/payloads/extras";
-import introduction from "@/payloads/introduction";
-import openSources from "@/payloads/opensources";
-import presentations from "@/payloads/presentations";
-import profile from "@/payloads/profile";
-import projects from "@/payloads/projects";
-import publications from "@/payloads/publications";
-import skills from "@/payloads/skills";
+import About from "@/container/About";
 
-function About() {
-  return (
-    <Container>
-      <LanguageToggle />
-      <Profile payload={profile} />
-      <Introduction payload={introduction} />
-      <Skills payload={skills} />
-      <Common payload={experiences} />
-      <Common payload={projects} />
-      <Common payload={presentations} />
-      <Common payload={openSources} />
-      <Common payload={publications} />
-      <Common payload={educations} />
-      <Common payload={extras} />
-    </Container>
-  );
+function HomePage() {
+  useEffect(() => {
+    const currentLang = getCurrentLanguage();
+    if (currentLang !== "ko") {
+      setCurrentLanguage("ko");
+    }
+  }, []);
+
+  return <About />;
 }
 
-export default About;
+export default HomePage;

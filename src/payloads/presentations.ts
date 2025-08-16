@@ -16,12 +16,6 @@ const presentations: Payload = {
       descriptions: [
         {
           content: {
-            ko: "vLLM의 OpenAI-Compatible Server 톺아보기",
-            en: "vLLM의 OpenAI-Compatible Server 톺아보기",
-          },
-        },
-        {
-          content: {
             ko: "GitHub",
             en: "GitHub",
           },
@@ -46,12 +40,6 @@ const presentations: Payload = {
       startedAt: "2025-08-02",
       onGoing: false,
       descriptions: [
-        {
-          content: {
-            ko: "오픈소스 LLM, vLLM으로 Production까지",
-            en: "오픈소스 LLM, vLLM으로 Production까지",
-          },
-        },
         {
           content: {
             ko: "GitHub",

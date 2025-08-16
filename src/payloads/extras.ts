@@ -6,8 +6,8 @@ const extras: Payload = {
   list: [
     {
       title: {
-        ko: "CKA (Certified Kubernetes Administrator)",
         en: "CKA (Certified Kubernetes Administrator)",
+        ko: "CKA (Certified Kubernetes Administrator)",
       },
       href: "https://www.credly.com/badges/8b2942ea-3d31-483b-a64a-6a6e0a4f6a5f/linked_in_profile",
       subTitle: "The Linux Foundation",
@@ -16,8 +16,8 @@ const extras: Payload = {
     },
     {
       title: {
-        ko: "전문연구요원",
         en: "Technical Research Personnel",
+        ko: "전문연구요원",
       },
       subTitle: "AgileSoDA, Tmax WAPL, GenON",
       startedAt: "2023-02-28",
@@ -25,8 +25,8 @@ const extras: Payload = {
     },
     {
       title: {
-        ko: "BOAZ 19기 (빅데이터 동아리)",
         en: "BOAZ 19th (Big Data Club)",
+        ko: "BOAZ 19기 (빅데이터 동아리)",
       },
       href: "https://www.bigdataboaz.com/",
       subTitle: "Data Analysis",
@@ -35,8 +35,8 @@ const extras: Payload = {
       descriptions: [
         {
           content: {
-            ko: "스터디 및 프로젝트 (GitHub)",
             en: "Study & Project (GitHub)",
+            ko: "스터디 및 프로젝트 (GitHub)",
           },
           href: "https://github.com/stars/Zerohertz/lists/99-boaz",
         },
@@ -44,34 +44,34 @@ const extras: Payload = {
     },
     {
       title: {
-        ko: "추가 링크",
         en: "Extra Links",
+        ko: "Extra Links",
       },
       descriptions: [
         {
           content: {
-            ko: "Dev.to",
             en: "Dev.to",
+            ko: "Dev.to",
           },
           href: "https://dev.to/zerohertz",
         },
         {
           content: {
-            ko: "Hashnode",
             en: "Hashnode",
+            ko: "Hashnode",
           },
           href: "https://zerohertz.hashnode.dev",
         },
         {
           content: {
-            ko: "백준 온라인 저지 (BOJ)",
             en: "Baekjoon Online Judge (BOJ)",
+            ko: "Baekjoon Online Judge (BOJ)",
           },
           descriptions: [
             {
               content: {
-                ko: "상위 3.39% (플래티넘 V)",
                 en: "Top 3.39% (Platinum V)",
+                ko: "Top 3.39% (Platinum V)",
               },
             },
           ],
@@ -79,15 +79,15 @@ const extras: Payload = {
         },
         {
           content: {
-            ko: "LeetCode",
             en: "LeetCode",
+            ko: "LeetCode",
           },
           href: "https://leetcode.com/u/Zerohertz/",
         },
         {
           content: {
-            ko: "X",
             en: "X",
+            ko: "X",
           },
           href: "https://x.com/zerohertzkr",
         },
@@ -95,46 +95,46 @@ const extras: Payload = {
     },
     {
       title: {
-        ko: "학술 연구 프로젝트",
         en: "Academic Research Projects",
+        ko: "Academic Research Projects",
       },
       descriptions: [
         {
           content: {
-            ko: "SiM Lab. (스마트 지능형 제조시스템 연구실)",
             en: "SiM Lab. (Smart intelligent Manufacturing system Laboratory)",
+            ko: "SiM Lab. (스마트 지능형 제조시스템 연구실)",
           },
           descriptions: [
             {
               content: {
-                ko: "권취 롤(copper film) 내부 응력 분포를 고려한 Web handling 불량 개선 방안 연구, SK 넥실리스 (2022. 10 ~ 2023. 01)",
                 en: "Research on Web handling defect improvement considering internal stress distribution of winding roll (copper film), SK Nexilis (Oct 2022 ~ Jan 2023)",
+                ko: "권취 롤(copper film) 내부 응력 분포를 고려한 Web handling 불량 개선 방안 연구, SK 넥실리스 (2022. 10 ~ 2023. 01)",
               },
               descriptions: [
                 {
                   content: {
-                    ko: "제품 운송 진동, 충격에 따른 가속도 데이터 특징 분석",
                     en: "Analysis of acceleration data characteristics from product transportation vibration and impact",
+                    ko: "제품 운송 진동, 충격에 따른 가속도 데이터 특징 분석",
                   },
                 },
               ],
             },
             {
               content: {
-                ko: "미래형 센서를 위한 초정밀 대면적 생산시스템 전문 인력 양성, 한국연구재단 (2021. 09 ~ 2023. 01)",
                 en: "Professional workforce training for ultra-precision large-area production systems for future sensors, National Research Foundation of Korea (Sep 2021 ~ Jan 2023)",
+                ko: "미래형 센서를 위한 초정밀 대면적 생산시스템 전문 인력 양성, 한국연구재단 (2021. 09 ~ 2023. 01)",
               },
             },
             {
               content: {
-                ko: "소형위성 분리용 어댑터 최적설계, 스페이스베이 (2022. 09 ~ 2023. 01)",
                 en: "Optimal design of adapter for small satellite separation, SpaceBay (Sep 2022 ~ Jan 2023)",
+                ko: "소형위성 분리용 어댑터 최적설계, 스페이스베이 (2022. 09 ~ 2023. 01)",
               },
               descriptions: [
                 {
                   content: {
-                    ko: "모터 동특성 분석 모델 개발 및 최적화",
                     en: "Development and optimization of motor dynamic characteristic analysis model",
+                    ko: "모터 동특성 분석 모델 개발 및 최적화",
                   },
                 },
               ],
@@ -270,34 +270,34 @@ const extras: Payload = {
         },
         {
           content: {
-            ko: "MRV Lab. (의료 로보틱스 및 가상현실 연구실)",
             en: "MRV Lab. (Medical Robotics and Virtual Reality Laboratory)",
+            ko: "MRV Lab. (의료 로보틱스 및 가상현실 연구실)",
           },
           descriptions: [
             {
               content: {
-                ko: "실감형 실내 사이클링을 위한 2자유도 실내 사이클링 플랫폼 및 가상현실기반 고품질 사이클링 시뮬레이션기술 개발, 중소벤처기업진흥공단 (2019. 05 ~ 2020. 05)",
                 en: "실감형 실내 사이클링을 위한 2자유도 실내 사이클링 플랫폼 및 가상현실기반 고품질 사이클링 시뮬레이션기술 개발, 중소벤처기업진흥공단 (2019. 05 ~ 2020. 05)",
+                ko: "실감형 실내 사이클링을 위한 2자유도 실내 사이클링 플랫폼 및 가상현실기반 고품질 사이클링 시뮬레이션기술 개발, 중소벤처기업진흥공단 (2019. 05 ~ 2020. 05)",
               },
               descriptions: [
                 {
                   content: {
-                    ko: "Unreal Engine 기반 가상 현실 환경 구축",
                     en: "Unreal Engine 기반 가상 현실 환경 구축",
+                    ko: "Unreal Engine 기반 가상 현실 환경 구축",
                   },
                 },
               ],
             },
             {
               content: {
-                ko: "스마트 커뮤니티 폴리싱 시스템(Googi) 개발, 한국연구재단 (2018. 06 ~ 2019. 11)",
                 en: "스마트 커뮤니티 폴리싱 시스템(Googi) 개발, 한국연구재단 (2018. 06 ~ 2019. 11)",
+                ko: "스마트 커뮤니티 폴리싱 시스템(Googi) 개발, 한국연구재단 (2018. 06 ~ 2019. 11)",
               },
               descriptions: [
                 {
                   content: {
-                    ko: "Unreal Engine 기반 가상 현실 환경 구축",
                     en: "Unreal Engine 기반 가상 현실 환경 구축",
+                    ko: "Unreal Engine 기반 가상 현실 환경 구축",
                   },
                 },
               ],
@@ -308,240 +308,240 @@ const extras: Payload = {
     },
     {
       title: {
-        ko: "학술 포스터",
         en: "Academic Posters",
+        ko: "Academic Posters",
       },
       descriptions: [
         {
           content: {
-            ko: "Multi-Phase Data Configuration Approach for Defect Detection on Roll-to-Roll System Bearings with Massive Data",
             en: "Multi-Phase Data Configuration Approach for Defect Detection on Roll-to-Roll System Bearings with Massive Data",
+            ko: "Multi-Phase Data Configuration Approach for Defect Detection on Roll-to-Roll System Bearings with Massive Data",
           },
           descriptions: [
             {
               content: {
-                ko: "Author: Yoonjae Lee, **Hyogeun Oh**, Changwoo Lee",
                 en: "Author: Yoonjae Lee, **Hyogeun Oh**, Changwoo Lee",
+                ko: "Author: Yoonjae Lee, **Hyogeun Oh**, Changwoo Lee",
               },
             },
             {
               content: {
-                ko: "Conference: 한국정밀공학회, Daegu, Korea",
                 en: "Conference: 한국정밀공학회, Daegu, Korea",
+                ko: "Conference: 한국정밀공학회, Daegu, Korea",
               },
             },
             {
               content: {
-                ko: "Presented: 2022. 10",
                 en: "Presented: 2022. 10",
+                ko: "Presented: 2022. 10",
               },
             },
           ],
         },
         {
           content: {
-            ko: "Optimization Algorithm of Bearing Condition Diagnosis Model Based on Feature Engineering",
             en: "Optimization Algorithm of Bearing Condition Diagnosis Model Based on Feature Engineering",
+            ko: "Optimization Algorithm of Bearing Condition Diagnosis Model Based on Feature Engineering",
           },
           descriptions: [
             {
               content: {
-                ko: "Author: **Hyogeun Oh**, Yoonjae Lee, Changwoo Lee",
                 en: "Author: **Hyogeun Oh**, Yoonjae Lee, Changwoo Lee",
+                ko: "Author: **Hyogeun Oh**, Yoonjae Lee, Changwoo Lee",
               },
             },
             {
               content: {
-                ko: "Conference: PRESM, Jeju, Korea",
                 en: "Conference: PRESM, Jeju, Korea",
+                ko: "Conference: PRESM, Jeju, Korea",
               },
             },
             {
               content: {
-                ko: "Presented: 2022. 07",
                 en: "Presented: 2022. 07",
+                ko: "Presented: 2022. 07",
               },
             },
           ],
         },
         {
           content: {
-            ko: "Analysis of lateral behavior in drying system for roll–to–roll printed electronics based on computational fluid dynamics",
             en: "Analysis of lateral behavior in drying system for roll–to–roll printed electronics based on computational fluid dynamics",
+            ko: "Analysis of lateral behavior in drying system for roll–to–roll printed electronics based on computational fluid dynamics",
           },
           descriptions: [
             {
               content: {
-                ko: "Author: Minho Jo, **Hyogeun Oh**, Hojin Jeon, Joungbae Choi, Changwoo Lee",
                 en: "Author: Minho Jo, **Hyogeun Oh**, Hojin Jeon, Joungbae Choi, Changwoo Lee",
+                ko: "Author: Minho Jo, **Hyogeun Oh**, Hojin Jeon, Joungbae Choi, Changwoo Lee",
               },
             },
             {
               content: {
-                ko: "Conference: 대한기계학회, Busan, Korea",
                 en: "Conference: 대한기계학회, Busan, Korea",
+                ko: "Conference: 대한기계학회, Busan, Korea",
               },
             },
             {
               content: {
-                ko: "Presented: 2022. 05",
                 en: "Presented: 2022. 05",
+                ko: "Presented: 2022. 05",
               },
             },
           ],
         },
         {
           content: {
-            ko: "Diagnosis of Roll-to-Roll Printed Electronic System Using a Separability Quantification Algorithm of Density-Based Feature Data",
             en: "Diagnosis of Roll-to-Roll Printed Electronic System Using a Separability Quantification Algorithm of Density-Based Feature Data",
+            ko: "Diagnosis of Roll-to-Roll Printed Electronic System Using a Separability Quantification Algorithm of Density-Based Feature Data",
           },
           descriptions: [
             {
               content: {
-                ko: "Author: **Hyogeun Oh**, Changwoo Lee",
                 en: "Author: **Hyogeun Oh**, Changwoo Lee",
+                ko: "Author: **Hyogeun Oh**, Changwoo Lee",
               },
             },
             {
               content: {
-                ko: "Conference: 소음진동공학회, Changwon, Korea",
                 en: "Conference: 소음진동공학회, Changwon, Korea",
+                ko: "Conference: 소음진동공학회, Changwon, Korea",
               },
             },
             {
               content: {
-                ko: "Presented: 2022. 05",
                 en: "Presented: 2022. 05",
+                ko: "Presented: 2022. 05",
               },
             },
           ],
         },
         {
           content: {
-            ko: "Compactness-based Feature Engineering Algorithm for Diagnosing Driven Roll in Roll-to-Roll Continuous Process",
             en: "Compactness-based Feature Engineering Algorithm for Diagnosing Driven Roll in Roll-to-Roll Continuous Process",
+            ko: "Compactness-based Feature Engineering Algorithm for Diagnosing Driven Roll in Roll-to-Roll Continuous Process",
           },
           descriptions: [
             {
               content: {
-                ko: "Author: **Hyogeun Oh**, Joungbae Choi, Minjae Kim, Changwoo Lee",
                 en: "Author: **Hyogeun Oh**, Joungbae Choi, Minjae Kim, Changwoo Lee",
+                ko: "Author: **Hyogeun Oh**, Joungbae Choi, Minjae Kim, Changwoo Lee",
               },
             },
             {
               content: {
-                ko: "Conference: 한국정밀공학회, Jeju, Korea",
                 en: "Conference: 한국정밀공학회, Jeju, Korea",
+                ko: "Conference: 한국정밀공학회, Jeju, Korea",
               },
             },
             {
               content: {
-                ko: "Presented: 2022. 05",
                 en: "Presented: 2022. 05",
+                ko: "Presented: 2022. 05",
               },
             },
           ],
         },
         {
           content: {
-            ko: "Meniscus image-based thickness prediction of coated layer in Roll-to-Roll slot-die coating processes",
             en: "Meniscus image-based thickness prediction of coated layer in Roll-to-Roll slot-die coating processes",
+            ko: "Meniscus image-based thickness prediction of coated layer in Roll-to-Roll slot-die coating processes",
           },
           descriptions: [
             {
               content: {
-                ko: "Author: **Hyogeun Oh**, Myeonghwan Yeo, Changwoo Lee",
                 en: "Author: **Hyogeun Oh**, Myeonghwan Yeo, Changwoo Lee",
+                ko: "Author: **Hyogeun Oh**, Myeonghwan Yeo, Changwoo Lee",
               },
             },
             {
               content: {
-                ko: "Conference: 한국유연인쇄전자학회, Hoengseong, Korea",
                 en: "Conference: 한국유연인쇄전자학회, Hoengseong, Korea",
+                ko: "Conference: 한국유연인쇄전자학회, Hoengseong, Korea",
               },
             },
             {
               content: {
-                ko: "Presented: 2021. 12",
                 en: "Presented: 2021. 12",
+                ko: "Presented: 2021. 12",
               },
             },
           ],
         },
         {
           content: {
-            ko: "Optimization of Statistical Feature Variables for Fault Diagnosis on Roll-to-Roll System Spindle Bearings",
             en: "Optimization of Statistical Feature Variables for Fault Diagnosis on Roll-to-Roll System Spindle Bearings",
+            ko: "Optimization of Statistical Feature Variables for Fault Diagnosis on Roll-to-Roll System Spindle Bearings",
           },
           descriptions: [
             {
               content: {
-                ko: "Author: Yoonjae Lee, Myeonghwan Yeo, **Hyogeun Oh**, Changwoo Lee",
                 en: "Author: Yoonjae Lee, Myeonghwan Yeo, **Hyogeun Oh**, Changwoo Lee",
+                ko: "Author: Yoonjae Lee, Myeonghwan Yeo, **Hyogeun Oh**, Changwoo Lee",
               },
             },
             {
               content: {
-                ko: "Conference: 한국정밀공학회, Online, Korea",
                 en: "Conference: 한국정밀공학회, Online, Korea",
+                ko: "Conference: 한국정밀공학회, Online, Korea",
               },
             },
             {
               content: {
-                ko: "Presented: 2021. 11",
                 en: "Presented: 2021. 11",
+                ko: "Presented: 2021. 11",
               },
             },
           ],
         },
         {
           content: {
-            ko: "Condition Diagnosis of Roll Eccentricity Disturbance in Roll-to-Roll Continuous Systems",
             en: "Condition Diagnosis of Roll Eccentricity Disturbance in Roll-to-Roll Continuous Systems",
+            ko: "Condition Diagnosis of Roll Eccentricity Disturbance in Roll-to-Roll Continuous Systems",
           },
           descriptions: [
             {
               content: {
-                ko: "Author: **Hyogeun Oh**, Yoonjae Lee, Byeonghui Park, Changwoo Lee",
                 en: "Author: **Hyogeun Oh**, Yoonjae Lee, Byeonghui Park, Changwoo Lee",
+                ko: "Author: **Hyogeun Oh**, Yoonjae Lee, Byeonghui Park, Changwoo Lee",
               },
             },
             {
               content: {
-                ko: "Conference: 한국정밀공학회, Online, Korea",
                 en: "Conference: 한국정밀공학회, Online, Korea",
+                ko: "Conference: 한국정밀공학회, Online, Korea",
               },
             },
             {
               content: {
-                ko: "Presented: 2021. 05",
                 en: "Presented: 2021. 05",
+                ko: "Presented: 2021. 05",
               },
             },
           ],
         },
         {
           content: {
-            ko: "Diagnosis System for Ball Bearing Cage Defects using Fisher Discriminant Ratio",
             en: "Diagnosis System for Ball Bearing Cage Defects using Fisher Discriminant Ratio",
+            ko: "Diagnosis System for Ball Bearing Cage Defects using Fisher Discriminant Ratio",
           },
           descriptions: [
             {
               content: {
-                ko: "Author: **Hyogeun Oh**, Yoonjae Lee, Changwoo Lee",
                 en: "Author: **Hyogeun Oh**, Yoonjae Lee, Changwoo Lee",
+                ko: "Author: **Hyogeun Oh**, Yoonjae Lee, Changwoo Lee",
               },
             },
             {
               content: {
-                ko: "Conference: 한국정밀공학회, Online, Korea",
                 en: "Conference: 한국정밀공학회, Online, Korea",
+                ko: "Conference: 한국정밀공학회, Online, Korea",
               },
             },
             {
               content: {
-                ko: "Presented: 2020. 09",
                 en: "Presented: 2020. 09",
+                ko: "Presented: 2020. 09",
               },
             },
           ],

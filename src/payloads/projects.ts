@@ -149,12 +149,16 @@ const projects: Payload = {
           },
         },
         {
-          content:
-            "Faced with significant compatibility issues due to inconsistent libraries and formats for model outputs, standardized the data format for preprocessing and model inference visualization, enabling consistent visualization and resolving unexpected compatibility problems.",
+          content: {
+            ko: "Faced with significant compatibility issues due to inconsistent libraries and formats for model outputs, standardized the data format for preprocessing and model inference visualization, enabling consistent visualization and resolving unexpected compatibility problems.",
+            en: "Faced with significant compatibility issues due to inconsistent libraries and formats for model outputs, standardized the data format for preprocessing and model inference visualization, enabling consistent visualization and resolving unexpected compatibility problems.",
+          },
         },
         {
-          content:
-            "Addressed inefficiencies in post-processing due to Python-native functions with high time complexity by optimizing them with Cython-native functions and improving time complexity. ([inference time decreased by 74.12%](https://github.com/Zerohertz/pan_pp.pytorch/tree/SpeedImprovement))",
+          content: {
+            ko: "Addressed inefficiencies in post-processing due to Python-native functions with high time complexity by optimizing them with Cython-native functions and improving time complexity. ([inference time decreased by 74.12%](https://github.com/Zerohertz/pan_pp.pytorch/tree/SpeedImprovement))",
+            en: "Addressed inefficiencies in post-processing due to Python-native functions with high time complexity by optimizing them with Cython-native functions and improving time complexity. ([inference time decreased by 74.12%](https://github.com/Zerohertz/pan_pp.pytorch/tree/SpeedImprovement))",
+          },
           image: "images/python-library-for-pre-post-processing-visualization-and-model-backend-0.webp",
         },
         {
@@ -186,31 +190,43 @@ const projects: Payload = {
       ],
       descriptions: [
         {
-          content:
-            "Developed models for document area detection, rotated document classification, and detection of text, signatures, and checkboxes, along with a Python backend for model deployment.",
+          content: {
+            ko: "Developed models for document area detection, rotated document classification, and detection of text, signatures, and checkboxes, along with a Python backend for model deployment.",
+            en: "Developed models for document area detection, rotated document classification, and detection of text, signatures, and checkboxes, along with a Python backend for model deployment.",
+          },
         },
         {
-          content:
-            "Integrated project source codes using Git Submodule to facilitate a smooth collaborative environment.",
+          content: {
+            ko: "Integrated project source codes using Git Submodule to facilitate a smooth collaborative environment.",
+            en: "Integrated project source codes using Git Submodule to facilitate a smooth collaborative environment.",
+          },
         },
         {
-          content:
-            "Implemented a pipeline using GitLab CI and Kubernetes to separate backend dependencies from code and weights, deploying through the Kubernetes sidecar pattern, which resolved versioning challenges and significantly reduced build times for the model backend.",
+          content: {
+            ko: "Implemented a pipeline using GitLab CI and Kubernetes to separate backend dependencies from code and weights, deploying through the Kubernetes sidecar pattern, which resolved versioning challenges and significantly reduced build times for the model backend.",
+            en: "Implemented a pipeline using GitLab CI and Kubernetes to separate backend dependencies from code and weights, deploying through the Kubernetes sidecar pattern, which resolved versioning challenges and significantly reduced build times for the model backend.",
+          },
           image: "images/ai-based-ocr-solution-twinreader-0.webp",
         },
         {
-          content:
-            "Faced with excessive GPU usage during model deployment, resolved the issue by identifying and fixing a memory leak through GPU resource monitoring and logging. (GPU memory usage reduced by 47.9%)",
+          content: {
+            ko: "Faced with excessive GPU usage during model deployment, resolved the issue by identifying and fixing a memory leak through GPU resource monitoring and logging. (GPU memory usage reduced by 47.9%)",
+            en: "Faced with excessive GPU usage during model deployment, resolved the issue by identifying and fixing a memory leak through GPU resource monitoring and logging. (GPU memory usage reduced by 47.9%)",
+          },
           image: "images/ai-based-ocr-solution-twinreader-1.webp",
         },
         {
-          content:
-            "Reduced inference time for a text detection model, where frequent calls made optimization critical, by utilizing TensorRT-based quantization. ([inference time decreased by 87.31%](https://github.com/Zerohertz/PANPP/tree/TensorRT))",
+          content: {
+            ko: "Reduced inference time for a text detection model, where frequent calls made optimization critical, by utilizing TensorRT-based quantization. ([inference time decreased by 87.31%](https://github.com/Zerohertz/PANPP/tree/TensorRT))",
+            en: "Reduced inference time for a text detection model, where frequent calls made optimization critical, by utilizing TensorRT-based quantization. ([inference time decreased by 87.31%](https://github.com/Zerohertz/PANPP/tree/TensorRT))",
+          },
           image: "images/ai-based-ocr-solution-twinreader-2.webp",
         },
         {
-          content:
-            "Encountered low accuracy in document rotation classification, addressed by performing batch inference on image tensors rotated in four directions and averaging the results. (improved accuracy by 2.01%p)",
+          content: {
+            ko: "Encountered low accuracy in document rotation classification, addressed by performing batch inference on image tensors rotated in four directions and averaging the results. (improved accuracy by 2.01%p)",
+            en: "Encountered low accuracy in document rotation classification, addressed by performing batch inference on image tensors rotated in four directions and averaging the results. (improved accuracy by 2.01%p)",
+          },
           image: "images/ai-based-ocr-solution-twinreader-3.webp",
         },
       ],
@@ -226,20 +242,28 @@ const projects: Payload = {
       keywords: ["Python", "PyTorch", "Triton Inference Server", "Label Studio", "Streamlit", "Docker", "Kubernetes"],
       descriptions: [
         {
-          content:
-            "Performed clustering, annotation, preprocessing, training, and deployment to develop a model for extracting information from a wide variety of trade document formats.",
+          content: {
+            ko: "Performed clustering, annotation, preprocessing, training, and deployment to develop a model for extracting information from a wide variety of trade document formats.",
+            en: "Performed clustering, annotation, preprocessing, training, and deployment to develop a model for extracting information from a wide variety of trade document formats.",
+          },
         },
         {
-          content:
-            "Faced with the challenge of categorizing large volumes of unstructured PDF documents, developed an AI OCR-based pipeline utilizing OCR results and LLM prompting to efficiently classify and sort documents. (achieved 93.75% accuracy)",
+          content: {
+            ko: "Faced with the challenge of categorizing large volumes of unstructured PDF documents, developed an AI OCR-based pipeline utilizing OCR results and LLM prompting to efficiently classify and sort documents. (achieved 93.75% accuracy)",
+            en: "Faced with the challenge of categorizing large volumes of unstructured PDF documents, developed an AI OCR-based pipeline utilizing OCR results and LLM prompting to efficiently classify and sort documents. (achieved 93.75% accuracy)",
+          },
         },
         {
-          content:
-            "To address the high time and cost demands of large-scale data annotation requiring expert knowledge, accelerated the process by implementing pre-labeling through an ML backend using Label Studio SDK, significantly reduced annotation time and costs.",
+          content: {
+            ko: "To address the high time and cost demands of large-scale data annotation requiring expert knowledge, accelerated the process by implementing pre-labeling through an ML backend using Label Studio SDK, significantly reduced annotation time and costs.",
+            en: "To address the high time and cost demands of large-scale data annotation requiring expert knowledge, accelerated the process by implementing pre-labeling through an ML backend using Label Studio SDK, significantly reduced annotation time and costs.",
+          },
         },
         {
-          content:
-            "Encountered difficulties in manually checking complex human errors during annotation review, developed a Streamlit-based GUI to allow easy detection and correction of these errors through simple configurations.",
+          content: {
+            ko: "Encountered difficulties in manually checking complex human errors during annotation review, developed a Streamlit-based GUI to allow easy detection and correction of these errors through simple configurations.",
+            en: "Encountered difficulties in manually checking complex human errors during annotation review, developed a Streamlit-based GUI to allow easy detection and correction of these errors through simple configurations.",
+          },
         },
       ],
     },
@@ -253,12 +277,24 @@ const projects: Payload = {
       endedAt: "2024-02",
       keywords: ["Python", "PyTorch", "Triton Inference Server", "Streamlit", "Docker", "Kubernetes"],
       descriptions: [
-        { content: "Developed a vehicle type classification model for PoC execution." },
         {
-          content:
-            "Conducted research and development models for filter, part recognition, repair type, and damage type, along with the model inference pipeline.",
+          content: {
+            ko: "Developed a vehicle type classification model for PoC execution.",
+            en: "Developed a vehicle type classification model for PoC execution.",
+          },
         },
-        { content: "Developed a demo page using Streamlit and deployed it on Kubernetes." },
+        {
+          content: {
+            ko: "Conducted research and development models for filter, part recognition, repair type, and damage type, along with the model inference pipeline.",
+            en: "Conducted research and development models for filter, part recognition, repair type, and damage type, along with the model inference pipeline.",
+          },
+        },
+        {
+          content: {
+            ko: "Developed a demo page using Streamlit and deployed it on Kubernetes.",
+            en: "Developed a demo page using Streamlit and deployed it on Kubernetes.",
+          },
+        },
       ],
     },
     {
@@ -272,10 +308,16 @@ const projects: Payload = {
       keywords: ["Python", "PyTorch", "Triton Inference Server", "FastAPI", "Gradio", "Docker", "Kubernetes"],
       descriptions: [
         {
-          content: "Developed models for segmentation of burn areas and severity diagnosis in burn patients.",
+          content: {
+            ko: "Developed models for segmentation of burn areas and severity diagnosis in burn patients.",
+            en: "Developed models for segmentation of burn areas and severity diagnosis in burn patients.",
+          },
         },
         {
-          content: "Designed and developed an API for model deployment using Triton Inference Server.",
+          content: {
+            ko: "Designed and developed an API for model deployment using Triton Inference Server.",
+            en: "Designed and developed an API for model deployment using Triton Inference Server.",
+          },
           image: "images/ai-diagnostic-service-for-burn-patients-0.webp",
         },
       ],
@@ -291,33 +333,56 @@ const projects: Payload = {
       keywords: ["Kubernetes", "Traefik", "Prometheus", "Grafana", "Apache Airflow", "Argo CD", "Jenkins"],
       descriptions: [
         {
-          content: "Zerohertz/k8s-on-premise (GitHub)",
+          content: {
+            ko: "Zerohertz/k8s-on-premise (GitHub)",
+            en: "Zerohertz/k8s-on-premise (GitHub)",
+          },
           href: "https://github.com/Zerohertz/k8s-on-premise",
           image: "images/on-premise-kubernetes-cluster-0.webp",
         },
         {
-          content: "Blog posts",
+          content: {
+            ko: "Blog posts",
+            en: "Blog posts",
+          },
           href: "https://zerohertz.github.io/tags/home-server/",
           image: "images/on-premise-kubernetes-cluster-1.webp",
         },
         {
-          content:
-            "Installed Kubernetes using Kubeadm on an on-premise environment to enhance understanding of Kubernetes architecture and practical usage.",
+          content: {
+            ko: "Installed Kubernetes using Kubeadm on an on-premise environment to enhance understanding of Kubernetes architecture and practical usage.",
+            en: "Installed Kubernetes using Kubeadm on an on-premise environment to enhance understanding of Kubernetes architecture and practical usage.",
+          },
         },
         {
-          content: "Secured deployed services by implementing HTTPS protocol and Google OAuth2 through Traefik.",
+          content: {
+            ko: "Secured deployed services by implementing HTTPS protocol and Google OAuth2 through Traefik.",
+            en: "Secured deployed services by implementing HTTPS protocol and Google OAuth2 through Traefik.",
+          },
         },
         {
-          content: "Established GitOps by automating build and deployment processes using GitHub Actions and Argo CD.",
+          content: {
+            ko: "Established GitOps by automating build and deployment processes using GitHub Actions and Argo CD.",
+            en: "Established GitOps by automating build and deployment processes using GitHub Actions and Argo CD.",
+          },
         },
         {
-          content: "Built a node status monitoring GUI leveraging Node Exporter, Prometheus, and Grafana.",
+          content: {
+            ko: "Built a node status monitoring GUI leveraging Node Exporter, Prometheus, and Grafana.",
+            en: "Built a node status monitoring GUI leveraging Node Exporter, Prometheus, and Grafana.",
+          },
         },
         {
-          content: "Automated various tasks using Apache Airflow integrated with KubernetesPodOperator.",
+          content: {
+            ko: "Automated various tasks using Apache Airflow integrated with KubernetesPodOperator.",
+            en: "Automated various tasks using Apache Airflow integrated with KubernetesPodOperator.",
+          },
         },
         {
-          content: "Set up a Docker image build and deployment pipeline using Jenkins and Kaniko.",
+          content: {
+            ko: "Set up a Docker image build and deployment pipeline using Jenkins and Kaniko.",
+            en: "Set up a Docker image build and deployment pipeline using Jenkins and Kaniko.",
+          },
         },
       ],
     },
@@ -332,13 +397,24 @@ const projects: Payload = {
       keywords: ["Python", "PyTorch", "Triton Inference Server", "FastAPI", "Amazon EC2", "Docker"],
       descriptions: [
         {
-          content: "Team-BoonMoSa (GitHub)",
+          content: {
+            ko: "Team-BoonMoSa (GitHub)",
+            en: "Team-BoonMoSa (GitHub)",
+          },
           href: "https://github.com/Team-BoonMoSa",
           image: "images/mosaic-classification-0.webp",
         },
-        { content: "Developed a YOLOv5 based logo segmentation model." },
         {
-          content: "Constructed a model deployment server on Amazon EC2 Inf1.",
+          content: {
+            ko: "Developed a YOLOv5 based logo segmentation model.",
+            en: "Developed a YOLOv5 based logo segmentation model.",
+          },
+        },
+        {
+          content: {
+            ko: "Constructed a model deployment server on Amazon EC2 Inf1.",
+            en: "Constructed a model deployment server on Amazon EC2 Inf1.",
+          },
           image: "images/mosaic-classification-1.webp",
         },
       ],

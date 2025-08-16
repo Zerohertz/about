@@ -1,7 +1,7 @@
 import { MultiLanguageText } from "@/utils/MultiLanguage";
 
 interface Description {
-  content: string | MultiLanguageText;
+  content: MultiLanguageText;
   className?: string;
   href?: string;
   image?: string;

@@ -146,7 +146,7 @@ const Left = ({ item, period, language }: { item: Item; period?: boolean; langua
           {period && (
             <div className="text-end">
               <Badge className="me-1" color="primary">
-                {language === "ko" ? "현재" : "Present"}
+                {"Present"}
               </Badge>
               <Badge color="secondary">{getDuration(startedAt, undefined)}</Badge>
             </div>

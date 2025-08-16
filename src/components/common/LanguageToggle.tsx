@@ -1,27 +1,44 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Button } from "reactstrap";
 
-import { getCurrentLanguage, Language, toggleLanguage } from "@/utils/GlobalLanguage";
+import { useRouter } from "next/router";
+
+import { Language, setCurrentLanguage } from "@/utils/GlobalLanguage";
+import { useLanguage } from "@/utils/useLanguage";
 
 function LanguageToggle() {
-  const [language, setLanguage] = useState<Language>("en");
+  const router = useRouter();
+  const { language, mounted } = useLanguage();
 
   useEffect(() => {
-    setLanguage(getCurrentLanguage());
+    if (!mounted) return;
 
-    const handleLanguageChange = (event: CustomEvent<Language>) => {
-      setLanguage(event.detail);
-    };
+    let targetLanguage: Language;
 
-    window.addEventListener("languageChange", handleLanguageChange as EventListener);
+    if (router.pathname === "/[lang]" && router.query.lang === "en") {
+      targetLanguage = "en";
+    } else {
+      targetLanguage = "ko";
+    }
 
-    return () => {
-      window.removeEventListener("languageChange", handleLanguageChange as EventListener);
-    };
-  }, []);
+    if (language !== targetLanguage) {
+      setCurrentLanguage(targetLanguage);
+    }
+  }, [mounted, router.pathname, router.query, language]);
+
+  const handleLanguageToggle = () => {
+    const newLanguage: Language = language === "ko" ? "en" : "ko";
+    setCurrentLanguage(newLanguage);
+
+    if (newLanguage === "ko") {
+      router.push("/", undefined, { scroll: false });
+    } else {
+      router.push("/en", undefined, { scroll: false });
+    }
+  };
 
   return (
-    <Button size="sm" onClick={toggleLanguage} className="language-toggle">
+    <Button size="sm" onClick={handleLanguageToggle} className="language-toggle">
       {language === "ko" ? "ENG" : "KOR"}
     </Button>
   );

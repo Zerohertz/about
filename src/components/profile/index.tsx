@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Alert, Col, Row } from "reactstrap";
 
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -51,9 +52,27 @@ const Component = ({ payload }: { payload: Payload }) => {
 };
 
 const Profile = ({ src }: { src: string }) => {
+  const router = useRouter();
+
+  const getImageSrc = (originalSrc: string) => {
+    if (originalSrc.startsWith("http")) return originalSrc;
+
+    const isGitHubPages = router.asPath.startsWith("/about/");
+    const basePath = isGitHubPages ? "/about" : "";
+
+    return originalSrc.startsWith("/") ? `${basePath}${originalSrc}` : `${basePath}/${originalSrc}`;
+  };
+
   return (
     <div className="text-md-start text-center mb-md-0 mb-3">
-      <Image className="img-fluid rounded" src={src} alt="Profile" width={300} height={300} quality={100} />
+      <Image
+        className="img-fluid rounded"
+        src={getImageSrc(src)}
+        alt="Profile"
+        width={300}
+        height={300}
+        quality={100}
+      />
     </div>
   );
 };

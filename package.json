@@ -2,6 +2,9 @@
   "name": "about",
   "version": "1.0.4",
   "private": true,
+  "engines": {
+    "node": "24.1.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

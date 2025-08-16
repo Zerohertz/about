@@ -30,11 +30,21 @@ function LanguageToggle() {
     const newLanguage: Language = language === "en" ? "ko" : "en";
     setCurrentLanguage(newLanguage);
 
-    if (newLanguage === "en") {
-      router.push("/", undefined, { scroll: false });
-    } else {
-      router.push("/ko", undefined, { scroll: false });
-    }
+    // Calculate current scroll percentage
+    const scrollTop = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = documentHeight > 0 ? scrollTop / documentHeight : 0;
+
+    const targetPath = newLanguage === "en" ? "/" : "/ko";
+
+    router.push(targetPath, undefined, { scroll: false }).then(() => {
+      // Restore scroll position based on percentage
+      setTimeout(() => {
+        const newDocumentHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const newScrollTop = newDocumentHeight * scrollPercent;
+        window.scrollTo({ top: newScrollTop, behavior: "smooth" });
+      }, 100);
+    });
   };
 
   return (

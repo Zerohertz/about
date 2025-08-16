@@ -11,7 +11,7 @@ fi
 echo "🔍 Running Gemini code review for $FILE_PATH..." >&2
 
 # TypeScript/JavaScript-specific review prompt
-REVIEW_OUTPUT=$(gemini -m gemini-2.5-flash -p "@$FILE_PATH" "Review this TypeScript/JavaScript code for:
+REVIEW_OUTPUT=$(gemini -m gemini-2.5-flash -p "@$FILE_PATH Review this TypeScript/JavaScript code for:
 1. TypeScript type safety and interface usage
 2. React component patterns and hooks best practices (if applicable)
 3. Import/export organization and ESLint rule compliance

@@ -1,15 +1,8 @@
 import Image from "next/image";
 
+import { getImageSrc } from "@/utils/ImagePath";
+
 const CustomImage = ({ src }: { src: string }) => {
-  const getImageSrc = (originalSrc: string) => {
-    if (originalSrc.startsWith("http")) return originalSrc;
-
-    const isGitHubPages = typeof window !== "undefined" && window.location.hostname === "zerohertz.github.io";
-    const basePath = isGitHubPages ? "/about" : "";
-
-    return originalSrc.startsWith("/") ? `${basePath}${originalSrc}` : `${basePath}/${originalSrc}`;
-  };
-
   return (
     <Image
       className="image"

@@ -190,7 +190,7 @@ const openSources: Payload = {
         },
         {
           content: {
-            ko: "2018년부터 꺼임없이 200여 편의 글을 작성하여 1,500명 이상의 MAU와 월 2,600회 이상의 페이지 비유를 달성했습니다.",
+            ko: "2018년부터 끊임없이 200여 편의 글을 작성하여 1,500명 이상의 MAU와 월 2,600회 이상의 페이지 비유를 달성했습니다.",
             en: "Achieved 1,500+ MAU and 2,600+ monthly page views by consistently writing 200+ posts since 2018.",
           },
         },

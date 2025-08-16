@@ -8,9 +8,9 @@ declare global {
 
 export function getCurrentLanguage(): Language {
   if (typeof window !== "undefined") {
-    return window.currentLanguage || "ko";
+    return window.currentLanguage || "en";
   }
-  return "ko";
+  return "en";
 }
 
 export function setCurrentLanguage(language: Language): void {
@@ -22,5 +22,5 @@ export function setCurrentLanguage(language: Language): void {
 
 export function toggleLanguage(): void {
   const current = getCurrentLanguage();
-  setCurrentLanguage(current === "ko" ? "en" : "ko");
+  setCurrentLanguage(current === "en" ? "ko" : "en");
 }

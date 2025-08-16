@@ -15,14 +15,14 @@ function LangAbout({ lang }: Props) {
   const router = useRouter();
 
   useEffect(() => {
-    if (lang === "ko") {
+    if (lang === "en") {
       router.replace("/");
       return;
     }
 
-    if (lang === "en") {
+    if (lang === "ko") {
       const currentLang = getCurrentLanguage();
-      if (currentLang !== "en") {
+      if (currentLang !== "ko") {
         setCurrentLanguage(lang);
       }
     }

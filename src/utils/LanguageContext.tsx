@@ -18,7 +18,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const [language, setLanguageState] = useState<Language>("en");
 
   const toggleLanguage = () => {
-    setLanguageState((prev) => (prev === "ko" ? "en" : "ko"));
+    setLanguageState((prev) => (prev === "en" ? "ko" : "en"));
   };
 
   const setLanguage = (lang: Language) => {

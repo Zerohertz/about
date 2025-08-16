@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { getCurrentLanguage, Language } from "@/utils/GlobalLanguage";
 
 export function useLanguage(initialLanguage?: Language) {
-  const [language, setLanguage] = useState<Language>(initialLanguage || "ko");
+  const [language, setLanguage] = useState<Language>(initialLanguage || "en");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

@@ -7,8 +7,8 @@ import About from "@/container/About";
 function HomePage() {
   useEffect(() => {
     const currentLang = getCurrentLanguage();
-    if (currentLang !== "ko") {
-      setCurrentLanguage("ko");
+    if (currentLang !== "en") {
+      setCurrentLanguage("en");
     }
   }, []);
 

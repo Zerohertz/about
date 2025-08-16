@@ -15,10 +15,10 @@ function LanguageToggle() {
 
     let targetLanguage: Language;
 
-    if (router.pathname === "/[lang]" && router.query.lang === "en") {
-      targetLanguage = "en";
-    } else {
+    if (router.pathname === "/[lang]" && router.query.lang === "ko") {
       targetLanguage = "ko";
+    } else {
+      targetLanguage = "en";
     }
 
     if (language !== targetLanguage) {
@@ -27,19 +27,19 @@ function LanguageToggle() {
   }, [mounted, router.pathname, router.query, language]);
 
   const handleLanguageToggle = () => {
-    const newLanguage: Language = language === "ko" ? "en" : "ko";
+    const newLanguage: Language = language === "en" ? "ko" : "en";
     setCurrentLanguage(newLanguage);
 
-    if (newLanguage === "ko") {
+    if (newLanguage === "en") {
       router.push("/", undefined, { scroll: false });
     } else {
-      router.push("/en", undefined, { scroll: false });
+      router.push("/ko", undefined, { scroll: false });
     }
   };
 
   return (
     <Button size="sm" onClick={handleLanguageToggle} className="language-toggle">
-      {language === "ko" ? "ENG" : "KOR"}
+      {language === "en" ? "KOR" : "ENG"}
     </Button>
   );
 }

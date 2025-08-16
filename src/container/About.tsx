@@ -23,11 +23,11 @@ function About() {
       <LanguageToggle />
       <Profile payload={profile} />
       <Introduction payload={introduction} />
-      <Skills payload={skills} />
       <Common payload={experiences} />
       <Common payload={projects} />
       <Common payload={presentations} />
       <Common payload={openSources} />
+      <Skills payload={skills} />
       <Common payload={publications} />
       <Common payload={educations} />
       <Common payload={extras} />

@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown";
 
 import { dateTimeToString, stringToDateTime } from "@/utils/DateTime";
 import { getCurrentLanguage, Language } from "@/utils/GlobalLanguage";
-import { getLocalizedArray, getLocalizedText } from "@/utils/MultiLanguage";
+import { getLocalizedText } from "@/utils/MultiLanguage";
 
 import ComponentWrapper from "@/components/default/ComponentWrapper";
 import Href from "@/components/default/Href";
@@ -35,7 +35,7 @@ const Component = ({ payload }: { payload: Payload }) => {
   }, []);
 
   const localizedTitle = getLocalizedText(payload.title, language);
-  const localizedContents = getLocalizedArray(payload.contents, language);
+  const localizedContents = payload.contents.map((item) => getLocalizedText(item, language));
   const localizedLatestUpdated = getLocalizedText(payload.latestUpdated, language);
 
   const latestUpdated = stringToDateTime(localizedLatestUpdated, language);

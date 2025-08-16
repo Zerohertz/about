@@ -1,9 +1,9 @@
-import { MultiLanguageArray } from "@/utils/MultiLanguage";
+import { MultiLanguageText } from "@/utils/MultiLanguage";
 
 import DefaultPayload from "@/components/default/Payload";
 
 interface Payload extends DefaultPayload {
-  contents: string[] | MultiLanguageArray;
+  contents: MultiLanguageText[];
   latestUpdated: string;
   // signature: string;
 }

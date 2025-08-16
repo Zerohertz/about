@@ -31,6 +31,7 @@ const TotalPeriod = ({ totalPeriod }: { totalPeriod: string | null }) => {
   if (!totalPeriod) {
     return null;
   }
+
   return (
     <>
       <div className="d-none d-md-block">

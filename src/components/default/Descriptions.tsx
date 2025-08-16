@@ -1,22 +1,57 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 import ReactMarkdown from "react-markdown";
+
+import { getCurrentLanguage, Language } from "@/utils/GlobalLanguage";
+import { getLocalizedText } from "@/utils/MultiLanguage";
 
 import Description from "@/components/default/Description";
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
 
 const Descriptions = ({ descriptions }: { descriptions: Description[] }) => {
+  const [language, setLanguage] = useState<Language>("en");
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    setLanguage(getCurrentLanguage());
+
+    const handleLanguageChange = (event: CustomEvent<Language>) => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setLanguage(event.detail);
+        setTimeout(() => setIsTransitioning(false), 50);
+      }, 150);
+    };
+
+    window.addEventListener("languageChange", handleLanguageChange as EventListener);
+
+    return () => {
+      window.removeEventListener("languageChange", handleLanguageChange as EventListener);
+    };
+  }, []);
+
   return (
-    <>
+    <div
+      style={{
+        opacity: isTransitioning ? 0.3 : 1,
+        transform: isTransitioning ? "translateY(5px)" : "translateY(0)",
+        transition: "all 0.2s ease-in-out",
+      }}
+    >
       {descriptions ? (
         <ul>
           {descriptions.map((description, descIndex) => (
             <Fragment key={`${description.content}-${descIndex}`}>
-              <CreateDescription description={description} key={`description-${description.content}-${descIndex}`} />
+              <CreateDescription
+                description={description}
+                language={language}
+                key={`description-${description.content}-${descIndex}`}
+              />
               {description.descriptions ? (
                 <RecursiveDescription
                   descriptions={description.descriptions}
+                  language={language}
                   key={`description-recursion-${description.content}-${descIndex}`}
                 />
               ) : (
@@ -28,19 +63,24 @@ const Descriptions = ({ descriptions }: { descriptions: Description[] }) => {
       ) : (
         ""
       )}
-    </>
+    </div>
   );
 };
 
-const RecursiveDescription = ({ descriptions }: { descriptions: Description[] }) => {
+const RecursiveDescription = ({ descriptions, language }: { descriptions: Description[]; language: Language }) => {
   return (
     <ul>
       {descriptions.map((description, index) => (
         <Fragment key={`${description.content}-${index}`}>
-          <CreateDescription description={description} key={`description-${description.content}-${index}`} />
+          <CreateDescription
+            description={description}
+            language={language}
+            key={`description-${description.content}-${index}`}
+          />
           {description.descriptions ? (
             <RecursiveDescription
               descriptions={description.descriptions}
+              language={language}
               key={`description-recursion-${description.content}-${index}`}
             />
           ) : (
@@ -52,15 +92,17 @@ const RecursiveDescription = ({ descriptions }: { descriptions: Description[] })
   );
 };
 
-const CreateDescription = ({ description }: { description: Description }) => {
+const CreateDescription = ({ description, language }: { description: Description; language: Language }) => {
   const { content, className, href, image } = description;
+  const localizedContent = getLocalizedText(content, language);
+
   return (
     <>
       <meta name="format-detection" content="telephone=no" />
       <li>
         {href ? (
           <Href className={className} href={href}>
-            {content}
+            {localizedContent}
           </Href>
         ) : (
           <ReactMarkdown
@@ -69,7 +111,7 @@ const CreateDescription = ({ description }: { description: Description }) => {
               a: Href,
             }}
           >
-            {content}
+            {localizedContent}
           </ReactMarkdown>
         )}
         {image && (

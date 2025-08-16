@@ -1,5 +1,7 @@
 import { DateTime } from "luxon";
 
+import { getLocalizedText, includes, Language, MultiLanguageText } from "@/utils/MultiLanguage";
+
 import Payload from "@/components/common/Payload";
 
 enum LUXON_DATE_FORMAT {
@@ -10,9 +12,10 @@ enum LUXON_DATE_FORMAT {
   KINDNESS_FULL = "DDDD",
 }
 
-export const stringToDateTime = (time: string) => {
-  const format = time.length > 7 ? LUXON_DATE_FORMAT.YYYY_LL_DD : LUXON_DATE_FORMAT.YYYY_LL;
-  return DateTime.fromFormat(time, format);
+export const stringToDateTime = (time: string | MultiLanguageText, language: Language = "en") => {
+  const timeString = typeof time === "string" ? time : getLocalizedText(time, language);
+  const format = timeString.length > 7 ? LUXON_DATE_FORMAT.YYYY_LL_DD : LUXON_DATE_FORMAT.YYYY_LL;
+  return DateTime.fromFormat(timeString, format);
 };
 
 export const dateTimeToString = (time: DateTime, day: boolean = false) => {
@@ -40,7 +43,7 @@ export const getTotalPeriod = (payload: Payload): string | null => {
   }
   const periods = payload.list
     .map((item) => {
-      if (!item.title || item.title.includes("Lab") || !item.startedAt) {
+      if (!item.title || includes(item.title, "Lab") || !item.startedAt) {
         return null;
       }
       return {

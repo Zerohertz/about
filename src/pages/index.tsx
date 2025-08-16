@@ -1,6 +1,7 @@
 import { Container } from "reactstrap";
 
 import Common from "@/components/common";
+import LanguageToggle from "@/components/common/LanguageToggle";
 import Introduction from "@/components/introduction";
 import Profile from "@/components/profile";
 import Skills from "@/components/skills";
@@ -19,6 +20,7 @@ import skills from "@/payloads/skills";
 function About() {
   return (
     <Container>
+      <LanguageToggle />
       <Profile payload={profile} />
       <Introduction payload={introduction} />
       <Skills payload={skills} />

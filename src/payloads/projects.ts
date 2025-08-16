@@ -5,7 +5,10 @@ const projects: Payload = {
   disable: false,
   list: [
     {
-      title: "LLMOps Solution, GenOS",
+      title: {
+        ko: "LLMOps 솔루션, GenOS",
+        en: "LLMOps Solution, GenOS",
+      },
       subTitle: "GenON",
       startedAt: "2024-12",
       onGoing: true,
@@ -24,87 +27,126 @@ const projects: Payload = {
       ],
       descriptions: [
         {
-          content:
-            "Conducted continuous evaluation and benchmarking of state-of-the-art Large Language Models (LLMs) to determine optimal computing resource requirements and configuration parameters for training and inference deployment.",
+          content: {
+            ko: "최신 대규모 언어 모델(LLM)의 지속적인 평가 및 벤치마킹을 수행하여 학습 및 추론 배포를 위한 최적의 컴퓨팅 리소스 요구사항 및 구성 매개변수를 결정했습니다.",
+            en: "Conducted continuous evaluation and benchmarking of state-of-the-art Large Language Models (LLMs) to determine optimal computing resource requirements and configuration parameters for training and inference deployment.",
+          },
         },
         {
-          content:
-            "Designed and developed microservices architecture (MSA) enabling distributed training and serving configuration through intuitive web-based user interfaces.",
+          content: {
+            ko: "직관적인 웹 기반 사용자 인터페이스를 통해 분산 학습 및 서빙 구성을 가능하게 하는 마이크로서비스 아키텍처(MSA)를 설계하고 개발했습니다.",
+            en: "Designed and developed microservices architecture (MSA) enabling distributed training and serving configuration through intuitive web-based user interfaces.",
+          },
         },
         {
-          content:
-            "Implemented Prometheus operator integration and developed comprehensive Grafana dashboards to enhance observability and monitoring capabilities for LLM serving infrastructure.",
+          content: {
+            ko: "Prometheus 운영자 통합을 구현하고 LLM 서빙 인프라의 관찰성 및 모니터링 기능을 향상시키기 위한 포괄적인 Grafana 대시보드를 개발했습니다.",
+            en: "Implemented Prometheus operator integration and developed comprehensive Grafana dashboards to enhance observability and monitoring capabilities for LLM serving infrastructure.",
+          },
           image: "images/llmops-solution-genos-0.webp",
         },
         {
-          content:
-            "Resolved ephemeral storage limitations by migrating from object storage to Network File System (NFS) provisioner, improving system reliability and performance.",
+          content: {
+            ko: "객체 스토리지에서 네트워크 파일 시스템(NFS) 프로비저너로 마이그레이션하여 임시 스토리지 제한을 해결하고 시스템 안정성과 성능을 향상시켰습니다.",
+            en: "Resolved ephemeral storage limitations by migrating from object storage to Network File System (NFS) provisioner, improving system reliability and performance.",
+          },
         },
         {
-          content:
-            "Led strategic planning and architectural design for Model Context Protocol (MCP) feature integration and implementation.",
+          content: {
+            ko: "모델 컨텍스트 프로토콜(MCP) 기능 통합 및 구현을 위한 전략적 계획 및 아키텍처 설계를 주도했습니다.",
+            en: "Led strategic planning and architectural design for Model Context Protocol (MCP) feature integration and implementation.",
+          },
         },
       ],
     },
     {
-      title: "Development and CI/CD Pipeline Construction of Python Library",
+      title: {
+        ko: "Python 라이브러리 개발 및 CI/CD 파이프라인 구축",
+        en: "Development and CI/CD Pipeline Construction of Python Library",
+      },
       subTitle: "Personal Project",
       startedAt: "2023-11",
       endedAt: "2024-12",
       keywords: ["Python", "PyTest", "Sphinx", "Kubernetes", "Jenkins", "GitHub Actions", "Codecov", "PyPI"],
       descriptions: [
         {
-          content: "Zerohertz/zerohertzLib (GitHub)",
+          content: {
+            ko: "Zerohertz/zerohertzLib (GitHub)",
+            en: "Zerohertz/zerohertzLib (GitHub)",
+          },
           href: "https://github.com/Zerohertz/zerohertzLib",
         },
         {
-          content: "Python Library (PyPI)",
+          content: {
+            ko: "Python Library (PyPI)",
+            en: "Python Library (PyPI)",
+          },
           href: "https://pypi.org/project/zerohertzLib/",
         },
         {
-          content: "Docs (Sphinx)",
+          content: {
+            ko: "Docs (Sphinx)",
+            en: "Docs (Sphinx)",
+          },
           href: "https://zerohertz.github.io/zerohertzLib/",
         },
         {
-          content:
-            "To reduce time consumption and inefficiency from reimplementing commonly used functions, developed and published a custom Python library on PyPI and GitHub Releases to enhance efficiency and code reusability across projects.",
+          content: {
+            ko: "일반적으로 사용되는 함수를 재구현하는 데 드는 시간 소모와 비효율성을 줄이기 위해 사용자 정의 Python 라이브러리를 개발하여 PyPI와 GitHub Releases에 배포하여 프로젝트 전반에 걸쳐 효율성과 코드 재사용성을 향상시켰습니다.",
+            en: "To reduce time consumption and inefficiency from reimplementing commonly used functions, developed and published a custom Python library on PyPI and GitHub Releases to enhance efficiency and code reusability across projects.",
+          },
           image: "images/development-and-ci-cd-pipeline-construction-of-python-library-0.webp",
         },
         {
-          content:
-            "Built a GitHub Actions-based CI/CD pipeline (migrated from Jenkins) to automate repetitive tasks such as formatting, unit testing, and deployment, streamlining the process for feature additions and bug fixes.",
+          content: {
+            ko: "GitHub Actions 기반 CI/CD 파이프라인을 구축하여(Jenkins에서 마이그레이션) 포매팅, 단위 테스트, 배포와 같은 반복적인 작업을 자동화하여 기능 추가와 버그 수정 프로세스를 간소화했습니다.",
+            en: "Built a GitHub Actions-based CI/CD pipeline (migrated from Jenkins) to automate repetitive tasks such as formatting, unit testing, and deployment, streamlining the process for feature additions and bug fixes.",
+          },
           image: "images/development-and-ci-cd-pipeline-construction-of-python-library-1.webp",
         },
         {
-          content:
-            "To prevent unnecessary deployments from non-production changes like documentation updates, implemented a detailed branching strategy on GitHub and set up dedicated pipelines for code segregation.",
+          content: {
+            ko: "문서 업데이트와 같은 비프로덕션 변경으로 인한 불필요한 배포를 방지하기 위해 GitHub에서 세부적인 브랜칭 전략을 구현하고 코드 분리를 위한 전용 파이프라인을 설정했습니다.",
+            en: "To prevent unnecessary deployments from non-production changes like documentation updates, implemented a detailed branching strategy on GitHub and set up dedicated pipelines for code segregation.",
+          },
           image: "images/development-and-ci-cd-pipeline-construction-of-python-library-2.webp",
         },
         {
-          content:
-            "Simplified version tracking by building a pipeline using the GitHub API to automatically generate and publish release notes to GitHub Releases, improving transparency across development cycles.",
+          content: {
+            ko: "GitHub API를 사용하여 릴리즈 노트를 자동으로 생성하고 GitHub Releases에 배포하는 파이프라인을 구축하여 버전 추적을 단순화하고 개발 사이클 전반에 걸쳐 투명성을 향상시켰습니다.",
+            en: "Simplified version tracking by building a pipeline using the GitHub API to automatically generate and publish release notes to GitHub Releases, improving transparency across development cycles.",
+          },
         },
         {
-          content:
-            "Ensured easy access to comprehensive project guidelines and function usage by creating a Sphinx-based documentation pipeline, deploying it via GitHub Pages for consistent and up-to-date project documentation.",
+          content: {
+            ko: "Sphinx 기반 문서 파이프라인을 생성하고 GitHub Pages를 통해 배포하여 포괄적인 프로젝트 가이드라인과 함수 사용법에 대한 쉽은 액세스를 보장하여 일관되고 최신 프로젝트 문서를 제공했습니다.",
+            en: "Ensured easy access to comprehensive project guidelines and function usage by creating a Sphinx-based documentation pipeline, deploying it via GitHub Pages for consistent and up-to-date project documentation.",
+          },
           image: "images/development-and-ci-cd-pipeline-construction-of-python-library-3.webp",
         },
       ],
     },
     {
-      title: "Python Library for Pre/Post-Processing, Visualization, and Model Backend",
+      title: {
+        ko: "전처리/후처리, 시각화 및 모델 백엔드를 위한 Python 라이브러리",
+        en: "Python Library for Pre/Post-Processing, Visualization, and Model Backend",
+      },
       subTitle: "AgileSoDA",
       startedAt: "2023-10",
       endedAt: "2024-09",
       keywords: ["Python", "Numpy", "OpenCV", "PyTorch", "Triton Inference Server", "PyTest", "Sphinx"],
       descriptions: [
         {
-          content:
-            "Packaged frequently used classes and functions within the model backend into a Python library to streamline development processes.",
+          content: {
+            ko: "모델 백엔드 내에서 빈번히 사용되는 클래스와 함수를 Python 라이브러리로 패키징하여 개발 프로세스를 간소화했습니다.",
+            en: "Packaged frequently used classes and functions within the model backend into a Python library to streamline development processes.",
+          },
         },
         {
-          content:
-            "Utilized Docstring to document functions and classes, enhancing code clarity and team collaboration, while maintaining library integrity through type hints and PyTest.",
+          content: {
+            ko: "Docstring을 활용하여 함수와 클래스를 문서화하고, 타입 힌트와 PyTest를 통해 라이브러리 무결성을 유지하면서 코드 명확성과 팀 협업을 향상시켰습니다.",
+            en: "Utilized Docstring to document functions and classes, enhancing code clarity and team collaboration, while maintaining library integrity through type hints and PyTest.",
+          },
         },
         {
           content:
@@ -116,12 +158,18 @@ const projects: Payload = {
           image: "images/python-library-for-pre-post-processing-visualization-and-model-backend-0.webp",
         },
         {
-          content: "Developed a unified class and inheritance structure for Triton Inference Server.",
+          content: {
+            ko: "Triton Inference Server를 위한 통합된 클래스 및 상속 구조를 개발했습니다.",
+            en: "Developed a unified class and inheritance structure for Triton Inference Server.",
+          },
         },
       ],
     },
     {
-      title: "AI-based OCR Solution, TwinReader",
+      title: {
+        ko: "AI 기반 OCR 솔루션, TwinReader",
+        en: "AI-based OCR Solution, TwinReader",
+      },
       subTitle: "AgileSoDA",
       startedAt: "2023-02",
       endedAt: "2024-09",
@@ -168,7 +216,10 @@ const projects: Payload = {
       ],
     },
     {
-      title: "Information Extraction Model Development for Trade Document Processing",
+      title: {
+        ko: "무역 문서 처리를 위한 정보 추출 모델 개발",
+        en: "Information Extraction Model Development for Trade Document Processing",
+      },
       subTitle: "AgileSoDA",
       startedAt: "2024-02",
       endedAt: "2024-05",
@@ -193,7 +244,10 @@ const projects: Payload = {
       ],
     },
     {
-      title: "AI-based Automotive Damage and Depth Recognition Product, TwinCar",
+      title: {
+        ko: "AI 기반 자동차 손상 및 심도 인식 제품, TwinCar",
+        en: "AI-based Automotive Damage and Depth Recognition Product, TwinCar",
+      },
       subTitle: "AgileSoDA",
       startedAt: "2023-11",
       endedAt: "2024-02",
@@ -208,7 +262,10 @@ const projects: Payload = {
       ],
     },
     {
-      title: "AI Diagnostic Service for Burn Patients",
+      title: {
+        ko: "화상 환자를 위한 AI 진단 서비스",
+        en: "AI Diagnostic Service for Burn Patients",
+      },
       subTitle: "AgileSoDA",
       startedAt: "2023-04",
       endedAt: "2023-11",
@@ -224,7 +281,10 @@ const projects: Payload = {
       ],
     },
     {
-      title: "On-premise Kubernetes Cluster",
+      title: {
+        ko: "On-premise Kubernetes 클러스터",
+        en: "On-premise Kubernetes Cluster",
+      },
       subTitle: "Personal Project",
       startedAt: "2023-08",
       endedAt: "2023-09",
@@ -262,7 +322,10 @@ const projects: Payload = {
       ],
     },
     {
-      title: "Mosaic Classification",
+      title: {
+        ko: "모자이크 분류",
+        en: "Mosaic Classification",
+      },
       subTitle: "BOAZ",
       startedAt: "2023-01",
       endedAt: "2023-07",

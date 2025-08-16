@@ -5,71 +5,139 @@ const extras: Payload = {
   disable: false,
   list: [
     {
-      title: "CKA (Certified Kubernetes Administrator)",
+      title: {
+        ko: "CKA (Certified Kubernetes Administrator)",
+        en: "CKA (Certified Kubernetes Administrator)",
+      },
       href: "https://www.credly.com/badges/8b2942ea-3d31-483b-a64a-6a6e0a4f6a5f/linked_in_profile",
       subTitle: "The Linux Foundation",
       startedAt: "2024-05-05",
       endedAt: "2026-05-04",
     },
     {
-      title: "전문연구요원",
+      title: {
+        ko: "전문연구요원",
+        en: "Technical Research Personnel",
+      },
       subTitle: "AgileSoDA, Tmax WAPL, GenON",
       startedAt: "2023-02-28",
       endedAt: "2026-02-27",
     },
     {
-      title: "BOAZ 19th (Big Data Club)",
+      title: {
+        ko: "BOAZ 19기 (빅데이터 동아리)",
+        en: "BOAZ 19th (Big Data Club)",
+      },
       href: "https://www.bigdataboaz.com/",
       subTitle: "Data Analysis",
       startedAt: "2022-07",
       endedAt: "2023-07",
       descriptions: [
         {
-          content: "Study & Project (GitHub)",
+          content: {
+            ko: "스터디 및 프로젝트 (GitHub)",
+            en: "Study & Project (GitHub)",
+          },
           href: "https://github.com/stars/Zerohertz/lists/99-boaz",
         },
       ],
     },
     {
-      title: "Extra Links",
+      title: {
+        ko: "추가 링크",
+        en: "Extra Links",
+      },
       descriptions: [
         {
-          content: "Dev.to",
+          content: {
+            ko: "Dev.to",
+            en: "Dev.to",
+          },
           href: "https://dev.to/zerohertz",
         },
         {
-          content: "Hashnode",
+          content: {
+            ko: "Hashnode",
+            en: "Hashnode",
+          },
           href: "https://zerohertz.hashnode.dev",
         },
         {
-          content: "Baekjoon Online Judge (BOJ)",
-          descriptions: [{ content: "Top 3.39% (Platinum V)" }],
+          content: {
+            ko: "백준 온라인 저지 (BOJ)",
+            en: "Baekjoon Online Judge (BOJ)",
+          },
+          descriptions: [
+            {
+              content: {
+                ko: "상위 3.39% (플래티넘 V)",
+                en: "Top 3.39% (Platinum V)",
+              },
+            },
+          ],
           href: "https://solved.ac/profile/zerohertz",
         },
-        { content: "LeetCode", href: "https://leetcode.com/u/Zerohertz/" },
         {
-          content: "X",
+          content: {
+            ko: "LeetCode",
+            en: "LeetCode",
+          },
+          href: "https://leetcode.com/u/Zerohertz/",
+        },
+        {
+          content: {
+            ko: "X",
+            en: "X",
+          },
           href: "https://x.com/zerohertzkr",
         },
       ],
     },
     {
-      title: "Academic Research Projects",
+      title: {
+        ko: "학술 연구 프로젝트",
+        en: "Academic Research Projects",
+      },
       descriptions: [
         {
-          content: "SiM Lab. (Smart intelligent Manufacturing system Laboratory)",
+          content: {
+            ko: "SiM Lab. (스마트 지능형 제조시스템 연구실)",
+            en: "SiM Lab. (Smart intelligent Manufacturing system Laboratory)",
+          },
           descriptions: [
             {
-              content:
-                "권취 롤(copper film) 내부 응력 분포를 고려한 Web handling 불량 개선 방안 연구, SK 넥실리스 (2022. 10 ~ 2023. 01)",
-              descriptions: [{ content: "제품 운송 진동, 충격에 따른 가속도 데이터 특징 분석" }],
+              content: {
+                ko: "권취 롤(copper film) 내부 응력 분포를 고려한 Web handling 불량 개선 방안 연구, SK 넥실리스 (2022. 10 ~ 2023. 01)",
+                en: "Research on Web handling defect improvement considering internal stress distribution of winding roll (copper film), SK Nexilis (Oct 2022 ~ Jan 2023)",
+              },
+              descriptions: [
+                {
+                  content: {
+                    ko: "제품 운송 진동, 충격에 따른 가속도 데이터 특징 분석",
+                    en: "Analysis of acceleration data characteristics from product transportation vibration and impact",
+                  },
+                },
+              ],
             },
             {
-              content: "미래형 센서를 위한 초정밀 대면적 생산시스템 전문 인력 양성, 한국연구재단 (2021. 09 ~ 2023. 01)",
+              content: {
+                ko: "미래형 센서를 위한 초정밀 대면적 생산시스템 전문 인력 양성, 한국연구재단 (2021. 09 ~ 2023. 01)",
+                en: "Professional workforce training for ultra-precision large-area production systems for future sensors, National Research Foundation of Korea (Sep 2021 ~ Jan 2023)",
+              },
             },
             {
-              content: "소형위성 분리용 어댑터 최적설계, 스페이스베이 (2022. 09 ~ 2023. 01)",
-              descriptions: [{ content: "모터 동특성 분석 모델 개발 및 최적화" }],
+              content: {
+                ko: "소형위성 분리용 어댑터 최적설계, 스페이스베이 (2022. 09 ~ 2023. 01)",
+                en: "Optimal design of adapter for small satellite separation, SpaceBay (Sep 2022 ~ Jan 2023)",
+              },
+              descriptions: [
+                {
+                  content: {
+                    ko: "모터 동특성 분석 모델 개발 및 최적화",
+                    en: "Development and optimization of motor dynamic characteristic analysis model",
+                  },
+                },
+              ],
             },
             {
               content:
@@ -131,7 +199,10 @@ const extras: Payload = {
           ],
         },
         {
-          content: "MRV Lab. (Medical Robotics and Virtual Reality Laboratory)",
+          content: {
+            ko: "MRV Lab. (의료 로보틱스 및 가상현실 연구실)",
+            en: "MRV Lab. (Medical Robotics and Virtual Reality Laboratory)",
+          },
           descriptions: [
             {
               content:
@@ -155,7 +226,10 @@ const extras: Payload = {
       ],
     },
     {
-      title: "Academic Posters",
+      title: {
+        ko: "학술 포스터",
+        en: "Academic Posters",
+      },
       descriptions: [
         {
           content:

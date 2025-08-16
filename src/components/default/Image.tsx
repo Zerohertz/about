@@ -1,13 +1,10 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
 
 const CustomImage = ({ src }: { src: string }) => {
-  const router = useRouter();
-
   const getImageSrc = (originalSrc: string) => {
     if (originalSrc.startsWith("http")) return originalSrc;
 
-    const isGitHubPages = router.asPath.startsWith("/about/");
+    const isGitHubPages = typeof window !== "undefined" && window.location.hostname === "zerohertz.github.io";
     const basePath = isGitHubPages ? "/about" : "";
 
     return originalSrc.startsWith("/") ? `${basePath}${originalSrc}` : `${basePath}/${originalSrc}`;

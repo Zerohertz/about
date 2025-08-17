@@ -1,0 +1,54 @@
+import { createContext, useContext, useEffect, useState } from "react";
+
+import { useLanguage } from "@/utils/useLanguage";
+
+interface AnimationContextType {
+  animationKey: number;
+  getAnimationClass: (staggerIndex: number) => string;
+}
+
+const AnimationContext = createContext<AnimationContextType | undefined>(undefined);
+
+export const AnimationProvider = ({ children }: { children: React.ReactNode }) => {
+  const { language } = useLanguage();
+  const [animationKey, setAnimationKey] = useState(0);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    // Reset animation when language changes
+    setShouldAnimate(false);
+    setAnimationKey((prev) => prev + 1);
+
+    // Trigger animation after a brief delay
+    const timer = setTimeout(() => {
+      setShouldAnimate(true);
+    }, 50);
+
+    return () => clearTimeout(timer);
+  }, [language]);
+
+  const getAnimationClass = (staggerIndex: number) => {
+    if (!shouldAnimate) return "";
+
+    switch (staggerIndex) {
+      case 1:
+        return "fadeInUpStagger1";
+      case 2:
+        return "fadeInUpStagger2";
+      case 3:
+        return "fadeInUpStagger3";
+      default:
+        return "fadeInUp";
+    }
+  };
+
+  return <AnimationContext.Provider value={{ animationKey, getAnimationClass }}>{children}</AnimationContext.Provider>;
+};
+
+export const useAnimation = () => {
+  const context = useContext(AnimationContext);
+  if (context === undefined) {
+    throw new Error("useAnimation must be used within an AnimationProvider");
+  }
+  return context;
+};

@@ -29,25 +29,10 @@ function LanguageToggle() {
 
   const handleLanguageToggle = useCallback(async () => {
     const newLanguage: Language = language === "en" ? "ko" : "en";
-    setCurrentLanguage(newLanguage);
-
-    // Calculate current scroll percentage for smooth transition
-    const scrollTop = window.scrollY;
-    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = documentHeight > 0 ? scrollTop / documentHeight : 0;
-
     const targetPath = newLanguage === "en" ? "/" : "/ko";
 
+    // Use router.push for proper Next.js navigation
     await router.push(targetPath, undefined, { scroll: false });
-
-    // Restore scroll position after navigation
-    setTimeout(() => {
-      const newDocumentHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (newDocumentHeight > 0) {
-        const newScrollTop = newDocumentHeight * scrollPercent;
-        window.scrollTo({ top: newScrollTop, behavior: "auto" });
-      }
-    }, 100);
   }, [language, router]);
 
   return (

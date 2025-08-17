@@ -12,13 +12,16 @@ export const useStaggeredAnimation = (staggerIndex: number = 0) => {
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
-    // Trigger animation on mount with staggered delay
+    // Reset animation state when language changes
+    setShouldAnimate(false);
+
+    // Trigger animation on mount or language change with staggered delay
     const timer = setTimeout(() => {
       setShouldAnimate(true);
     }, 100 * staggerIndex);
 
     return () => clearTimeout(timer);
-  }, [staggerIndex]);
+  }, [staggerIndex, language]);
 
   const getAnimationClass = () => {
     if (!shouldAnimate) return "";

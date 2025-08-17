@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Badge } from "reactstrap";
 
 import { DateTime } from "luxon";
@@ -6,22 +6,37 @@ import ReactMarkdown from "react-markdown";
 
 import { dateTimeToString, stringToDateTime } from "@/utils/DateTime";
 import { getLocalizedText } from "@/utils/MultiLanguage";
+import { useLanguage } from "@/utils/useLanguage";
 
 import ComponentWrapper from "@/components/default/ComponentWrapper";
 import Href from "@/components/default/Href";
 import Payload from "@/components/introduction/Payload";
 
-import { useStaggeredAnimation } from "@/hooks/useAnimation";
+import { useAnimation } from "@/contexts/AnimationContext";
 
 const Component = ({ payload }: { payload: Payload }) => {
-  const { language, animationClass: titleAnimationClass } = useStaggeredAnimation(0);
-  const { animationClass: contentAnimationClass } = useStaggeredAnimation(1);
+  const { language } = useLanguage();
+  const { getAnimationClass } = useAnimation();
+  const [forceUpdate, setForceUpdate] = useState(0);
 
-  const localizedTitle = useMemo(() => getLocalizedText(payload.title, language), [payload.title, language]);
-  const localizedContents = useMemo(
-    () => payload.contents.map((item) => getLocalizedText(item, language)),
-    [payload.contents, language],
-  );
+  console.log("Introduction component language:", language);
+
+  useEffect(() => {
+    // Force re-render when language changes
+    setForceUpdate((prev) => prev + 1);
+  }, [language]);
+
+  const localizedTitle = useMemo(() => {
+    const result = getLocalizedText(payload.title, language);
+    console.log("Localized title:", result);
+    return result;
+  }, [payload.title, language]);
+
+  const localizedContents = useMemo(() => {
+    const result = payload.contents.map((item) => getLocalizedText(item, language));
+    console.log("Localized contents:", result[0], result[1]); // 첫 두 항목만 출력
+    return result;
+  }, [payload.contents, language]);
   const localizedLatestUpdated = useMemo(
     () => getLocalizedText(payload.latestUpdated, language),
     [payload.latestUpdated, language],
@@ -34,15 +49,15 @@ const Component = ({ payload }: { payload: Payload }) => {
   }, [localizedLatestUpdated, language]);
 
   return (
-    <div className="mt-md-5 mt-4 mb-md-5 mb-5">
-      <div className={titleAnimationClass || ""}>
+    <div className="mt-md-5 mt-4 mb-md-5 mb-5" key={`intro-${language}-${forceUpdate}`}>
+      <div className={getAnimationClass(0)}>
         <h2 className="mb-3" id="introduction">
           <a className="primary" href="#introduction">
             {localizedTitle}
           </a>
         </h2>
       </div>
-      <div className={contentAnimationClass || ""}>
+      <div className={getAnimationClass(1)}>
         {localizedContents.map((content, index) => (
           <ReactMarkdown
             key={index.toString()}

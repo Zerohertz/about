@@ -6,6 +6,7 @@ import { NextSeo } from "next-seo";
 
 import global from "@/payloads/global";
 
+import { APP_CONFIG } from "@/config/app";
 import { AnimationProvider } from "@/contexts/AnimationContext";
 
 import "@/styles/global.scss";
@@ -17,8 +18,8 @@ function App({ Component, pageProps }: AppProps) {
       <NextSeo {...global.seo} />
       <Head>
         <title>{global.headTitle}</title>
-        <link rel="icon" href={global.favicon} />
-        <link rel="apple-touch-icon" href={global.favicon} />
+        <link rel="icon" href={`${APP_CONFIG.basePath}/${global.favicon}`} />
+        <link rel="apple-touch-icon" href={`${APP_CONFIG.basePath}/${global.favicon}`} />
       </Head>
       <AnimationProvider>
         <Component {...pageProps} />

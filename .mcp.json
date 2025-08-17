@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "React Docs": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://gitmcp.io/facebook/react"],
+      "env": {}
+    },
+    "Next Docs": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://gitmcp.io/vercel/next.js"],
+      "env": {}
+    }
+  }
+}

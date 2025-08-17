@@ -108,31 +108,52 @@ button.btn.language-toggle {
   }
 }
 
-// Language transition animations
-.language-transition {
-  transition: all 0.3s ease-in-out;
+// Animation utilities with GPU acceleration
+.fadeInUp {
+  animation: fadeInUp 0.4s ease-out forwards;
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  will-change: opacity, transform;
+}
 
-  &.transitioning {
-    opacity: 0.3;
-    transform: translateY(10px);
-  }
+.fadeInUpDelay {
+  animation: fadeInUp 0.4s ease-out 0.1s forwards;
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  will-change: opacity, transform;
+}
 
-  &.normal {
+.fadeInUpStagger1 {
+  animation: fadeInUp 0.4s ease-out 0.05s forwards;
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  will-change: opacity, transform;
+}
+
+.fadeInUpStagger2 {
+  animation: fadeInUp 0.4s ease-out 0.1s forwards;
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  will-change: opacity, transform;
+}
+
+.fadeInUpStagger3 {
+  animation: fadeInUp 0.4s ease-out 0.15s forwards;
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  will-change: opacity, transform;
+}
+
+// Prevent flash of unstyled content by hiding elements until animations are applied
+[class*="fadeInUp"]:not([class*="fadeInUp"]) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.language-transition-subtle {
-  transition: all 0.2s ease-in-out;
-
-  &.transitioning {
-    opacity: 0.3;
-    transform: translateY(5px);
-  }
-
-  &.normal {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}

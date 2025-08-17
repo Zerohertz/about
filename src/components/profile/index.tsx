@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
 import { Alert, Col, Row } from "reactstrap";
 
 import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { getCurrentLanguage, Language } from "@/utils/GlobalLanguage";
+import { Language } from "@/utils/GlobalLanguage";
 import { getImageSrc } from "@/utils/ImagePath";
 import { getLocalizedText } from "@/utils/MultiLanguage";
 
@@ -13,39 +12,38 @@ import Href from "@/components/default/Href";
 import Item from "@/components/profile/Item";
 import Payload from "@/components/profile/Payload";
 
+import { useStaggeredAnimation } from "@/hooks/useAnimation";
+
 const Component = ({ payload }: { payload: Payload }) => {
-  const [language, setLanguage] = useState<Language>("en");
-
-  useEffect(() => {
-    setLanguage(getCurrentLanguage());
-
-    const handleLanguageChange = (event: CustomEvent<Language>) => {
-      setLanguage(event.detail);
-    };
-
-    window.addEventListener("languageChange", handleLanguageChange as EventListener);
-
-    return () => {
-      window.removeEventListener("languageChange", handleLanguageChange as EventListener);
-    };
-  }, []);
+  const { language, animationClass: profileAnimationClass } = useStaggeredAnimation(0);
+  const { animationClass: nameAnimationClass } = useStaggeredAnimation(1);
+  const { animationClass: contactsAnimationClass } = useStaggeredAnimation(2);
+  const { animationClass: noticeAnimationClass } = useStaggeredAnimation(3);
 
   return (
     <Row className="mt-md-5 mt-3 mb-md-5 mb-4">
       <Col md={4} sm={12}>
-        <Profile src={payload.image} />
+        <div className={profileAnimationClass || ""}>
+          <Profile src={payload.image} />
+        </div>
       </Col>
       <Col md={8} sm={12}>
         <div className="ms-md-3">
-          <Name name={payload.name} language={language} />
-          <Contacts contacts={payload.contact} />
+          <div className={nameAnimationClass || ""}>
+            <Name name={payload.name} language={language} />
+          </div>
+          <div className={contactsAnimationClass || ""}>
+            <Contacts contacts={payload.contact} />
+          </div>
         </div>
       </Col>
       {payload.notice && (
-        <Alert color="secondary" role="alert" className="mt-3">
-          {payload.notice.icon ? <FontAwesomeIcon className="mr-2" icon={payload.notice.icon} /> : null}{" "}
-          {getLocalizedText(payload.notice.title, language)}
-        </Alert>
+        <div className={noticeAnimationClass || ""}>
+          <Alert color="secondary" role="alert" className="mt-3">
+            {payload.notice.icon ? <FontAwesomeIcon className="mr-2" icon={payload.notice.icon} /> : null}{" "}
+            {getLocalizedText(payload.notice.title, language)}
+          </Alert>
+        </div>
       )}
     </Row>
   );

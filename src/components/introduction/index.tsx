@@ -1,54 +1,48 @@
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { Badge } from "reactstrap";
 
 import { DateTime } from "luxon";
 import ReactMarkdown from "react-markdown";
 
 import { dateTimeToString, stringToDateTime } from "@/utils/DateTime";
-import { getCurrentLanguage, Language } from "@/utils/GlobalLanguage";
 import { getLocalizedText } from "@/utils/MultiLanguage";
 
 import ComponentWrapper from "@/components/default/ComponentWrapper";
 import Href from "@/components/default/Href";
 import Payload from "@/components/introduction/Payload";
 
+import { useStaggeredAnimation } from "@/hooks/useAnimation";
+
 const Component = ({ payload }: { payload: Payload }) => {
-  const [language, setLanguage] = useState<Language>("en");
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const { language, animationClass: titleAnimationClass } = useStaggeredAnimation(0);
+  const { animationClass: contentAnimationClass } = useStaggeredAnimation(1);
 
-  useEffect(() => {
-    setLanguage(getCurrentLanguage());
+  const localizedTitle = useMemo(() => getLocalizedText(payload.title, language), [payload.title, language]);
+  const localizedContents = useMemo(
+    () => payload.contents.map((item) => getLocalizedText(item, language)),
+    [payload.contents, language],
+  );
+  const localizedLatestUpdated = useMemo(
+    () => getLocalizedText(payload.latestUpdated, language),
+    [payload.latestUpdated, language],
+  );
 
-    const handleLanguageChange = (event: CustomEvent<Language>) => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setLanguage(event.detail);
-        setTimeout(() => setIsTransitioning(false), 50);
-      }, 150);
-    };
-
-    window.addEventListener("languageChange", handleLanguageChange as EventListener);
-
-    return () => {
-      window.removeEventListener("languageChange", handleLanguageChange as EventListener);
-    };
-  }, []);
-
-  const localizedTitle = getLocalizedText(payload.title, language);
-  const localizedContents = payload.contents.map((item) => getLocalizedText(item, language));
-  const localizedLatestUpdated = getLocalizedText(payload.latestUpdated, language);
-
-  const latestUpdated = stringToDateTime(localizedLatestUpdated, language);
-  const latestUpdatedByNow = Math.floor(DateTime.local().diff(latestUpdated).milliseconds / 1000 / 60 / 60 / 24);
+  const { latestUpdated, latestUpdatedByNow } = useMemo(() => {
+    const updated = stringToDateTime(localizedLatestUpdated, language);
+    const daysDiff = Math.floor(DateTime.local().diff(updated).milliseconds / 1000 / 60 / 60 / 24);
+    return { latestUpdated: updated, latestUpdatedByNow: daysDiff };
+  }, [localizedLatestUpdated, language]);
 
   return (
     <div className="mt-md-5 mt-4 mb-md-5 mb-5">
-      <h2 className="mb-3" id="introduction">
-        <a className="primary" href="#introduction">
-          {localizedTitle}
-        </a>
-      </h2>
-      <div className={`language-transition ${isTransitioning ? "transitioning" : "normal"}`}>
+      <div className={titleAnimationClass || ""}>
+        <h2 className="mb-3" id="introduction">
+          <a className="primary" href="#introduction">
+            {localizedTitle}
+          </a>
+        </h2>
+      </div>
+      <div className={contentAnimationClass || ""}>
         {localizedContents.map((content, index) => (
           <ReactMarkdown
             key={index.toString()}

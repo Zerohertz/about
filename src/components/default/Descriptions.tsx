@@ -11,17 +11,12 @@ import _Image from "@/components/default/Image";
 
 const Descriptions = ({ descriptions }: { descriptions: Description[] }) => {
   const [language, setLanguage] = useState<Language>("en");
-  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     setLanguage(getCurrentLanguage());
 
     const handleLanguageChange = (event: CustomEvent<Language>) => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setLanguage(event.detail);
-        setTimeout(() => setIsTransitioning(false), 50);
-      }, 150);
+      setLanguage(event.detail);
     };
 
     window.addEventListener("languageChange", handleLanguageChange as EventListener);
@@ -32,7 +27,7 @@ const Descriptions = ({ descriptions }: { descriptions: Description[] }) => {
   }, []);
 
   return (
-    <div className={`language-transition-subtle ${isTransitioning ? "transitioning" : "normal"}`}>
+    <div>
       {descriptions ? (
         <ul>
           {descriptions.map((description, descIndex) => (

@@ -74,7 +74,17 @@
             "position": "before"
           },
           {
-            "pattern": "@/assets/**",
+            "pattern": "@/config/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/constants/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/contexts/**",
             "group": "internal",
             "position": "before"
           },
@@ -85,6 +95,11 @@
           },
           {
             "pattern": "@/components/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/container/**",
             "group": "internal",
             "position": "before"
           },

@@ -1,11 +1,11 @@
 import { PropsWithChildren, useMemo } from "react";
 import { Badge, Col, Row } from "reactstrap";
 
+import { useAnimation } from "@/contexts/AnimationContext";
+
 import { getTotalPeriod } from "@/utils/DateTime";
 
 import Payload from "@/components/common/Payload";
-
-import { useAnimation } from "@/contexts/AnimationContext";
 
 const Section = ({ payload, children }: PropsWithChildren<{ payload: Payload }>) => {
   const id = useMemo(() => payload.title.replace(" & ", "-").replace(" ", "-").toLowerCase(), [payload.title]);

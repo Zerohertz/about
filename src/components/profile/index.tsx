@@ -2,6 +2,8 @@ import { Alert, Col, Row } from "reactstrap";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { useAnimation } from "@/contexts/AnimationContext";
+
 import { Language } from "@/utils/GlobalLanguage";
 import { getLocalizedText } from "@/utils/MultiLanguage";
 import { useLanguage } from "@/utils/useLanguage";
@@ -11,7 +13,7 @@ import _Image from "@/components/default/Image";
 import Item from "@/components/profile/Item";
 import Payload from "@/components/profile/Payload";
 
-import { useAnimation } from "@/contexts/AnimationContext";
+import { IMAGE_DEFAULTS } from "@/constants";
 
 const Component = ({ payload }: { payload: Payload }) => {
   const { language } = useLanguage();
@@ -49,7 +51,7 @@ const Component = ({ payload }: { payload: Payload }) => {
 const Profile = ({ src }: { src: string }) => {
   return (
     <div className="text-md-start text-center mb-md-0 mb-3">
-      <_Image src={src} className="img-fluid rounded" size={300} />
+      <_Image src={src} className="img-fluid rounded" size={IMAGE_DEFAULTS.PROFILE_SIZE} />
     </div>
   );
 };

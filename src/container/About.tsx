@@ -1,5 +1,7 @@
 import { Container } from "reactstrap";
 
+import { AnimationProvider } from "@/contexts/AnimationContext";
+
 import Common from "@/components/common";
 import LanguageToggle from "@/components/common/LanguageToggle";
 import Introduction from "@/components/introduction";
@@ -16,8 +18,6 @@ import profile from "@/payloads/profile";
 import projects from "@/payloads/projects";
 import publications from "@/payloads/publications";
 import skills from "@/payloads/skills";
-
-import { AnimationProvider } from "@/contexts/AnimationContext";
 
 function About() {
   return (

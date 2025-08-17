@@ -4,9 +4,9 @@ import Script from "next/script";
 
 import { NextSeo } from "next-seo";
 
-import global from "@/payloads/global";
-
 import { APP_CONFIG } from "@/config/app";
+
+import global from "@/payloads/global";
 
 import "@/styles/global.scss";
 // import "bootstrap/dist/css/bootstrap.min.css";

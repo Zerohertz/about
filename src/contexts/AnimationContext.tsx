@@ -2,6 +2,8 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 import { useLanguage } from "@/utils/useLanguage";
 
+import { ANIMATION_DELAYS } from "@/constants";
+
 interface AnimationContextType {
   animationKey: number;
   getAnimationClass: (staggerIndex: number) => string;
@@ -22,7 +24,7 @@ export const AnimationProvider = ({ children }: { children: React.ReactNode }) =
     // Trigger animation after a brief delay
     const timer = setTimeout(() => {
       setShouldAnimate(true);
-    }, 50);
+    }, ANIMATION_DELAYS.TRIGGER_DELAY);
 
     return () => clearTimeout(timer);
   }, [language]);

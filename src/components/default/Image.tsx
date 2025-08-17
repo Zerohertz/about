@@ -1,8 +1,20 @@
+import { memo } from "react";
+
 import Image from "next/image";
 
 import { APP_CONFIG } from "@/config/app";
 
-const CustomImage = ({ src, className = "image", size = 5000 }: { src: string; className?: string; size?: number }) => {
+import { IMAGE_DEFAULTS } from "@/constants";
+
+const CustomImage = ({
+  src,
+  className = "image",
+  size = IMAGE_DEFAULTS.DEFAULT_SIZE,
+}: {
+  src: string;
+  className?: string;
+  size?: number;
+}) => {
   const imageSrc = src.startsWith("http") ? src : `${APP_CONFIG.basePath}${src}`;
 
   return (
@@ -12,10 +24,10 @@ const CustomImage = ({ src, className = "image", size = 5000 }: { src: string; c
       alt={src}
       height={size}
       width={size}
-      quality={100}
+      quality={IMAGE_DEFAULTS.QUALITY}
       unoptimized={src.endsWith(".gif")}
     />
   );
 };
 
-export default CustomImage;
+export default memo(CustomImage);

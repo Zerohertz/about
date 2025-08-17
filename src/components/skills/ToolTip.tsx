@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Tooltip } from "reactstrap";
 
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
@@ -20,4 +20,4 @@ const ToolTip = ({ content }: { content: string }) => {
   );
 };
 
-export default ToolTip;
+export default memo(ToolTip);

@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, memo, useEffect, useState } from "react";
 
 import ReactMarkdown from "react-markdown";
 
@@ -56,7 +56,7 @@ const Descriptions = ({ descriptions }: { descriptions: Description[] }) => {
   );
 };
 
-const RecursiveDescription = ({ descriptions, language }: { descriptions: Description[]; language: Language }) => {
+const RecursiveDescription = memo(({ descriptions, language }: { descriptions: Description[]; language: Language }) => {
   return (
     <ul>
       {descriptions.map((description, index) => (
@@ -79,9 +79,9 @@ const RecursiveDescription = ({ descriptions, language }: { descriptions: Descri
       ))}
     </ul>
   );
-};
+});
 
-const CreateDescription = ({ description, language }: { description: Description; language: Language }) => {
+const CreateDescription = memo(({ description, language }: { description: Description; language: Language }) => {
   const { content, className, href, image } = description;
   const localizedContent = getLocalizedText(content, language);
 
@@ -111,6 +111,6 @@ const CreateDescription = ({ description, language }: { description: Description
       </li>
     </>
   );
-};
+});
 
-export default Descriptions;
+export default memo(Descriptions);

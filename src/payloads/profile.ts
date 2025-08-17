@@ -5,7 +5,7 @@ import { faBolt, faClock, faCoffee, faEnvelope } from "@fortawesome/free-solid-s
 import Payload from "@/components/profile/Payload";
 
 const profile: Payload = {
-  image: "props/profile.webp",
+  image: "/props/profile.webp",
   name: {
     title: "Hyogeun Oh",
     small: "(오효근)",

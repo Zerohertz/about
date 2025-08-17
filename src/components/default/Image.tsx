@@ -1,15 +1,17 @@
 import Image from "next/image";
 
-import { getImageSrc } from "@/utils/ImagePath";
+import { APP_CONFIG } from "@/config/app";
 
-const CustomImage = ({ src }: { src: string }) => {
+const CustomImage = ({ src, className = "image", size = 5000 }: { src: string; className: string; size: number }) => {
+  const imageSrc = src.startsWith("http") ? src : `${APP_CONFIG.basePath}${src}`;
+
   return (
     <Image
-      className="image"
-      src={getImageSrc(src)}
+      className={className}
+      src={imageSrc}
       alt={src}
-      height={5000}
-      width={5000}
+      height={size}
+      width={size}
       quality={100}
       unoptimized={src.endsWith(".gif")}
     />

@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "export",
   distDir: "out",
-  basePath: "/about",
   trailingSlash: true,
   images: {
     // https://nextjs.org/docs/messages/export-image-api

@@ -76,6 +76,13 @@ jobs:
       - name: Update date
         run: |
           sed -i "s|latestUpdated: \".*\"|latestUpdated: \"$(TZ='Asia/Seoul' date +%Y-%m-%d)\"|" src/payloads/introduction.ts
+      - name: Set base path
+        run: |
+          if [[ "${{ github.repository }}" == "${{ github.repository_owner }}/${{ github.repository_owner }}.github.io" ]]; then
+            echo "NEXT_PUBLIC_BASE_PATH=" >> $GITHUB_ENV
+          else
+            echo "NEXT_PUBLIC_BASE_PATH=/${{ github.event.repository.name }}" >> $GITHUB_ENV
+          fi
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact

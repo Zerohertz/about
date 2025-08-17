@@ -43,7 +43,7 @@ const projects: Payload = {
             ko: "Prometheus 운영자 통합을 구현하고 LLM 서빙 인프라의 관찰성 및 모니터링 기능을 향상시키기 위한 포괄적인 Grafana 대시보드를 개발했습니다.",
             en: "Implemented Prometheus operator integration and developed comprehensive Grafana dashboards to enhance observability and monitoring capabilities for LLM serving infrastructure.",
           },
-          image: "images/llmops-solution-genos-0.webp",
+          image: "/images/llmops-solution-genos-0.webp",
         },
         {
           content: {
@@ -95,21 +95,21 @@ const projects: Payload = {
             ko: "일반적으로 사용되는 함수를 재구현하는 데 드는 시간 소모와 비효율성을 줄이기 위해 사용자 정의 Python 라이브러리를 개발하여 PyPI와 GitHub Releases에 배포하여 프로젝트 전반에 걸쳐 효율성과 코드 재사용성을 향상시켰습니다.",
             en: "To reduce time consumption and inefficiency from reimplementing commonly used functions, developed and published a custom Python library on PyPI and GitHub Releases to enhance efficiency and code reusability across projects.",
           },
-          image: "images/development-and-ci-cd-pipeline-construction-of-python-library-0.webp",
+          image: "/images/development-and-ci-cd-pipeline-construction-of-python-library-0.webp",
         },
         {
           content: {
             ko: "GitHub Actions 기반 CI/CD 파이프라인을 구축하여(Jenkins에서 마이그레이션) 포매팅, 단위 테스트, 배포와 같은 반복적인 작업을 자동화하여 기능 추가와 버그 수정 프로세스를 간소화했습니다.",
             en: "Built a GitHub Actions-based CI/CD pipeline (migrated from Jenkins) to automate repetitive tasks such as formatting, unit testing, and deployment, streamlining the process for feature additions and bug fixes.",
           },
-          image: "images/development-and-ci-cd-pipeline-construction-of-python-library-1.webp",
+          image: "/images/development-and-ci-cd-pipeline-construction-of-python-library-1.webp",
         },
         {
           content: {
             ko: "문서 업데이트와 같은 비프로덕션 변경으로 인한 불필요한 배포를 방지하기 위해 GitHub에서 세부적인 브랜칭 전략을 구현하고 코드 분리를 위한 전용 파이프라인을 설정했습니다.",
             en: "To prevent unnecessary deployments from non-production changes like documentation updates, implemented a detailed branching strategy on GitHub and set up dedicated pipelines for code segregation.",
           },
-          image: "images/development-and-ci-cd-pipeline-construction-of-python-library-2.webp",
+          image: "/images/development-and-ci-cd-pipeline-construction-of-python-library-2.webp",
         },
         {
           content: {
@@ -122,7 +122,7 @@ const projects: Payload = {
             ko: "Sphinx 기반 문서 파이프라인을 생성하고 GitHub Pages를 통해 배포하여 포괄적인 프로젝트 가이드라인과 함수 사용법에 대한 쉽은 액세스를 보장하여 일관되고 최신 프로젝트 문서를 제공했습니다.",
             en: "Ensured easy access to comprehensive project guidelines and function usage by creating a Sphinx-based documentation pipeline, deploying it via GitHub Pages for consistent and up-to-date project documentation.",
           },
-          image: "images/development-and-ci-cd-pipeline-construction-of-python-library-3.webp",
+          image: "/images/development-and-ci-cd-pipeline-construction-of-python-library-3.webp",
         },
       ],
     },
@@ -159,7 +159,7 @@ const projects: Payload = {
             ko: "Addressed inefficiencies in post-processing due to Python-native functions with high time complexity by optimizing them with Cython-native functions and improving time complexity. ([inference time decreased by 74.12%](https://github.com/Zerohertz/pan_pp.pytorch/tree/SpeedImprovement))",
             en: "Addressed inefficiencies in post-processing due to Python-native functions with high time complexity by optimizing them with Cython-native functions and improving time complexity. ([inference time decreased by 74.12%](https://github.com/Zerohertz/pan_pp.pytorch/tree/SpeedImprovement))",
           },
-          image: "images/python-library-for-pre-post-processing-visualization-and-model-backend-0.webp",
+          image: "/images/python-library-for-pre-post-processing-visualization-and-model-backend-0.webp",
         },
         {
           content: {
@@ -206,28 +206,28 @@ const projects: Payload = {
             ko: "Implemented a pipeline using GitLab CI and Kubernetes to separate backend dependencies from code and weights, deploying through the Kubernetes sidecar pattern, which resolved versioning challenges and significantly reduced build times for the model backend.",
             en: "Implemented a pipeline using GitLab CI and Kubernetes to separate backend dependencies from code and weights, deploying through the Kubernetes sidecar pattern, which resolved versioning challenges and significantly reduced build times for the model backend.",
           },
-          image: "images/ai-based-ocr-solution-twinreader-0.webp",
+          image: "/images/ai-based-ocr-solution-twinreader-0.webp",
         },
         {
           content: {
             ko: "Faced with excessive GPU usage during model deployment, resolved the issue by identifying and fixing a memory leak through GPU resource monitoring and logging. (GPU memory usage reduced by 47.9%)",
             en: "Faced with excessive GPU usage during model deployment, resolved the issue by identifying and fixing a memory leak through GPU resource monitoring and logging. (GPU memory usage reduced by 47.9%)",
           },
-          image: "images/ai-based-ocr-solution-twinreader-1.webp",
+          image: "/images/ai-based-ocr-solution-twinreader-1.webp",
         },
         {
           content: {
             ko: "Reduced inference time for a text detection model, where frequent calls made optimization critical, by utilizing TensorRT-based quantization. ([inference time decreased by 87.31%](https://github.com/Zerohertz/PANPP/tree/TensorRT))",
             en: "Reduced inference time for a text detection model, where frequent calls made optimization critical, by utilizing TensorRT-based quantization. ([inference time decreased by 87.31%](https://github.com/Zerohertz/PANPP/tree/TensorRT))",
           },
-          image: "images/ai-based-ocr-solution-twinreader-2.webp",
+          image: "/images/ai-based-ocr-solution-twinreader-2.webp",
         },
         {
           content: {
             ko: "Encountered low accuracy in document rotation classification, addressed by performing batch inference on image tensors rotated in four directions and averaging the results. (improved accuracy by 2.01%p)",
             en: "Encountered low accuracy in document rotation classification, addressed by performing batch inference on image tensors rotated in four directions and averaging the results. (improved accuracy by 2.01%p)",
           },
-          image: "images/ai-based-ocr-solution-twinreader-3.webp",
+          image: "/images/ai-based-ocr-solution-twinreader-3.webp",
         },
       ],
     },
@@ -318,7 +318,7 @@ const projects: Payload = {
             ko: "Designed and developed an API for model deployment using Triton Inference Server.",
             en: "Designed and developed an API for model deployment using Triton Inference Server.",
           },
-          image: "images/ai-diagnostic-service-for-burn-patients-0.webp",
+          image: "/images/ai-diagnostic-service-for-burn-patients-0.webp",
         },
       ],
     },
@@ -338,7 +338,7 @@ const projects: Payload = {
             en: "Zerohertz/k8s-on-premise (GitHub)",
           },
           href: "https://github.com/Zerohertz/k8s-on-premise",
-          image: "images/on-premise-kubernetes-cluster-0.webp",
+          image: "/images/on-premise-kubernetes-cluster-0.webp",
         },
         {
           content: {
@@ -346,7 +346,7 @@ const projects: Payload = {
             en: "Blog posts",
           },
           href: "https://zerohertz.github.io/tags/home-server/",
-          image: "images/on-premise-kubernetes-cluster-1.webp",
+          image: "/images/on-premise-kubernetes-cluster-1.webp",
         },
         {
           content: {
@@ -402,7 +402,7 @@ const projects: Payload = {
             en: "Team-BoonMoSa (GitHub)",
           },
           href: "https://github.com/Team-BoonMoSa",
-          image: "images/mosaic-classification-0.webp",
+          image: "/images/mosaic-classification-0.webp",
         },
         {
           content: {
@@ -415,7 +415,7 @@ const projects: Payload = {
             ko: "Constructed a model deployment server on Amazon EC2 Inf1.",
             en: "Constructed a model deployment server on Amazon EC2 Inf1.",
           },
-          image: "images/mosaic-classification-1.webp",
+          image: "/images/mosaic-classification-1.webp",
         },
       ],
     },

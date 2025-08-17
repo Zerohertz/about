@@ -1,14 +1,12 @@
 import { Alert, Col, Row } from "reactstrap";
 
-import Image from "next/image";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Language } from "@/utils/GlobalLanguage";
-import { getImageSrc } from "@/utils/ImagePath";
 import { getLocalizedText } from "@/utils/MultiLanguage";
 
 import Href from "@/components/default/Href";
+import _Image from "@/components/default/Image";
 import Item from "@/components/profile/Item";
 import Payload from "@/components/profile/Payload";
 
@@ -52,14 +50,7 @@ const Component = ({ payload }: { payload: Payload }) => {
 const Profile = ({ src }: { src: string }) => {
   return (
     <div className="text-md-start text-center mb-md-0 mb-3">
-      <Image
-        className="img-fluid rounded"
-        src={getImageSrc(src)}
-        alt="Profile"
-        width={300}
-        height={300}
-        quality={100}
-      />
+      <_Image src={src} className="img-fluid rounded" size={300} />
     </div>
   );
 };

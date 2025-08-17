@@ -17,21 +17,25 @@ import projects from "@/payloads/projects";
 import publications from "@/payloads/publications";
 import skills from "@/payloads/skills";
 
+import { AnimationProvider } from "@/contexts/AnimationContext";
+
 function About() {
   return (
-    <Container>
-      <LanguageToggle />
-      <Profile payload={profile} />
-      <Introduction payload={introduction} />
-      <Common payload={experiences} />
-      <Common payload={projects} />
-      <Common payload={presentations} />
-      <Common payload={openSources} />
-      <Skills payload={skills} />
-      <Common payload={publications} />
-      <Common payload={educations} />
-      <Common payload={extras} />
-    </Container>
+    <AnimationProvider>
+      <Container>
+        <LanguageToggle />
+        <Profile payload={profile} />
+        <Introduction payload={introduction} />
+        <Common payload={experiences} />
+        <Common payload={projects} />
+        <Common payload={presentations} />
+        <Common payload={openSources} />
+        <Skills payload={skills} />
+        <Common payload={publications} />
+        <Common payload={educations} />
+        <Common payload={extras} />
+      </Container>
+    </AnimationProvider>
   );
 }
 

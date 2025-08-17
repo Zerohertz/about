@@ -7,7 +7,6 @@ import { NextSeo } from "next-seo";
 import global from "@/payloads/global";
 
 import { APP_CONFIG } from "@/config/app";
-import { AnimationProvider } from "@/contexts/AnimationContext";
 
 import "@/styles/global.scss";
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,9 +20,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href={`${APP_CONFIG.basePath}/${global.favicon}`} />
         <link rel="apple-touch-icon" href={`${APP_CONFIG.basePath}/${global.favicon}`} />
       </Head>
-      <AnimationProvider>
-        <Component {...pageProps} />
-      </AnimationProvider>
+      <Component {...pageProps} />
       {/* Google Analytics */}
       {global.analytics && global.analytics.google && (
         <Script strategy="afterInteractive" id="google-analytics">

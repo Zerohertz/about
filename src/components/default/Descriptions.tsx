@@ -31,20 +31,10 @@ const Descriptions = ({ descriptions }: { descriptions: Description[] }) => {
       {descriptions ? (
         <ul>
           {descriptions.map((description, descIndex) => (
-            <Fragment key={`${description.content}-${descIndex}`}>
-              <CreateDescription
-                description={description}
-                language={language}
-                key={`description-${description.content}-${descIndex}`}
-              />
-              {description.descriptions ? (
-                <RecursiveDescription
-                  descriptions={description.descriptions}
-                  language={language}
-                  key={`description-recursion-${description.content}-${descIndex}`}
-                />
-              ) : (
-                ""
+            <Fragment key={`desc-${descIndex}`}>
+              <CreateDescription description={description} language={language} />
+              {description.descriptions && (
+                <RecursiveDescription descriptions={description.descriptions} language={language} />
               )}
             </Fragment>
           ))}
@@ -56,24 +46,20 @@ const Descriptions = ({ descriptions }: { descriptions: Description[] }) => {
   );
 };
 
-const RecursiveDescription = memo(({ descriptions, language }: { descriptions: Description[]; language: Language }) => {
+const RecursiveDescription = memo(function RecursiveDescription({
+  descriptions,
+  language,
+}: {
+  descriptions: Description[];
+  language: Language;
+}) {
   return (
     <ul>
       {descriptions.map((description, index) => (
-        <Fragment key={`${description.content}-${index}`}>
-          <CreateDescription
-            description={description}
-            language={language}
-            key={`description-${description.content}-${index}`}
-          />
-          {description.descriptions ? (
-            <RecursiveDescription
-              descriptions={description.descriptions}
-              language={language}
-              key={`description-recursion-${description.content}-${index}`}
-            />
-          ) : (
-            ""
+        <Fragment key={`recursive-desc-${index}`}>
+          <CreateDescription description={description} language={language} />
+          {description.descriptions && (
+            <RecursiveDescription descriptions={description.descriptions} language={language} />
           )}
         </Fragment>
       ))}
@@ -81,35 +67,38 @@ const RecursiveDescription = memo(({ descriptions, language }: { descriptions: D
   );
 });
 
-const CreateDescription = memo(({ description, language }: { description: Description; language: Language }) => {
+const CreateDescription = memo(function CreateDescription({
+  description,
+  language,
+}: {
+  description: Description;
+  language: Language;
+}) {
   const { content, className, href, image } = description;
   const localizedContent = getLocalizedText(content, language);
 
   return (
-    <>
-      <meta name="format-detection" content="telephone=no" />
-      <li>
-        {href ? (
-          <Href className={className} href={href}>
-            {localizedContent}
-          </Href>
-        ) : (
-          <ReactMarkdown
-            className="markdown"
-            components={{
-              a: Href,
-            }}
-          >
-            {localizedContent}
-          </ReactMarkdown>
-        )}
-        {image && (
-          <div>
-            <_Image src={image} />
-          </div>
-        )}
-      </li>
-    </>
+    <li>
+      {href ? (
+        <Href className={className} href={href}>
+          {localizedContent}
+        </Href>
+      ) : (
+        <ReactMarkdown
+          className="markdown"
+          components={{
+            a: Href,
+          }}
+        >
+          {localizedContent}
+        </ReactMarkdown>
+      )}
+      {image && (
+        <div>
+          <_Image src={image} />
+        </div>
+      )}
+    </li>
   );
 });
 

@@ -5,8 +5,12 @@ import global from "@/payloads/global";
 
 class DocumentImpl extends Document {
   render() {
+    // Get language from the URL path or default to Korean
+    const isEnglish = this.props?.__NEXT_DATA__?.page === "/" || this.props?.__NEXT_DATA__?.query?.lang === undefined;
+    const lang = isEnglish ? "en-US" : "ko-KR";
+
     return (
-      <Html lang="ko-KR">
+      <Html lang={lang}>
         <Head>
           <meta charSet="utf-8" />
           {/* Font Setup: https://fonts.google.com */}
@@ -18,7 +22,10 @@ class DocumentImpl extends Document {
           />
           {/* Google Analytics */}
           {global.analytics && global.analytics.google && (
-            <Script strategy="beforeInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-ZCW0CR8M8X" />
+            <Script
+              strategy="beforeInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${global.analytics.google}`}
+            />
           )}
           {/* Naver Analytics */}
           {global.analytics && global.analytics.naver && (

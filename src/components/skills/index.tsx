@@ -5,17 +5,16 @@ import Container from "@/components/skills/Container";
 import Payload from "@/components/skills/Payload";
 import ToolTip from "@/components/skills/ToolTip";
 
-import { useStaggeredAnimation } from "@/hooks/useAnimation";
+import { useAnimation } from "@/contexts/AnimationContext";
 
 const Component = ({ payload }: { payload: Payload }) => {
-  const { animationClass: titleAnimationClass } = useStaggeredAnimation(0);
-  const { animationClass: contentAnimationClass } = useStaggeredAnimation(1);
+  const { getAnimationClass } = useAnimation();
 
   return (
     <div className="mt-md-5 mt-5 mb-md-5 mb-5">
       <Row className="pb-3">
         <Col>
-          <div className={titleAnimationClass || ""}>
+          <div className={getAnimationClass(0)}>
             <h2 className="skill-heading" id="skills">
               <span>
                 <a className="primary" href="#skills">
@@ -27,9 +26,9 @@ const Component = ({ payload }: { payload: Payload }) => {
           </div>
         </Col>
       </Row>
-      <div className={contentAnimationClass || ""}>
+      <div className={getAnimationClass(1)}>
         {payload.skills.map((skill, index) => (
-          <Container key={index.toString()} skill={skill} index={index} />
+          <Container key={index} skill={skill} index={index} />
         ))}
       </div>
     </div>

@@ -19,7 +19,6 @@ export function useLanguage(initialLanguage?: Language) {
     if (!mounted) return;
 
     const handleLanguageChange = (event: CustomEvent<Language>) => {
-      console.log("Language change event received:", event.detail);
       setLanguage(event.detail);
     };
 

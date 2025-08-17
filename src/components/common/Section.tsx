@@ -5,19 +5,18 @@ import { getTotalPeriod } from "@/utils/DateTime";
 
 import Payload from "@/components/common/Payload";
 
-import { useStaggeredAnimation } from "@/hooks/useAnimation";
+import { useAnimation } from "@/contexts/AnimationContext";
 
 const Section = ({ payload, children }: PropsWithChildren<{ payload: Payload }>) => {
   const id = useMemo(() => payload.title.replace(" & ", "-").replace(" ", "-").toLowerCase(), [payload.title]);
   const totalPeriod = useMemo(() => getTotalPeriod(payload), [payload]);
-  const { animationClass: titleAnimationClass } = useStaggeredAnimation(0);
-  const { animationClass: contentAnimationClass } = useStaggeredAnimation(1);
+  const { getAnimationClass } = useAnimation();
 
   return (
     <div className="mt-md-5 mt-5 mb-md-5 mb-5">
       <Row className="pb-3">
         <Col>
-          <div className={titleAnimationClass || ""}>
+          <div className={getAnimationClass(0)}>
             <div className="d-flex align-items-center">
               <h2 id={id}>
                 <a className="primary" href={`#${id}`}>
@@ -29,7 +28,7 @@ const Section = ({ payload, children }: PropsWithChildren<{ payload: Payload }>)
           </div>
         </Col>
       </Row>
-      <div className={contentAnimationClass || ""}>{children}</div>
+      <div className={getAnimationClass(1)}>{children}</div>
     </div>
   );
 };

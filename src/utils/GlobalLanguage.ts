@@ -15,7 +15,6 @@ export function getCurrentLanguage(): Language {
 
 export function setCurrentLanguage(language: Language): void {
   if (typeof window !== "undefined") {
-    console.log("Setting language to:", language);
     window.currentLanguage = language;
     window.dispatchEvent(new CustomEvent("languageChange", { detail: language }));
   }

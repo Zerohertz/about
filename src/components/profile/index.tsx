@@ -4,39 +4,38 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Language } from "@/utils/GlobalLanguage";
 import { getLocalizedText } from "@/utils/MultiLanguage";
+import { useLanguage } from "@/utils/useLanguage";
 
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
 import Item from "@/components/profile/Item";
 import Payload from "@/components/profile/Payload";
 
-import { useStaggeredAnimation } from "@/hooks/useAnimation";
+import { useAnimation } from "@/contexts/AnimationContext";
 
 const Component = ({ payload }: { payload: Payload }) => {
-  const { language, animationClass: profileAnimationClass } = useStaggeredAnimation(0);
-  const { animationClass: nameAnimationClass } = useStaggeredAnimation(1);
-  const { animationClass: contactsAnimationClass } = useStaggeredAnimation(2);
-  const { animationClass: noticeAnimationClass } = useStaggeredAnimation(3);
+  const { language } = useLanguage();
+  const { getAnimationClass } = useAnimation();
 
   return (
     <Row className="mt-md-5 mt-3 mb-md-5 mb-4">
       <Col md={4} sm={12}>
-        <div className={profileAnimationClass || ""}>
+        <div className={getAnimationClass(0)}>
           <Profile src={payload.image} />
         </div>
       </Col>
       <Col md={8} sm={12}>
         <div className="ms-md-3">
-          <div className={nameAnimationClass || ""}>
+          <div className={getAnimationClass(1)}>
             <Name name={payload.name} language={language} />
           </div>
-          <div className={contactsAnimationClass || ""}>
+          <div className={getAnimationClass(2)}>
             <Contacts contacts={payload.contact} />
           </div>
         </div>
       </Col>
       {payload.notice && (
-        <div className={noticeAnimationClass || ""}>
+        <div className={getAnimationClass(3)}>
           <Alert color="secondary" role="alert" className="mt-3">
             {payload.notice.icon ? <FontAwesomeIcon className="mr-2" icon={payload.notice.icon} /> : null}{" "}
             {getLocalizedText(payload.notice.title, language)}

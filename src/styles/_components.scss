@@ -107,3 +107,32 @@ button.btn.language-toggle {
     transform: scale(0.98);
   }
 }
+
+// Language transition animations
+.language-transition {
+  transition: all 0.3s ease-in-out;
+
+  &.transitioning {
+    opacity: 0.3;
+    transform: translateY(10px);
+  }
+
+  &.normal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.language-transition-subtle {
+  transition: all 0.2s ease-in-out;
+
+  &.transitioning {
+    opacity: 0.3;
+    transform: translateY(5px);
+  }
+
+  &.normal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

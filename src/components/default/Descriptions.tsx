@@ -32,13 +32,7 @@ const Descriptions = ({ descriptions }: { descriptions: Description[] }) => {
   }, []);
 
   return (
-    <div
-      style={{
-        opacity: isTransitioning ? 0.3 : 1,
-        transform: isTransitioning ? "translateY(5px)" : "translateY(0)",
-        transition: "all 0.2s ease-in-out",
-      }}
-    >
+    <div className={`language-transition-subtle ${isTransitioning ? "transitioning" : "normal"}`}>
       {descriptions ? (
         <ul>
           {descriptions.map((description, descIndex) => (

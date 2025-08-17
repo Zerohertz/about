@@ -48,13 +48,7 @@ const Component = ({ payload }: { payload: Payload }) => {
           {localizedTitle}
         </a>
       </h2>
-      <div
-        style={{
-          opacity: isTransitioning ? 0.3 : 1,
-          transform: isTransitioning ? "translateY(10px)" : "translateY(0)",
-          transition: "all 0.3s ease-in-out",
-        }}
-      >
+      <div className={`language-transition ${isTransitioning ? "transitioning" : "normal"}`}>
         {localizedContents.map((content, index) => (
           <ReactMarkdown
             key={index.toString()}

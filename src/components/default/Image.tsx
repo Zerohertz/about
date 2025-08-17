@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { APP_CONFIG } from "@/config/app";
 
-const CustomImage = ({ src, className = "image", size = 5000 }: { src: string; className: string; size: number }) => {
+const CustomImage = ({ src, className = "image", size = 5000 }: { src: string; className?: string; size?: number }) => {
   const imageSrc = src.startsWith("http") ? src : `${APP_CONFIG.basePath}${src}`;
 
   return (

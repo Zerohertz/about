@@ -1,15 +1,19 @@
 import { FC } from "react";
 
+import { Language } from "@/utils/GlobalLanguage";
+
 import Payload from "@/components/default/Payload";
 
-type Component<T> = (props: { payload: T }) => JSX.Element;
+type Component<T> = (props: { payload: T; language: Language }) => JSX.Element;
 
-const ComponentWrapper = <T extends Payload>(WrappedComponent: Component<T>): FC<{ payload: T; title?: string }> => {
-  const Wrapper: FC<{ payload: T }> = ({ payload }) => {
+const ComponentWrapper = <T extends Payload>(
+  WrappedComponent: Component<T>,
+): FC<{ payload: T; language: Language }> => {
+  const Wrapper: FC<{ payload: T; language: Language }> = ({ payload, language }) => {
     if (payload?.disable) {
       return null;
     }
-    return <WrappedComponent payload={payload} />;
+    return <WrappedComponent payload={payload} language={language} />;
   };
   return Wrapper;
 };

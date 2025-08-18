@@ -6,7 +6,6 @@ import { useAnimation } from "@/contexts/AnimationContext";
 
 import { Language } from "@/utils/GlobalLanguage";
 import { getLocalizedText } from "@/utils/MultiLanguage";
-import { useLanguage } from "@/utils/useLanguage";
 
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
@@ -15,8 +14,7 @@ import Payload from "@/components/profile/Payload";
 
 import { IMAGE_DEFAULTS } from "@/constants";
 
-const Component = ({ payload }: { payload: Payload }) => {
-  const { language } = useLanguage();
+const Component = ({ payload, language }: { payload: Payload; language: Language }) => {
   const { getAnimationClass } = useAnimation();
 
   return (

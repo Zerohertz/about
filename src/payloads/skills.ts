@@ -153,7 +153,10 @@ const skills: Payload = {
   title: "SKILLS",
   disable: false,
   skills: [programming, mlops, infra, dataEngineering, database, etc], // ingress
-  tooltip: "1: Beginner\n2: Intermediate\n3: Professional",
+  tooltip: {
+    en: "1: Beginner\n2: Intermediate\n3: Professional",
+    ko: "1: 초급\n2: 중급\n3: 고급",
+  },
 };
 
 export default skills;

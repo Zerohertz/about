@@ -1,31 +1,15 @@
-import { Fragment, memo, useEffect, useState } from "react";
+import { Fragment, memo } from "react";
 
 import ReactMarkdown from "react-markdown";
 
-import { getCurrentLanguage, Language } from "@/utils/GlobalLanguage";
+import { Language } from "@/utils/GlobalLanguage";
 import { getLocalizedText } from "@/utils/MultiLanguage";
 
 import Description from "@/components/default/Description";
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
 
-const Descriptions = ({ descriptions }: { descriptions: Description[] }) => {
-  const [language, setLanguage] = useState<Language>("en");
-
-  useEffect(() => {
-    setLanguage(getCurrentLanguage());
-
-    const handleLanguageChange = (event: CustomEvent<Language>) => {
-      setLanguage(event.detail);
-    };
-
-    window.addEventListener("languageChange", handleLanguageChange as EventListener);
-
-    return () => {
-      window.removeEventListener("languageChange", handleLanguageChange as EventListener);
-    };
-  }, []);
-
+const Descriptions = ({ descriptions, language }: { descriptions: Description[]; language: Language }) => {
   return (
     <div>
       {descriptions ? (

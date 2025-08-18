@@ -2,12 +2,14 @@ import { Col, Row } from "reactstrap";
 
 import { useAnimation } from "@/contexts/AnimationContext";
 
+import { Language } from "@/utils/GlobalLanguage";
+
 import ComponentWrapper from "@/components/default/ComponentWrapper";
 import Container from "@/components/skills/Container";
 import Payload from "@/components/skills/Payload";
 import ToolTip from "@/components/skills/ToolTip";
 
-const Component = ({ payload }: { payload: Payload }) => {
+const Component = ({ payload, language }: { payload: Payload; language: Language }) => {
   const { getAnimationClass } = useAnimation();
 
   return (
@@ -21,7 +23,7 @@ const Component = ({ payload }: { payload: Payload }) => {
                   {payload.title}
                 </a>
               </span>
-              <ToolTip content={payload.tooltip} />
+              <ToolTip content={payload.tooltip} language={language} />
             </h2>
           </div>
         </Col>

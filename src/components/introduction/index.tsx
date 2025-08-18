@@ -7,15 +7,14 @@ import ReactMarkdown from "react-markdown";
 import { useAnimation } from "@/contexts/AnimationContext";
 
 import { dateTimeToString, stringToDateTime } from "@/utils/DateTime";
+import { Language } from "@/utils/GlobalLanguage";
 import { getLocalizedText } from "@/utils/MultiLanguage";
-import { useLanguage } from "@/utils/useLanguage";
 
 import ComponentWrapper from "@/components/default/ComponentWrapper";
 import Href from "@/components/default/Href";
 import Payload from "@/components/introduction/Payload";
 
-const Component = ({ payload }: { payload: Payload }) => {
-  const { language } = useLanguage();
+const Component = ({ payload, language }: { payload: Payload; language: Language }) => {
   const { getAnimationClass } = useAnimation();
 
   const localizedTitle = useMemo(() => getLocalizedText(payload.title, language), [payload.title, language]);

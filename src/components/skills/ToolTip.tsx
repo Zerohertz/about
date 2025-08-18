@@ -4,7 +4,10 @@ import { Tooltip } from "reactstrap";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const ToolTip = ({ content }: { content: string }) => {
+import { Language } from "@/utils/GlobalLanguage";
+import { getLocalizedText, MultiLanguageText } from "@/utils/MultiLanguage";
+
+const ToolTip = ({ content, language }: { content: MultiLanguageText; language: Language }) => {
   const [tooltipOpen, setTooltipOpen] = useState(false);
   const toggle = () => setTooltipOpen(!tooltipOpen);
   if (!content) {
@@ -14,7 +17,7 @@ const ToolTip = ({ content }: { content: string }) => {
     <small>
       <FontAwesomeIcon className="icon" icon={faQuestionCircle} id="skill-tooltip" />
       <Tooltip placement="right" target="skill-tooltip" isOpen={tooltipOpen} toggle={toggle}>
-        {content}
+        {getLocalizedText(content, language)}
       </Tooltip>
     </small>
   );

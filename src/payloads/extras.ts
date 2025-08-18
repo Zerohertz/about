@@ -108,7 +108,7 @@ const extras: Payload = {
             {
               content: {
                 en: "Research on Web handling defect improvement considering internal stress distribution of winding roll (copper film), SK Nexilis (Oct 2022 ~ Jan 2023)",
-                ko: "권취 롤(copper film) 내부 응력 분포를 고려한 Web handling 불량 개선 방안 연구, SK 넥실리스 (2022. 10 ~ 2023. 01)",
+                ko: "권취 롤 (copper film) 내부 응력 분포를 고려한 Web handling 불량 개선 방안 연구, SK 넥실리스 (2022. 10 ~ 2023. 01)",
               },
               descriptions: [
                 {

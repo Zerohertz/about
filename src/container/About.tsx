@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Container } from "reactstrap";
 
 import { AnimationProvider } from "@/contexts/AnimationContext";
 
@@ -40,19 +39,17 @@ function About({ initialLanguage }: AboutProps) {
 
   return (
     <AnimationProvider>
-      <Container>
-        <LanguageToggle />
-        <Profile payload={profile} language={language} />
-        <Introduction payload={introduction} language={language} />
-        <Common payload={experiences} language={language} />
-        <Common payload={projects} language={language} />
-        <Common payload={presentations} language={language} />
-        <Common payload={openSources} language={language} />
-        <Skills payload={skills} language={language} />
-        <Common payload={publications} language={language} />
-        <Common payload={educations} language={language} />
-        <Common payload={extras} language={language} />
-      </Container>
+      <LanguageToggle />
+      <Profile payload={profile} language={language} />
+      <Introduction payload={introduction} language={language} />
+      <Common payload={experiences} language={language} />
+      <Common payload={projects} language={language} />
+      <Common payload={presentations} language={language} />
+      <Common payload={openSources} language={language} />
+      <Skills payload={skills} language={language} />
+      <Common payload={publications} language={language} />
+      <Common payload={educations} language={language} />
+      <Common payload={extras} language={language} />
     </AnimationProvider>
   );
 }

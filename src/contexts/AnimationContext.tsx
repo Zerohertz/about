@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { Container } from "reactstrap";
 
 import { useLanguage } from "@/utils/useLanguage";
 
@@ -44,7 +45,11 @@ export const AnimationProvider = ({ children }: { children: React.ReactNode }) =
     }
   };
 
-  return <AnimationContext.Provider value={{ animationKey, getAnimationClass }}>{children}</AnimationContext.Provider>;
+  return (
+    <AnimationContext.Provider value={{ animationKey, getAnimationClass }}>
+      <Container>{children}</Container>
+    </AnimationContext.Provider>
+  );
 };
 
 export const useAnimation = () => {

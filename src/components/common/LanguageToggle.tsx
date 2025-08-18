@@ -1,6 +1,8 @@
 import { useCallback } from "react";
 import { Button } from "reactstrap";
 
+import { APP_CONFIG } from "@/config/app";
+
 import { Language, setCurrentLanguage } from "@/utils/GlobalLanguage";
 import { useLanguage } from "@/utils/useLanguage";
 
@@ -9,7 +11,7 @@ function LanguageToggle() {
 
   const handleLanguageToggle = useCallback(() => {
     const newLanguage: Language = language === "en" ? "ko" : "en";
-    const targetPath = newLanguage === "en" ? "/" : "/ko";
+    const targetPath = newLanguage === "en" ? APP_CONFIG.basePath + "/" : APP_CONFIG.basePath + "/ko";
 
     // 직접 언어 상태 변경 (라우팅 없이)
     setCurrentLanguage(newLanguage);

@@ -44,11 +44,15 @@ export function useLanguage(initialLanguage?: Language) {
       targetLanguage = "en";
     }
 
-    if (language !== targetLanguage) {
-      setLanguage(targetLanguage);
-      setCurrentLanguage(targetLanguage);
-    }
-  }, [mounted, router.pathname, router.query.lang, language]);
+    // 언어가 다를 때만 업데이트하여 무한 루프 방지
+    setLanguage((currentLanguage) => {
+      if (currentLanguage !== targetLanguage) {
+        setCurrentLanguage(targetLanguage);
+        return targetLanguage;
+      }
+      return currentLanguage;
+    });
+  }, [mounted, router.pathname, router.query.lang]);
 
   return { language, mounted };
 }

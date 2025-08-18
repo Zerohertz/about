@@ -1,12 +1,10 @@
-import { Language } from "@/utils/GlobalLanguage";
+import { Language, MultiLanguageText } from "@/types/language";
 
-export interface MultiLanguageText {
-  ko: string;
-  en: string;
-}
+// Re-export for backward compatibility
+export type { Language, MultiLanguageText };
 
 export function includes(text: string | MultiLanguageText, searchString: string, language: Language = "en"): boolean {
-  const str = typeof text === "string" ? text : text[language];
+  const str = typeof text === "string" ? text : text[language] || text.en || "";
   return str.includes(searchString);
 }
 
@@ -14,5 +12,6 @@ export function getLocalizedText(text: string | MultiLanguageText, language: Lan
   if (typeof text === "string") {
     return text;
   }
-  return text[language];
+  // Fallback to English if requested language is not available
+  return text[language] || text.en || "";
 }

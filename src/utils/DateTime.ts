@@ -1,9 +1,10 @@
 import { DateTime } from "luxon";
 
-import { Language } from "@/utils/GlobalLanguage";
-import { getLocalizedText, includes, MultiLanguageText } from "@/utils/MultiLanguage";
+import { getLocalizedText, includes } from "@/utils/MultiLanguage";
 
 import Payload from "@/components/common/Payload";
+
+import { Language, MultiLanguageText } from "@/types/language";
 
 enum LUXON_DATE_FORMAT {
   YYYY_LL_DD = "yyyy-LL-dd",
@@ -32,6 +33,11 @@ export const dateTimeToString = (time: DateTime, day: boolean = false) => {
 };
 
 export const getDuration = (from: DateTime, to: DateTime = DateTime.local()) => {
+  // Validate DateTime objects
+  if (!from.isValid || !to.isValid) {
+    return "Invalid date";
+  }
+
   from = from.startOf("month");
   to = to.plus({ month: 1 }).startOf("month");
   const totalMonths = to.diff(from, "months").months;

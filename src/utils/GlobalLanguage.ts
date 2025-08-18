@@ -1,1 +1,1 @@
-export type Language = "ko" | "en";
+export type { Language } from "@/types/language";

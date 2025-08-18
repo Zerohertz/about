@@ -12,22 +12,22 @@ interface AnimationContextType {
 const AnimationContext = createContext<AnimationContextType | undefined>(undefined);
 
 export const AnimationProvider = ({ children }: { children: React.ReactNode }) => {
-  const { language } = useLanguage();
+  const { language, mounted } = useLanguage();
   const [animationKey, setAnimationKey] = useState(0);
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
-    // Reset animation when language changes
+    if (!mounted) return;
+
     setShouldAnimate(false);
     setAnimationKey((prev) => prev + 1);
 
-    // Trigger animation after a brief delay
     const timer = setTimeout(() => {
       setShouldAnimate(true);
     }, ANIMATION_DELAYS.TRIGGER_DELAY);
 
     return () => clearTimeout(timer);
-  }, [language]);
+  }, [language, mounted]);
 
   const getAnimationClass = (staggerIndex: number) => {
     if (!shouldAnimate) return "";

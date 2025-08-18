@@ -2,6 +2,7 @@ import { Container } from "reactstrap";
 
 import { AnimationProvider } from "@/contexts/AnimationContext";
 
+import { Language } from "@/utils/GlobalLanguage";
 import { useLanguage } from "@/utils/useLanguage";
 
 import Common from "@/components/common";
@@ -21,8 +22,12 @@ import projects from "@/payloads/projects";
 import publications from "@/payloads/publications";
 import skills from "@/payloads/skills";
 
-function About() {
-  const { language } = useLanguage();
+interface AboutProps {
+  initialLanguage?: Language;
+}
+
+function About({ initialLanguage }: AboutProps) {
+  const { language } = useLanguage(initialLanguage);
 
   return (
     <AnimationProvider>

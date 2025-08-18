@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 
-import { getCurrentLanguage, Language, setCurrentLanguage } from "@/utils/GlobalLanguage";
+import { Language, setCurrentLanguage } from "@/utils/GlobalLanguage";
 
 import About from "@/container/About";
 
@@ -20,19 +20,14 @@ function LangAbout({ lang }: Props) {
       return;
     }
 
-    if (lang === "ko") {
-      const currentLang = getCurrentLanguage();
-      if (currentLang !== "ko") {
-        setCurrentLanguage(lang);
-      }
-    }
+    setCurrentLanguage(lang);
   }, [lang, router]);
 
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
 
-  return <About />;
+  return <About initialLanguage={lang} />;
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

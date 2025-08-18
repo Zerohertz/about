@@ -1,42 +1,42 @@
-import { useCallback, useEffect } from "react";
+import { useCallback } from "react";
 import { Button } from "reactstrap";
-
-import { useRouter } from "next/router";
 
 import { Language, setCurrentLanguage } from "@/utils/GlobalLanguage";
 import { useLanguage } from "@/utils/useLanguage";
 
 function LanguageToggle() {
-  const router = useRouter();
-  const { language, mounted } = useLanguage();
+  const { language } = useLanguage();
 
-  useEffect(() => {
-    if (!mounted) return;
-
-    let targetLanguage: Language;
-
-    if (router.pathname === "/[lang]" && typeof router.query.lang === "string" && router.query.lang === "ko") {
-      targetLanguage = "ko";
-    } else {
-      targetLanguage = "en";
-    }
-
-    // Only update language if it's actually different to avoid unnecessary calls
-    if (language !== targetLanguage) {
-      setCurrentLanguage(targetLanguage);
-    }
-  }, [mounted, router.pathname, router.query.lang, language]);
-
-  const handleLanguageToggle = useCallback(async () => {
+  const handleLanguageToggle = useCallback(() => {
     const newLanguage: Language = language === "en" ? "ko" : "en";
     const targetPath = newLanguage === "en" ? "/" : "/ko";
 
-    // Use router.push for proper Next.js navigation
-    await router.push(targetPath, undefined, { scroll: false });
-  }, [language, router]);
+    // 직접 언어 상태 변경 (라우팅 없이)
+    setCurrentLanguage(newLanguage);
+
+    // 브라우저 히스토리만 업데이트 (페이지 리로드 없음)
+    window.history.pushState(null, "", targetPath);
+  }, [language]);
+
+  const handleKeyDown = useCallback(
+    (event: React.KeyboardEvent) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        handleLanguageToggle();
+      }
+    },
+    [handleLanguageToggle],
+  );
 
   return (
-    <Button size="sm" onClick={handleLanguageToggle} className="language-toggle">
+    <Button
+      size="sm"
+      onClick={handleLanguageToggle}
+      onKeyDown={handleKeyDown}
+      className="language-toggle"
+      aria-label={`Switch to ${language === "en" ? "Korean" : "English"} language`}
+      title={`Switch to ${language === "en" ? "Korean" : "English"}`}
+    >
       {language === "en" ? "KOR" : "ENG"}
     </Button>
   );

@@ -1,18 +1,20 @@
 import { useEffect } from "react";
 
-import { getCurrentLanguage, setCurrentLanguage } from "@/utils/GlobalLanguage";
-
-import About from "@/container/About";
+import { useRouter } from "next/router";
 
 function HomePage() {
-  useEffect(() => {
-    const currentLang = getCurrentLanguage();
-    if (currentLang !== "en") {
-      setCurrentLanguage("en");
-    }
-  }, []);
+  const router = useRouter();
 
-  return <About />;
+  useEffect(() => {
+    // 브라우저 언어 감지해서 리다이렉트 (정적 빌드용)
+    const browserLang = navigator.language.toLowerCase();
+    const isKorean = browserLang.startsWith("ko");
+    const targetPath = isKorean ? "/ko" : "/en";
+
+    router.replace(targetPath);
+  }, [router]);
+
+  return <div>Redirecting...</div>;
 }
 
 export default HomePage;

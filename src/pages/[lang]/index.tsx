@@ -1,9 +1,6 @@
-import { useEffect } from "react";
-
 import { GetStaticPaths, GetStaticProps } from "next";
-import { useRouter } from "next/router";
 
-import { Language, setCurrentLanguage } from "@/utils/GlobalLanguage";
+import { Language } from "@/utils/GlobalLanguage";
 
 import About from "@/container/About";
 
@@ -12,21 +9,6 @@ interface Props {
 }
 
 function LangAbout({ lang }: Props) {
-  const router = useRouter();
-
-  useEffect(() => {
-    if (lang === "en") {
-      router.replace("/");
-      return;
-    }
-
-    setCurrentLanguage(lang);
-  }, [lang, router]);
-
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
-
   return <About initialLanguage={lang} />;
 }
 

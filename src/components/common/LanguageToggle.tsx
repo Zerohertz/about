@@ -1,24 +1,22 @@
 import { useCallback } from "react";
 import { Button } from "reactstrap";
 
-import { APP_CONFIG } from "@/config/app";
+import { useRouter } from "next/router";
 
-import { Language, setCurrentLanguage } from "@/utils/GlobalLanguage";
+import { Language } from "@/utils/GlobalLanguage";
 import { useLanguage } from "@/utils/useLanguage";
 
 function LanguageToggle() {
   const { language } = useLanguage();
+  const router = useRouter();
 
   const handleLanguageToggle = useCallback(() => {
     const newLanguage: Language = language === "en" ? "ko" : "en";
-    const targetPath = newLanguage === "en" ? APP_CONFIG.basePath + "/" : APP_CONFIG.basePath + "/ko";
+    const targetPath = `/${newLanguage}`;
 
-    // 직접 언어 상태 변경 (라우팅 없이)
-    setCurrentLanguage(newLanguage);
-
-    // 브라우저 히스토리만 업데이트 (페이지 리로드 없음)
-    window.history.pushState(null, "", targetPath);
-  }, [language]);
+    // Next.js router를 사용한 부드러운 전환
+    router.push(targetPath);
+  }, [language, router]);
 
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent) => {

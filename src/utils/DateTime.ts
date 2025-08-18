@@ -1,6 +1,7 @@
 import { DateTime } from "luxon";
 
-import { getLocalizedText, includes, Language, MultiLanguageText } from "@/utils/MultiLanguage";
+import { Language } from "@/utils/GlobalLanguage";
+import { getLocalizedText, includes, MultiLanguageText } from "@/utils/MultiLanguage";
 
 import Payload from "@/components/common/Payload";
 
@@ -9,13 +10,18 @@ enum LUXON_DATE_FORMAT {
   YYYY_LL = "yyyy-LL",
   YYYY_DOT_LL = "yyyy. LL",
   YYYY_DOT_LL_DOT_DD = "yyyy. LL. dd",
-  KINDNESS_FULL = "DDDD",
 }
 
 export const stringToDateTime = (time: string | MultiLanguageText, language: Language = "en") => {
   const timeString = typeof time === "string" ? time : getLocalizedText(time, language);
   const format = timeString.length > 7 ? LUXON_DATE_FORMAT.YYYY_LL_DD : LUXON_DATE_FORMAT.YYYY_LL;
-  return DateTime.fromFormat(timeString, format);
+  const dateTime = DateTime.fromFormat(timeString, format);
+
+  if (!dateTime.isValid) {
+    return DateTime.local(); // fallback to current date
+  }
+
+  return dateTime;
 };
 
 export const dateTimeToString = (time: DateTime, day: boolean = false) => {

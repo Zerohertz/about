@@ -43,7 +43,10 @@ export function restoreScrollPosition(key: string): void {
   const savedPercentage = sessionStorage.getItem(`scroll-${key}`);
   if (savedPercentage) {
     const percentage = parseFloat(savedPercentage);
-    // 페이지가 완전히 로드된 후 스크롤 복원
-    setTimeout(() => setScrollPercentage(percentage), 100);
+    // NaN 체크 추가
+    if (!isNaN(percentage)) {
+      // 페이지가 완전히 로드된 후 스크롤 복원
+      setTimeout(() => setScrollPercentage(percentage), 100);
+    }
   }
 }

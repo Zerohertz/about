@@ -1,4 +1,4 @@
-export type Language = "ko" | "en";
+import { Language } from "@/utils/GlobalLanguage";
 
 export interface MultiLanguageText {
   ko: string;
@@ -10,7 +10,7 @@ export function includes(text: string | MultiLanguageText, searchString: string,
   return str.includes(searchString);
 }
 
-export function getLocalizedText(text: string | MultiLanguageText, language: Language): string {
+export function getLocalizedText(text: string | MultiLanguageText, language: Language = "en"): string {
   if (typeof text === "string") {
     return text;
   }

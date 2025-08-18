@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { Container } from "reactstrap";
 
 import { AnimationProvider } from "@/contexts/AnimationContext";
 
 import { Language } from "@/utils/GlobalLanguage";
+import { restoreScrollPosition } from "@/utils/scrollUtils";
 import { useLanguage } from "@/utils/useLanguage";
 
 import Common from "@/components/common";
@@ -27,7 +29,14 @@ interface AboutProps {
 }
 
 function About({ initialLanguage }: AboutProps) {
-  const { language } = useLanguage(initialLanguage);
+  const { language, mounted } = useLanguage(initialLanguage);
+
+  // 언어 변경 후 스크롤 위치 복원
+  useEffect(() => {
+    if (mounted) {
+      restoreScrollPosition("language-switch");
+    }
+  }, [language, mounted]);
 
   return (
     <AnimationProvider>

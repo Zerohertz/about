@@ -4,6 +4,7 @@ import { Button } from "reactstrap";
 import { useRouter } from "next/router";
 
 import { Language } from "@/utils/GlobalLanguage";
+import { saveScrollPosition } from "@/utils/scrollUtils";
 import { useLanguage } from "@/utils/useLanguage";
 
 function LanguageToggle() {
@@ -14,8 +15,11 @@ function LanguageToggle() {
     const newLanguage: Language = language === "en" ? "ko" : "en";
     const targetPath = `/${newLanguage}`;
 
-    // Next.js router를 사용한 부드러운 전환
-    router.push(targetPath);
+    // 현재 스크롤 위치를 백분율로 저장
+    saveScrollPosition("language-switch");
+
+    // 스크롤 위치 유지하면서 언어 전환
+    router.push(targetPath, undefined, { scroll: false });
   }, [language, router]);
 
   const handleKeyDown = useCallback(

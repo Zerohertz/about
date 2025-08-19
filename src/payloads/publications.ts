@@ -64,8 +64,8 @@ const publications: Payload = {
     },
     {
       title: {
-        ko: "",
         en: "",
+        ko: "",
       },
       subTitle: "",
       startedAt: "2022-04",

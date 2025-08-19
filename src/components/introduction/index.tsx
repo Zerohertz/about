@@ -58,7 +58,6 @@ const Component = ({ payload, language }: { payload: Payload; language: Language
           <small>{"Latest Updated"}</small>{" "}
           <Badge color="secondary">{`${dateTimeToString(latestUpdated, true)} (D+${latestUpdatedByNow})`}</Badge>
         </p>
-        {/* <p className={"signature text-end"}>{payload.signature}</p> */}
       </div>
     </div>
   );

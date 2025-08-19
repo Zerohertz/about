@@ -13,8 +13,8 @@ const introduction: Payload = {
       ko: "배움과 성장에 대한 열정으로 2018년부터 Kubernetes, PyTorch, Airflow 등의 주제로 [기술 블로그](https://zerohertz.github.io/)를 운영하며 1,500 이상의 MAU를 달성했습니다. [10개 이상의 스터디](https://github.com/stars/Zerohertz/lists/99-boaz)에 참여하며 기술의 핵심 원리를 탐구하고 실무 문제 해결에 적용하는 것을 즐깁니다.",
     },
     {
-      ko: "",
       en: "",
+      ko: "",
     },
     {
       en: "🚀 **Efficiency-Maximizing Engineer**",
@@ -25,8 +25,8 @@ const introduction: Payload = {
       ko: "비효율적인 반복 작업을 자동화하고 운영 개선을 위한 효율적인 방법을 추구합니다. 모델 서빙을 위한 Python 백엔드를 개발하고 파이프라인을 최적화하여 효율성을 높였습니다. GitLab CI와 Kubernetes를 활용하여 파이프라인을 구축하고 사이드카 패턴으로 배포하여 버전 관리 문제를 해결하고 빌드 시간을 대폭 단축했습니다.",
     },
     {
-      ko: "",
       en: "",
+      ko: "",
     },
     {
       en: "🫂 **Collaboration-Focused Engineer**",

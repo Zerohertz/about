@@ -269,8 +269,8 @@ const projects: Payload = {
     },
     {
       title: {
-        ko: "AI 기반 자동차 손상 및 심도 인식 제품, TwinCar",
         en: "AI-based Automotive Damage and Depth Recognition Product, TwinCar",
+        ko: "AI 기반 자동차 손상 및 심도 인식 제품, TwinCar",
       },
       subTitle: "AgileSoDA",
       startedAt: "2023-11",

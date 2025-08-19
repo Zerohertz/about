@@ -32,7 +32,7 @@ const openSources: Payload = {
         {
           content: {
             en: "Conducted comprehensive performance analysis comparing [v0 vs. v1 engines](https://github.com/vllm-project/vllm/issues/17540) and [version stability](https://github.com/vllm-project/vllm/issues/18619) (`v0.8.4` vs. `v0.8.5.post1`) across multi-GPU environments, providing detailed technical documentation for engine optimization and issue reproduction.",
-            ko: "멀티 GPU 환경에서 [v0 vs. v1 엔진](https://github.com/vllm-project/vllm/issues/17540) 및 [버전 안정성](https://github.com/vllm-project/vllm/issues/18619) (`v0.8.4` vs. `v0.8.5.post1`)을 비교하는 포괄적인 성능 분석을 수행하고, 엔진 최적화 및 이슈 재현을 위한 상세한 기술 문서를 제공했습니다.",
+            ko: "멀티 GPU 환경에서 [v0 vs. v1 엔진](https://github.com/vllm-project/vllm/issues/17540) 및 [버전 안정성](https://github.com/vllm-project/vllm/issues/18619) (`v0.8.4` vs. `v0.8.5.post1`) 비교 포괄적 성능 분석 수행 및 엔진 최적화와 이슈 재현을 위한 상세 기술 문서 제공",
           },
         },
       ],
@@ -113,7 +113,7 @@ const openSources: Payload = {
         {
           content: {
             en: "Addressed tensor dimension errors and generalized prediction, evaluation, and visualization processes.",
-            ko: "텐서 차원 오류를 해결하고 예측, 평가 및 시각화 프로세스를 일반화했습니다.",
+            ko: "텐서 차원 오류 해결 및 예측, 평가, 시각화 프로세스 일반화",
           },
         },
       ],

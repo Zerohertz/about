@@ -1,8 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 
-import { Language } from "@/utils/GlobalLanguage";
-
 import About from "@/containers/About";
+import { Language } from "@/types/language";
 
 interface Props {
   lang: Language;

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { useRouter } from "next/router";
 
-import { Language } from "@/utils/GlobalLanguage";
+import { Language } from "@/types/language";
 
 export function useLanguage(initialLanguage?: Language) {
   const router = useRouter();

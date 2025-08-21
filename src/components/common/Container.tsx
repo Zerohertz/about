@@ -3,7 +3,6 @@ import { Badge, Col, Row } from "reactstrap";
 import colors from "@/styles/colors.module.scss";
 
 import { dateTimeToString, getDuration, stringToDateTime } from "@/utils/DateTime";
-import { Language } from "@/utils/GlobalLanguage";
 import { getLocalizedText, includes } from "@/utils/MultiLanguage";
 
 import Item from "@/components/common/Item";
@@ -12,6 +11,8 @@ import Descriptions from "@/components/default/Descriptions";
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
 import getReplacedKeyword from "@/components/global/keywords";
+
+import { Language } from "@/types/language";
 
 const Container = ({ payload, language }: { payload: Payload; language: Language }) => {
   return (

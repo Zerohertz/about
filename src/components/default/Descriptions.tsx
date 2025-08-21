@@ -2,12 +2,13 @@ import { Fragment, memo } from "react";
 
 import ReactMarkdown from "react-markdown";
 
-import { Language } from "@/utils/GlobalLanguage";
 import { getLocalizedText } from "@/utils/MultiLanguage";
 
 import Description from "@/components/default/Description";
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
+
+import { Language } from "@/types/language";
 
 const Descriptions = ({ descriptions, language }: { descriptions: Description[]; language: Language }) => {
   return (

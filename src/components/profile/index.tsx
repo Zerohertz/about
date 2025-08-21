@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useAnimation } from "@/contexts/AnimationContext";
 
-import { Language } from "@/utils/GlobalLanguage";
 import { getLocalizedText } from "@/utils/MultiLanguage";
 
 import Href from "@/components/default/Href";
@@ -13,6 +12,7 @@ import Item from "@/components/profile/Item";
 import Payload from "@/components/profile/Payload";
 
 import { IMAGE_DEFAULTS } from "@/constants";
+import { Language } from "@/types/language";
 
 const Component = ({ payload, language }: { payload: Payload; language: Language }) => {
   const { getAnimationClass } = useAnimation();

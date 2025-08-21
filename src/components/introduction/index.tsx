@@ -7,12 +7,13 @@ import ReactMarkdown from "react-markdown";
 import { useAnimation } from "@/contexts/AnimationContext";
 
 import { dateTimeToString, stringToDateTime } from "@/utils/DateTime";
-import { Language } from "@/utils/GlobalLanguage";
 import { getLocalizedText } from "@/utils/MultiLanguage";
 
 import ComponentWrapper from "@/components/default/ComponentWrapper";
 import Href from "@/components/default/Href";
 import Payload from "@/components/introduction/Payload";
+
+import { Language } from "@/types/language";
 
 const Component = ({ payload, language }: { payload: Payload; language: Language }) => {
   const { getAnimationClass } = useAnimation();

@@ -2,7 +2,6 @@ import { useEffect } from "react";
 
 import { AnimationProvider } from "@/contexts/AnimationContext";
 
-import { Language } from "@/utils/GlobalLanguage";
 import { restoreScrollPosition } from "@/utils/scrollUtils";
 import { useLanguage } from "@/utils/useLanguage";
 
@@ -22,6 +21,8 @@ import profile from "@/payloads/profile";
 import projects from "@/payloads/projects";
 import publications from "@/payloads/publications";
 import skills from "@/payloads/skills";
+
+import { Language } from "@/types/language";
 
 interface AboutProps {
   initialLanguage?: Language;

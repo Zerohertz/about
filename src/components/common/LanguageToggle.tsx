@@ -3,9 +3,10 @@ import { Button } from "reactstrap";
 
 import { useRouter } from "next/router";
 
-import { Language } from "@/utils/GlobalLanguage";
 import { saveScrollPosition } from "@/utils/scrollUtils";
 import { useLanguage } from "@/utils/useLanguage";
+
+import { Language } from "@/types/language";
 
 function LanguageToggle() {
   const { language } = useLanguage();

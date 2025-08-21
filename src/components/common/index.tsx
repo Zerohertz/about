@@ -1,9 +1,9 @@
-import { Language } from "@/utils/GlobalLanguage";
-
 import Container from "@/components/common/Container";
 import Payload from "@/components/common/Payload";
 import Section from "@/components/common/Section";
 import ComponentWrapper from "@/components/default/ComponentWrapper";
+
+import { Language } from "@/types/language";
 
 const Component = ({ payload, language }: { payload: Payload; language: Language }) => {
   return (

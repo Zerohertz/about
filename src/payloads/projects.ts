@@ -12,7 +12,7 @@ const projects: Payload = {
       subTitle: "GenON",
       startedAt: "2025-08",
       onGoing: true,
-      keywords: ["Python", "PyTorch", "Trasformers", "DeepSpeed", "vLLM", "Ray", "Kubernetes", "NCCL", "RDMA"],
+      keywords: ["Python", "PyTorch", "Transformers", "DeepSpeed", "vLLM", "Ray", "Kubernetes", "NCCL", "RDMA"],
       descriptions: [
         {
           content: {

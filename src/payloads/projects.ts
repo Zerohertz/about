@@ -107,8 +107,8 @@ const projects: Payload = {
         ko: "컨테이너 상태 모니터링 시스템 고도화",
       },
       subTitle: "GenON",
-      startedAt: "2024-06",
-      endedAt: "2024-08",
+      startedAt: "2025-06",
+      endedAt: "2025-08",
       keywords: ["Python", "FastAPI", "MariaDB", "Redis", "Kubernetes", "Prometheus"],
       descriptions: [
         {

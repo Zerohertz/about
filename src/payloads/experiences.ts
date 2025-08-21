@@ -18,10 +18,16 @@ const experiences: Payload = {
       keywords: [
         "Python",
         "FastAPI",
-        "Hugging Face",
-        "vLLM",
+        "PyTorch",
+        "Transformers",
         "DeepSpeed",
+        "vLLM",
+        "Ray",
+        "NCCL",
+        "RDMA",
         "MariaDB",
+        "Redis",
+        "RabbitMQ",
         "Docker",
         "Kubernetes",
         "Prometheus",
@@ -31,20 +37,26 @@ const experiences: Payload = {
       descriptions: [
         {
           content: {
-            en: "Designed and implemented a GPU resource scheduler, a Kubernetes resource controller, and comprehensive LLM lifecycle management modules for the GenOS LLMOps product, enhancing resource efficiency and system reliability.",
-            ko: "GenOS LLMOps 제품을 위한 GPU 리소스 스케줄러, Kubernetes 리소스 컨트롤러 및 포괄적 LLM 생명주기 관리 모듈 설계와 구현으로 리소스 효율성과 시스템 신뢰성 향상",
+            en: "Collaborated within a 30-member cross-functional team comprising machine learning engineers, backend engineers, and product managers to develop LLMOps products and conduct technical reviews for new feature implementations.",
+            ko: "머신러닝 엔지니어, 백엔드 엔지니어, 기획자 등으로 구성된 30명 규모의 다기능 팀에서 협업하여 LLMOps 제품 개발 및 새로운 기능 구현을 위한 기술 검토 수행",
           },
         },
         {
           content: {
-            en: "Developed distributed training and serving pipelines for large language models (LLMs) and multimodal large language models (MLLMs) on a Kubernetes platform, which improved scalability and boosted performance.",
-            ko: "Kubernetes 플랫폼에서 LLM 및 MLLM을 위한 분산 학습 및 서빙 파이프라인 개발으로 확장성 개선 및 성능 향상",
+            en: "Developed user-friendly distributed training and serving platform leveraging GPU Direct RDMA with high-speed Ethernet (RoCEv2) and InfiniBand on Kubernetes for seamless multi-node ML workflows.",
+            ko: "고속 이더넷 (RoCEv2) 및 InfiniBand 기반 GPU Direct RDMA를 활용하여 Kubernetes 기반에서 원활한 멀티노드 ML 워크플로우를 지원하는 사용자 친화적 분산 학습 및 서빙 플랫폼 개발",
           },
         },
         {
           content: {
-            en: "Collaborated closely with the R&D team to productize cutting-edge model training code, streamlining integration and accelerating time-to-market for advanced machine learning solutions.",
-            ko: "R&D 팀과 긴밀 협력으로 최첨단 모델 학습 코드 제품화 및 통합 간소화를 통한 고급 머신러닝 솔루션 출시 시간 단축",
+            en: "Planned, designed, and developed comprehensive backend system for Kubernetes container status monitoring and alerting, enabling end-to-end container lifecycle management through web interface.",
+            ko: "Kubernetes 컨테이너 상태 모니터링 및 알림을 위한 포괄적 백엔드 시스템 기획, 설계 및 개발로 웹 인터페이스를 통한 end-to-end 컨테이너 생명주기 관리 구현",
+          },
+        },
+        {
+          content: {
+            en: "Proactively proposed and designed advanced features including LoRA adapter serving, MCP (Model Context Protocol) integration, and container monitoring system enhancements, while leading technical initiatives that significantly contributed to the LLMOps product roadmap.",
+            ko: "LoRA 어댑터 서빙, MCP (Model Context Protocol) 통합, 컨테이너 모니터링 시스템 고도화 등 고급 기능을 주도적으로 제안 및 설계하여 LLMOps 제품 로드맵에 핵심적으로 기여하는 기술 프로젝트 주도",
           },
         },
       ],
@@ -97,7 +109,7 @@ const experiences: Payload = {
         {
           content: {
             en: "Managed the entire lifecycle of machine learning services (annotation, modeling, training, deployment) and oversaw Kubernetes-based IDC infrastructure within an 11-member team.",
-            ko: "11명 구성 팀 내에서 머신러닝 서비스 전체 생명주기 (어노테이션, 모델링, 학습, 배포) 관리 및 Kubernetes 기반 IDC 인프라 감독",
+            ko: "11명 구성 팀 내에서 머신러닝 서비스 전체 생명주기 (어노테이션, 모델링, 학습, 배포) 관리 및 Kubernetes 기반 IDC 인프라 관리",
           },
         },
         {

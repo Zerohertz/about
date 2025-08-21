@@ -25,9 +25,9 @@ This is a personal portfolio/about page built with Next.js 15, React 18, TypeScr
 ### Component Structure
 
 - `src/components/common/` - Common reusable components with shared `Item` and `Payload` interfaces
-- `src/components/default/` - Default components for standard layouts
+- `src/components/default/` - Default components for standard layouts and core types (`Language`, `MultiLanguageText`)
 - `src/components/profile/`, `src/components/skills/`, `src/components/introduction/` - Section-specific components
-- `src/components/global/` - Global configuration components
+- `src/components/global/` - Global configuration components, contexts (`AnimationContext`), and keywords mapping
 
 ### Content Management
 
@@ -71,3 +71,11 @@ The application is configured for static export and GitHub Pages deployment:
 - Uses Luxon for date handling
 - FontAwesome icons integrated via React components
 - Bootstrap components via Reactstrap
+
+## Recent Architecture Changes
+
+- **Type Organization**: Moved `Language` and `MultiLanguageText` types from `src/types/language.ts` to `src/components/default/Language.ts` for better organization
+- **Context Consolidation**: Moved `AnimationContext` from `src/contexts/` to `src/components/global/` to consolidate global utilities
+- **Import Cleanup**: Removed unnecessary re-export files (`GlobalLanguage.ts`) and updated all imports to use direct paths
+- **ESLint Updates**: Removed obsolete import ordering rules for deleted directories
+

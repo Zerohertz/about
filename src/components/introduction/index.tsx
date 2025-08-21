@@ -4,14 +4,13 @@ import { Badge } from "reactstrap";
 import { DateTime } from "luxon";
 import ReactMarkdown from "react-markdown";
 
-import { useAnimation } from "@/contexts/AnimationContext";
-
 import { dateTimeToString, stringToDateTime } from "@/utils/DateTime";
 import { getLocalizedText } from "@/utils/MultiLanguage";
 
 import ComponentWrapper from "@/components/default/ComponentWrapper";
 import Href from "@/components/default/Href";
 import { Language } from "@/components/default/Language";
+import { useAnimation } from "@/components/global/AnimationContext";
 import Payload from "@/components/introduction/Payload";
 
 const Component = ({ payload, language }: { payload: Payload; language: Language }) => {

@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 
-import { AnimationProvider } from "@/contexts/AnimationContext";
-
 import { restoreScrollPosition } from "@/utils/scrollUtils";
 import { useLanguage } from "@/utils/useLanguage";
 
 import Common from "@/components/common";
 import LanguageToggle from "@/components/common/LanguageToggle";
 import { Language } from "@/components/default/Language";
+import { AnimationProvider } from "@/components/global/AnimationContext";
 import Introduction from "@/components/introduction";
 import Profile from "@/components/profile";
 import Skills from "@/components/skills";

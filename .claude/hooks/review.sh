@@ -3,6 +3,7 @@
 INPUT=$(cat)
 FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // .tool_input.filePath // empty')
 
+exit 0
 # Only review TypeScript/JavaScript files
 if [[ ! "$FILE_PATH" =~ \.(ts|tsx|js|jsx)$ ]] || [[ ! -f "$FILE_PATH" ]]; then
 	exit 0

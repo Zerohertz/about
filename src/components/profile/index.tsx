@@ -2,13 +2,12 @@ import { Alert, Col, Row } from "reactstrap";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { useAnimation } from "@/contexts/AnimationContext";
-
 import { getLocalizedText } from "@/utils/MultiLanguage";
 
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
 import { Language } from "@/components/default/Language";
+import { useAnimation } from "@/components/global/AnimationContext";
 import Item from "@/components/profile/Item";
 import Payload from "@/components/profile/Payload";
 

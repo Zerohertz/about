@@ -6,6 +6,36 @@ const projects: Payload = {
   list: [
     {
       title: {
+        en: "RDMA-Enabled Multi-Node Distributed Training and Serving System",
+        ko: "RDMA 지원 멀티노드 분산 학습 및 서빙 시스템",
+      },
+      subTitle: "GenON",
+      startedAt: "2025-08",
+      onGoing: true,
+      keywords: ["Python", "PyTorch", "Trasformers", "DeepSpeed", "vLLM", "Ray", "Kubernetes", "NCCL", "RDMA"],
+      descriptions: [
+        {
+          content: {
+            en: "Architected high-performance distributed training infrastructure supporting GPU Direct RDMA communication for ultra-fast inter-node data transfer with dynamic port allocation system preventing conflicts in multi-node environments.",
+            ko: "멀티노드 환경에서 충돌 방지를 위한 동적 포트 할당 시스템과 노드 간 초고속 데이터 전송용 GPU Direct RDMA 통신을 지원하는 고성능 분산 학습 인프라 아키텍처 설계",
+          },
+        },
+        {
+          content: {
+            en: "Implemented NCCL optimization with advanced network communication parameter tuning including `NCCL_NET_GDR_LEVEL` configuration, ensuring robust distributed training execution.",
+            ko: "`NCCL_NET_GDR_LEVEL` 구성을 포함한 고급 네트워크 통신 파라미터 튜닝을 통한 NCCL 최적화로 견고한 분산 학습 실행 보장",
+          },
+        },
+        {
+          content: {
+            en: "Developed comprehensive DeepSpeed integration with ZeRO optimization stages for large-scale model training and implemented optimized environment configuration.",
+            ko: "ZeRO 최적화 단계를 포함한 대규모 모델 학습용 포괄적 DeepSpeed 통합 개발 및 최적화된 환경 구성 구현",
+          },
+        },
+      ],
+    },
+    {
+      title: {
         en: "LLMOps Solution, GenOS",
         ko: "LLMOps 솔루션, GenOS",
       },
@@ -15,10 +45,16 @@ const projects: Payload = {
       keywords: [
         "Python",
         "FastAPI",
-        "Hugging Face",
-        "vLLM",
+        "PyTorch",
+        "Transformers",
         "DeepSpeed",
+        "vLLM",
+        "Ray",
+        "NCCL",
+        "RDMA",
         "MariaDB",
+        "Redis",
+        "RabbitMQ",
         "Docker",
         "Kubernetes",
         "Prometheus",
@@ -28,33 +64,81 @@ const projects: Payload = {
       descriptions: [
         {
           content: {
-            en: "Conducted continuous evaluation and benchmarking of state-of-the-art Large Language Models (LLMs) to determine optimal computing resource requirements and configuration parameters for training and inference deployment.",
-            ko: "최신 대규모 언어 모델 (LLM) 지속적 평가 및 벤치마킹을 통한 학습 및 추론 배포용 최적 컴퓨팅 리소스 요구사항 및 구성 매개변수 결정",
+            en: "Designed and developed scalable microservices architecture (MSA) for intuitive LLMOps solution with web-based management interfaces, enabling efficient model training and serving workflows.",
+            ko: "웹 기반 관리 인터페이스를 갖춘 직관적인 LLMOps 솔루션을 위한 확장 가능한 마이크로서비스 아키텍처 (MSA) 설계 및 개발로 효율적 모델 학습 및 서빙 워크플로우 지원",
           },
         },
         {
           content: {
-            en: "Designed and developed microservices architecture (MSA) enabling distributed training and serving configuration through intuitive web-based user interfaces.",
-            ko: "직관적인 웹 기반 사용자 인터페이스를 통한 분산 학습 및 서빙 구성 지원 마이크로서비스 아키텍처 (MSA) 설계 및 개발",
+            en: "Conducted continuous evaluation and benchmarking of state-of-the-art LLM models to determine optimal resource requirements and configuration parameters for enterprise deployment scenarios.",
+            ko: "엔터프라이즈 배포 시나리오를 위한 최신 LLM 모델의 지속적 평가 및 벤치마킹을 통한 최적 리소스 요구사항 및 구성 매개변수 결정",
           },
         },
         {
           content: {
-            en: "Implemented Prometheus operator integration and developed comprehensive Grafana dashboards to enhance observability and monitoring capabilities for LLM serving infrastructure.",
-            ko: "Prometheus 오퍼레이터 통합 구현 및 LLM 서빙 인프라의 관찰성과 모니터링 기능 향상을 위한 포괄적 Grafana 대시보드 개발",
+            en: "Developed comprehensive Grafana dashboards based on Prometheus operator to enhance monitoring capabilities for LLM serving infrastructure.",
+            ko: "Prometheus 오퍼레이터 기반 LLM 서빙 인프라의 모니터링 기능 향상을 위한 포괄적 Grafana 대시보드 개발",
           },
           image: "/images/llmops-solution-genos-0.webp",
         },
         {
           content: {
-            en: "Resolved ephemeral storage limitations by migrating from object storage to Network File System (NFS) provisioner, improving system reliability and performance.",
-            ko: "객체 스토리지에서 네트워크 파일 시스템 (NFS) 프로비저너로 마이그레이션을 통한 임시 스토리지 제한 해결 및 시스템 안정성과 성능 향상",
+            en: "Migrated model storage system from object storage (MinIO) to Network File System (NFS) provisioner, resolving temporary storage limitations and improving system stability and performance.",
+            ko: "모델 저장 시스템을 객체 스토리지 (MinIO)에서 네트워크 파일 시스템 (NFS) 프로비저너로 마이그레이션하여 임시 스토리지 제한 해결 및 시스템 안정성과 성능 향상",
           },
         },
         {
           content: {
-            en: "Led strategic planning and architectural design for Model Context Protocol (MCP) feature integration and implementation.",
-            ko: "모델 컨텍스트 프로토콜 (MCP) 기능 통합 및 구현을 위한 전략적 계획 및 아키텍처 설계 주도",
+            en: "Led technical initiatives by proposing and designing advanced features including LoRA adapter serving, MCP (Model Context Protocol) integration, and container monitoring system enhancements.",
+            ko: "LoRA 어댑터 서빙, MCP (Model Context Protocol) 통합, 컨테이너 모니터링 시스템 고도화 등 고급 기능 제안 및 설계를 통한 기술적 주도",
+          },
+        },
+        {
+          content: {
+            en: "Conducted technical reviews and benchmark testing of new open-source LLM serving technologies to evaluate performance and feasibility for production deployment.",
+            ko: "새로운 오픈 소스 LLM 서빙 기술 검토 및 벤치마크 테스트 수행으로 프로덕션 배포를 위한 성능 및 실현 가능성 평가",
+          },
+        },
+      ],
+    },
+    {
+      title: {
+        en: "Container Status Monitoring System Enhancement",
+        ko: "컨테이너 상태 모니터링 시스템 고도화",
+      },
+      subTitle: "GenON",
+      startedAt: "2024-06",
+      endedAt: "2024-08",
+      keywords: ["Python", "FastAPI", "MariaDB", "Redis", "Kubernetes", "Prometheus"],
+      descriptions: [
+        {
+          content: {
+            en: "Architected and implemented asynchronous container status monitoring system with Prometheus metrics collection, `asyncio.Queue`-based producer-consumer pattern, and SQLAlchemy ORM for complex container state lifecycle management to resolve legacy system performance bottlenecks.",
+            ko: "Prometheus 메트릭 수집, `asyncio.Queue` 기반 생산자-소비자 패턴, SQLAlchemy ORM을 활용한 복잡한 컨테이너 상태 생명주기 관리를 통해 레거시 시스템의 성능 병목을 해결하는 비동기 컨테이너 상태 모니터링 시스템 아키텍처 설계 및 구현",
+          },
+        },
+        {
+          content: {
+            en: "Implemented low-load/high-scalability microservices architecture with 3-tier caching strategy (Local Cache → Redis → Database), Redis Pub/Sub event streaming, and Server-Sent Events (SSE) for real-time client updates utilizing existing infrastructure stack.",
+            ko: "3단계 캐싱 전략 (Local Cache → Redis → Database), Redis Pub/Sub 이벤트 스트리밍, SSE (Server-Sent Events) 기반 실시간 클라이언트 업데이트를 통해 기존 인프라 스택을 활용한 저부하/고확장성 마이크로서비스 아키텍처 구현",
+          },
+        },
+        {
+          content: {
+            en: "Developed distributed microservices architecture with separate data collection and API services using `asyncio`-based message processing and RESTful endpoints with SSE streaming for real-time monitoring capabilities.",
+            ko: "`asyncio` 기반 메시지 처리와 RESTful 엔드포인트 및 SSE 스트리밍을 활용하여 데이터 수집과 API 서비스를 분리한 분산 마이크로서비스 아키텍처 개발로 실시간 모니터링 역량 구현",
+          },
+        },
+        {
+          content: {
+            en: "Enhanced ML lifecycle management by implementing automated alerting system for training and serving failures that improved incident response times and operational efficiency.",
+            ko: "학습 및 서빙 장애 발생 시 자동 알림 시스템 구현으로 ML 생애주기 관리를 고도화하고 장애 대응 시간 단축 및 운영 효율성 향상",
+          },
+        },
+        {
+          content: {
+            en: "Enhanced observability by implementing startup probes for accurate container service health detection, enabling precise identification of actual service readiness beyond basic container status and improving system reliability through early detection of initialization failures.",
+            ko: "startup probe 구현으로 정확한 컨테이너 서비스 상태 탐지를 통해 observability를 향상시키고 기본적인 컨테이너 상태를 넘어 실제 서비스 준비 상태를 정밀하게 식별하며 초기화 장애의 조기 탐지를 통해 시스템 신뢰성 개선",
           },
         },
       ],
@@ -99,8 +183,8 @@ const projects: Payload = {
         },
         {
           content: {
-            en: "Built a GitHub Actions-based CI/CD pipeline (migrated from Jenkins) to automate repetitive tasks such as formatting, unit testing, and deployment, streamlining the process for feature additions and bug fixes.",
-            ko: "GitHub Actions 기반 CI 및 CD 파이프라인 구축 (Jenkins에서 마이그레이션) 을 통한 포매팅, 단위 테스트, 배포 등 반복 작업 자동화 및 기능 추가와 버그 수정 프로세스 간소화",
+            en: "Built a GitHub Actions-based CI/CD pipeline (migrated from Jenkins) to automate repetitive tasks such as formatting, unit testing, and deployment while streamlining the process for feature additions and bug fixes.",
+            ko: "GitHub Actions 기반 CI/CD 파이프라인 구축 (Jenkins에서 마이그레이션) 을 통해 포매팅, 단위 테스트, 배포 등 반복 작업을 자동화하고 기능 추가와 버그 수정 프로세스를 간소화",
           },
           image: "/images/development-and-ci-cd-pipeline-construction-of-python-library-1.webp",
         },
@@ -144,14 +228,14 @@ const projects: Payload = {
         },
         {
           content: {
-            en: "Utilized Docstring to document functions and classes, enhancing code clarity and team collaboration, while maintaining library integrity through type hints and PyTest.",
-            ko: "Docstring 기반 함수 및 클래스 문서화와 타입 힌트 및 PyTest를 통한 라이브러리 무결성 보장 및 코드 품질 향상",
+            en: "Utilized Docstring to document functions and classes for enhanced code clarity and team collaboration while maintaining library integrity through type hints and PyTest.",
+            ko: "Docstring 기반 함수 및 클래스 문서화로 코드 명확성과 팀 협업을 향상시키고 타입 힌트 및 PyTest를 통해 라이브러리 무결성 보장 및 코드 품질 향상",
           },
         },
         {
           content: {
-            en: "Faced with significant compatibility issues due to inconsistent libraries and formats for model outputs, standardized the data format for preprocessing and model inference visualization, enabling consistent visualization and resolving unexpected compatibility problems.",
-            ko: "모델 출력 호환성 문제 해결을 위한 전처리 및 시각화 데이터 형식 표준화로 일관된 시각화 구현",
+            en: "Faced with significant compatibility issues due to inconsistent libraries and formats for model outputs and standardized the data format for preprocessing and model inference visualization to enable consistent visualization and resolve unexpected compatibility problems.",
+            ko: "모델 출력의 비일관된 라이브러리와 형식으로 인한 중대한 호환성 문제에 직면하여 전처리 및 모델 추론 시각화를 위한 데이터 형식을 표준화하고 일관된 시각화를 가능하게 하여 예상치 못한 호환성 문제를 해결",
           },
         },
         {

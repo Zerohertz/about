@@ -3,8 +3,7 @@ import { DateTime } from "luxon";
 import { getLocalizedText, includes } from "@/utils/MultiLanguage";
 
 import Payload from "@/components/common/Payload";
-
-import { Language, MultiLanguageText } from "@/types/language";
+import { Language, MultiLanguageText } from "@/components/default/Language";
 
 enum LUXON_DATE_FORMAT {
   YYYY_LL_DD = "yyyy-LL-dd",

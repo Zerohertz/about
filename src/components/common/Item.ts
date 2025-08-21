@@ -1,6 +1,5 @@
-import { MultiLanguageText } from "@/utils/MultiLanguage";
-
 import Description from "@/components/default/Description";
+import { MultiLanguageText } from "@/components/default/Language";
 
 type ItemBase = {
   title?: MultiLanguageText;

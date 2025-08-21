@@ -11,9 +11,8 @@ import { getLocalizedText } from "@/utils/MultiLanguage";
 
 import ComponentWrapper from "@/components/default/ComponentWrapper";
 import Href from "@/components/default/Href";
+import { Language } from "@/components/default/Language";
 import Payload from "@/components/introduction/Payload";
-
-import { Language } from "@/types/language";
 
 const Component = ({ payload, language }: { payload: Payload; language: Language }) => {
   const { getAnimationClass } = useAnimation();

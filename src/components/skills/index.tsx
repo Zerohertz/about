@@ -3,11 +3,10 @@ import { Col, Row } from "reactstrap";
 import { useAnimation } from "@/contexts/AnimationContext";
 
 import ComponentWrapper from "@/components/default/ComponentWrapper";
+import { Language } from "@/components/default/Language";
 import Container from "@/components/skills/Container";
 import Payload from "@/components/skills/Payload";
 import ToolTip from "@/components/skills/ToolTip";
-
-import { Language } from "@/types/language";
 
 const Component = ({ payload, language }: { payload: Payload; language: Language }) => {
   const { getAnimationClass } = useAnimation();

@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { saveScrollPosition } from "@/utils/scrollUtils";
 import { useLanguage } from "@/utils/useLanguage";
 
-import { Language } from "@/types/language";
+import { Language } from "@/components/default/Language";
 
 function LanguageToggle() {
   const { language } = useLanguage();

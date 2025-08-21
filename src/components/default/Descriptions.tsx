@@ -7,8 +7,7 @@ import { getLocalizedText } from "@/utils/MultiLanguage";
 import Description from "@/components/default/Description";
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
-
-import { Language } from "@/types/language";
+import { Language } from "@/components/default/Language";
 
 const Descriptions = ({ descriptions, language }: { descriptions: Description[]; language: Language }) => {
   return (

@@ -4,9 +4,9 @@ import { Tooltip } from "reactstrap";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { getLocalizedText, MultiLanguageText } from "@/utils/MultiLanguage";
+import { getLocalizedText } from "@/utils/MultiLanguage";
 
-import { Language } from "@/types/language";
+import { Language, MultiLanguageText } from "@/components/default/Language";
 
 const ToolTip = ({ content, language }: { content: MultiLanguageText; language: Language }) => {
   const [tooltipOpen, setTooltipOpen] = useState(false);

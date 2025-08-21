@@ -1,5 +1,4 @@
-import { MultiLanguageText } from "@/utils/MultiLanguage";
-
+import { MultiLanguageText } from "@/components/default/Language";
 import DefaultPayload from "@/components/default/Payload";
 import Skill from "@/components/skills/Skill";
 

@@ -1,4 +1,4 @@
-import { MultiLanguageText } from "@/utils/MultiLanguage";
+import { MultiLanguageText } from "@/components/default/Language";
 
 interface Description {
   content: MultiLanguageText;

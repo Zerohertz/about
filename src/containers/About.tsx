@@ -7,6 +7,7 @@ import { useLanguage } from "@/utils/useLanguage";
 
 import Common from "@/components/common";
 import LanguageToggle from "@/components/common/LanguageToggle";
+import { Language } from "@/components/default/Language";
 import Introduction from "@/components/introduction";
 import Profile from "@/components/profile";
 import Skills from "@/components/skills";
@@ -21,8 +22,6 @@ import profile from "@/payloads/profile";
 import projects from "@/payloads/projects";
 import publications from "@/payloads/publications";
 import skills from "@/payloads/skills";
-
-import { Language } from "@/types/language";
 
 interface AboutProps {
   initialLanguage?: Language;

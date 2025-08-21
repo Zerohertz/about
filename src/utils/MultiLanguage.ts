@@ -1,7 +1,4 @@
-import { Language, MultiLanguageText } from "@/types/language";
-
-// Re-export for backward compatibility
-export type { Language, MultiLanguageText };
+import { Language, MultiLanguageText } from "@/components/default/Language";
 
 export function includes(text: string | MultiLanguageText, searchString: string, language: Language = "en"): boolean {
   const str = typeof text === "string" ? text : text[language] || text.en || "";

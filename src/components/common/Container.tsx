@@ -10,9 +10,8 @@ import Payload from "@/components/common/Payload";
 import Descriptions from "@/components/default/Descriptions";
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
+import { Language } from "@/components/default/Language";
 import getReplacedKeyword from "@/components/global/keywords";
-
-import { Language } from "@/types/language";
 
 const Container = ({ payload, language }: { payload: Payload; language: Language }) => {
   return (

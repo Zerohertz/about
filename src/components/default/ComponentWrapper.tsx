@@ -1,8 +1,7 @@
 import { FC } from "react";
 
+import { Language } from "@/components/default/Language";
 import Payload from "@/components/default/Payload";
-
-import { Language } from "@/types/language";
 
 type Component<T> = (props: { payload: T; language: Language }) => JSX.Element;
 

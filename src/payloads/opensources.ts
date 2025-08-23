@@ -31,8 +31,8 @@ const openSources: Payload = {
         },
         {
           content: {
-            en: "Conducted comprehensive performance analysis comparing [v0 vs. v1 engines](https://github.com/vllm-project/vllm/issues/17540) and [version stability](https://github.com/vllm-project/vllm/issues/18619) (`v0.8.4` vs. `v0.8.5.post1`) across multi-GPU environments, providing detailed technical documentation for engine optimization and issue reproduction.",
-            ko: "멀티 GPU 환경에서 [v0 vs. v1 엔진](https://github.com/vllm-project/vllm/issues/17540) 및 [버전 안정성](https://github.com/vllm-project/vllm/issues/18619) (`v0.8.4` vs. `v0.8.5.post1`) 비교 포괄적 성능 분석 수행 및 엔진 최적화와 이슈 재현을 위한 상세 기술 문서 제공",
+            en: "Conducted comprehensive performance analysis comparing [v0 vs. v1 engines](https://github.com/vllm-project/vllm/issues/17540) and [version stability](https://github.com/vllm-project/vllm/issues/18619) (`v0.8.4` vs. `v0.8.5.post1`) across multi-GPU environments, providing detailed technical documentation for issue reproduction.",
+            ko: "멀티 GPU 환경에서 [v0 vs. v1 엔진](https://github.com/vllm-project/vllm/issues/17540) 및 [버전 안정성](https://github.com/vllm-project/vllm/issues/18619) (`v0.8.4` vs. `v0.8.5.post1`) 비교 포괄적 성능 분석 수행 및 이슈 재현을 위한 상세 기술 문서 제공",
           },
         },
       ],

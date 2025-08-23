@@ -8,7 +8,7 @@ import { getLocalizedText } from "@/utils/MultiLanguage";
 
 import { Language, MultiLanguageText } from "@/components/default/Language";
 
-const ToolTip = ({ content, language }: { content: MultiLanguageText; language: Language }) => {
+const ToolTip = ({ content, language }: { content?: MultiLanguageText; language: Language }) => {
   const [tooltipOpen, setTooltipOpen] = useState(false);
   const toggle = () => setTooltipOpen(!tooltipOpen);
   if (!content) {

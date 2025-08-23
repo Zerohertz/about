@@ -4,7 +4,7 @@ import Skill from "@/components/skills/Skill";
 
 interface Payload extends DefaultPayload {
   skills: Skill[];
-  tooltip: MultiLanguageText;
+  tooltip?: MultiLanguageText;
 }
 
 export default Payload;

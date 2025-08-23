@@ -11,7 +11,7 @@ import global from "@/payloads/global";
 import "@/styles/global.scss";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
-function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <NextSeo {...global.seo} />
@@ -46,6 +46,6 @@ function App({ Component, pageProps }: AppProps) {
       )}
     </>
   );
-}
+};
 
 export default App;

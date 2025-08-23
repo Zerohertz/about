@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import { Language } from "@/components/default/Language";
 
-export function useLanguage(initialLanguage?: Language) {
+export const useLanguage = (initialLanguage?: Language) => {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
   const [language, setLanguage] = useState<Language>(initialLanguage || "en");
@@ -26,4 +26,4 @@ export function useLanguage(initialLanguage?: Language) {
   }, [mounted, router.query.lang, initialLanguage]);
 
   return { language, mounted };
-}
+};

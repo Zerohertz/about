@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { useRouter } from "next/router";
 
-function HomePage() {
+const HomePage = () => {
   const router = useRouter();
 
   useEffect(() => {
@@ -17,6 +17,6 @@ function HomePage() {
 
   // 로딩 표시 없이 빈 화면
   return null;
-}
+};
 
 export default HomePage;

@@ -8,7 +8,7 @@ import { useLanguage } from "@/utils/useLanguage";
 
 import { Language } from "@/components/default/Language";
 
-function LanguageToggle() {
+const LanguageToggle = () => {
   const { language } = useLanguage();
   const router = useRouter();
 
@@ -45,6 +45,6 @@ function LanguageToggle() {
       {language === "en" ? "KOR" : "ENG"}
     </Button>
   );
-}
+};
 
 export default LanguageToggle;

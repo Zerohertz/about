@@ -26,7 +26,7 @@ interface AboutProps {
   initialLanguage?: Language;
 }
 
-function About({ initialLanguage }: AboutProps) {
+const About = ({ initialLanguage }: AboutProps) => {
   const { language, mounted } = useLanguage(initialLanguage);
 
   // 언어 변경 후 스크롤 위치 복원
@@ -51,6 +51,6 @@ function About({ initialLanguage }: AboutProps) {
       <Common payload={extras} language={language} />
     </AnimationProvider>
   );
-}
+};
 
 export default About;

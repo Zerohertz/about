@@ -8,9 +8,9 @@ interface Props {
   lang: Language;
 }
 
-function LangAbout({ lang }: Props) {
+const LangAbout = ({ lang }: Props) => {
   return <About initialLanguage={lang} />;
-}
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {

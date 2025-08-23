@@ -1,6 +1,6 @@
 interface Payload {
   title: string;
-  disable?: boolean;
+  disabled?: boolean;
 }
 
 export default Payload;

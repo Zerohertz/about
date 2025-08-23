@@ -2,7 +2,7 @@ import Payload from "@/components/common/Payload";
 
 const presentations: Payload = {
   title: "PRESENTATIONS",
-  disable: false,
+  disabled: false,
   list: [
     {
       title: {

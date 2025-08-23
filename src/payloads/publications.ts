@@ -2,7 +2,7 @@ import Payload from "@/components/common/Payload";
 
 const publications: Payload = {
   title: "PUBLICATIONS & PATENTS",
-  disable: false,
+  disabled: false,
   list: [
     {
       startedAt: "2023-09",

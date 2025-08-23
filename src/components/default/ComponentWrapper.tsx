@@ -9,7 +9,7 @@ const ComponentWrapper = <T extends Payload>(
   WrappedComponent: Component<T>,
 ): FC<{ payload: T; language: Language }> => {
   const Wrapper: FC<{ payload: T; language: Language }> = ({ payload, language }) => {
-    if (payload?.disable) {
+    if (payload?.disabled) {
       return null;
     }
     return <WrappedComponent payload={payload} language={language} />;

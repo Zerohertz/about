@@ -2,7 +2,7 @@ import Payload from "@/components/common/Payload";
 
 const openSources: Payload = {
   title: "OPEN SOURCES",
-  disable: false,
+  disabled: false,
   list: [
     {
       title: {

@@ -2,7 +2,7 @@ import Payload from "@/components/introduction/Payload";
 
 const introduction: Payload = {
   title: "INTRODUCTION",
-  disable: false,
+  disabled: false,
   contents: [
     {
       en: "🌱 **Continuously Growing Engineer**",

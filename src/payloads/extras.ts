@@ -2,7 +2,7 @@ import Payload from "@/components/common/Payload";
 
 const extras: Payload = {
   title: "EXTRAS",
-  disable: false,
+  disabled: false,
   list: [
     {
       title: {

@@ -2,7 +2,7 @@ import Payload from "@/components/common/Payload";
 
 const projects: Payload = {
   title: "PROJECTS",
-  disable: false,
+  disabled: false,
   list: [
     {
       title: {

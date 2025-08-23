@@ -2,7 +2,7 @@ import Payload from "@/components/common/Payload";
 
 const experiences: Payload = {
   title: "EXPERIENCES",
-  disable: false,
+  disabled: false,
   totalPeriod: true,
   currentAndPeriod: true,
   list: [

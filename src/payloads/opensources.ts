@@ -39,6 +39,21 @@ const openSources: Payload = {
     },
     {
       title: {
+        en: "LMCache/LMCache",
+        ko: "LMCache/LMCache",
+      },
+      href: "https://github.com/LMCache/LMCache/issues?q=author%3AZerohertz%20OR%20reviewed-by%3AZerohertz%20",
+      descriptions: [
+        {
+          content: {
+            en: "Fixed critical execution failure in `lmcache/vllm-openai` containers by adding `/opt/venv/bin` to PATH, enabling proper binary discovery in [`vllm-project/production-stack`](https://github.com/vllm-project/production-stack) deployment environments.",
+            ko: "[`vllm-project/production-stack`](https://github.com/vllm-project/production-stack) 배포 환경에서 올바른 바이너리 검색을 위해 PATH에 `/opt/venv/bin` 추가하여 `lmcache/vllm-openai` 컨테이너의 치명적 실행 실패 문제 해결",
+          },
+        },
+      ],
+    },
+    {
+      title: {
         en: "fastapi/fastapi",
         ko: "fastapi/fastapi",
       },

@@ -150,7 +150,7 @@ const projects: Payload = {
       },
       subTitle: "Personal Project",
       startedAt: "2023-11",
-      endedAt: "2024-12",
+      onGoing: true,
       keywords: ["Python", "PyTest", "Sphinx", "Kubernetes", "Jenkins", "GitHub Actions", "Codecov", "PyPI"],
       descriptions: [
         {

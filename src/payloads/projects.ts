@@ -169,10 +169,10 @@ const projects: Payload = {
         },
         {
           content: {
-            en: "Docs (Sphinx)",
-            ko: "Docs (Sphinx)",
+            en: "Docs (MkDocs)",
+            ko: "Docs (MkDocs)",
           },
-          href: "https://zerohertz.github.io/zerohertzLib/",
+          href: "https://zerohertzlib.readthedocs.io/",
         },
         {
           content: {

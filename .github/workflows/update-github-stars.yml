@@ -1,0 +1,72 @@
+name: Update GitHub Stars SVGs
+
+on:
+  schedule:
+    # Run daily at 00:00 UTC (09:00 KST)
+    - cron: "0 0 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "src/payloads/opensources.ts"
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-stars:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install tsx
+        run: npm install -g tsx
+
+      - name: Download GitHub Stars SVGs
+        run: tsx scripts/download-github-stars.ts
+        continue-on-error: true
+        id: download
+
+      - name: Check for changes
+        id: check
+        run: |
+          if [ -d "public/icons/stars" ]; then
+            git add public/icons/stars/
+            if git diff --staged --quiet; then
+              echo "changed=false" >> $GITHUB_OUTPUT
+              echo "No changes detected in SVG files"
+            else
+              echo "changed=true" >> $GITHUB_OUTPUT
+              echo "Changes detected in SVG files"
+            fi
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No stars directory found"
+          fi
+
+      - name: Commit and push changes
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "🤖 chore: update github stars svgs"
+          git push
+
+      - name: Report status
+        if: always()
+        run: |
+          if [ "${{ steps.check.outputs.changed }}" == "true" ]; then
+            echo "✅ GitHub Stars SVGs updated and committed"
+          else
+            echo "ℹ️ No changes in GitHub Stars SVGs"
+          fi

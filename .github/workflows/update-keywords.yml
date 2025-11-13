@@ -1,0 +1,71 @@
+name: Update Keywords SVGs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/payloads/educations.ts"
+      - "src/payloads/experiences.ts"
+      - "src/payloads/projects.ts"
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-keywords:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install tsx
+        run: npm install -g tsx
+
+      - name: Download Keywords SVGs
+        run: tsx scripts/download-keywords.ts
+        continue-on-error: true
+        id: download
+
+      - name: Check for changes
+        id: check
+        run: |
+          if [ -d "public/icons/keywords" ]; then
+            git add public/icons/keywords/
+            if git diff --staged --quiet; then
+              echo "changed=false" >> $GITHUB_OUTPUT
+              echo "No changes detected in SVG files"
+            else
+              echo "changed=true" >> $GITHUB_OUTPUT
+              echo "Changes detected in SVG files"
+            fi
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No keywords directory found"
+          fi
+
+      - name: Commit and push changes
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "🤖 chore: update keywords svgs"
+          git push
+
+      - name: Report status
+        if: always()
+        run: |
+          if [ "${{ steps.check.outputs.changed }}" == "true" ]; then
+            echo "✅ Keywords SVGs updated and committed"
+          else
+            echo "ℹ️ No changes in Keywords SVGs"
+          fi

@@ -1,7 +1,5 @@
 import { Badge, Col, Row } from "reactstrap";
 
-import colors from "@/styles/colors.module.scss";
-
 import { dateTimeToString, getDuration, stringToDateTime } from "@/utils/DateTime";
 import { getLocalizedText, includes } from "@/utils/MultiLanguage";
 
@@ -11,7 +9,6 @@ import Descriptions from "@/components/default/Descriptions";
 import Href from "@/components/default/Href";
 import _Image from "@/components/default/Image";
 import { Language } from "@/components/default/Language";
-import getReplacedKeyword from "@/components/global/keywords";
 
 const Container = ({ payload, language }: { payload: Payload; language: Language }) => {
   return (
@@ -72,21 +69,20 @@ const Left = ({ item, period, language }: { item: Item; period?: boolean; langua
     }
     if (item.href) {
       if (includes(item.title, "/", language) && item.href.includes("github.com")) {
+        const repoName = getLocalizedText(item.title, language);
+        const svgFileName = `${repoName.replace("/", "-").replace(/\s+/g, "-").toLowerCase()}.svg`;
+        const svgPath = `/icons/stars/${svgFileName}`;
         return (
           <Row>
             <Col md={12} xs={8}>
-              <h4
-                className={`${(getLocalizedText(item.title, language) || "").length > 25 ? "github-repo-long" : "github-repo-short"}`}
-              >
+              <h4 className={`${repoName.length > 25 ? "github-repo-long" : "github-repo-short"}`}>
                 <Href className="gray" href={item.href}>
-                  {getLocalizedText(item.title, language)}
+                  {repoName}
                 </Href>
               </h4>
             </Col>
             <Col md={12} xs={4} className="text-md-end text-end">
-              <_Image
-                src={`https://img.shields.io/github/stars/${getLocalizedText(item.title, language)}?style=flat&logo=github&logoColor=000000&label=GitHub%20%F0%9F%8C%9F&labelColor=gray&color=${colors.primary.replace("#", "")}`}
-              />
+              <_Image src={svgPath} />
             </Col>
           </Row>
         );
@@ -172,14 +168,15 @@ const Keywords = ({ keywords }: { keywords: string[] }) => {
   }
   return (
     <div className="mb-1">
-      {keywords.map((keyword, index) => (
-        <span className="me-1" key={index.toString()}>
-          <_Image
-            // src={`https://img.shields.io/badge/${keyword}-white?style=flat&logo=${getReplacedKeyword(keyword)}&logoColor=white&color=${colors.primary.replace("#", "")}`}
-            src={`https://img.shields.io/badge/${keyword}-black?style=flat&logo=${getReplacedKeyword(keyword)}`}
-          />
-        </span>
-      ))}
+      {keywords.map((keyword, index) => {
+        const svgFileName = `${keyword.replace(/\s+/g, "-").toLowerCase()}.svg`;
+        const svgPath = `/icons/keywords/${svgFileName}`;
+        return (
+          <span className="me-1" key={index.toString()}>
+            <_Image src={svgPath} />
+          </span>
+        );
+      })}
     </div>
   );
 };

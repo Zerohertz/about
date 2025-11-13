@@ -23,6 +23,7 @@ const experiences: Payload = {
         "DeepSpeed",
         "vLLM",
         "Ray",
+        "Triton Inference Server",
         "NCCL",
         "RDMA",
         "MariaDB",
@@ -37,26 +38,26 @@ const experiences: Payload = {
       descriptions: [
         {
           content: {
-            en: "Collaborated within a 30-member cross-functional team comprising machine learning engineers, backend engineers, and product managers to develop LLMOps products and conduct technical reviews for new feature implementations.",
-            ko: "머신러닝 엔지니어, 백엔드 엔지니어, 기획자 등으로 구성된 30명 규모의 다기능 팀에서 협업하여 LLMOps 제품 개발 및 새로운 기능 구현을 위한 기술 검토 수행",
+            en: "Proactively proposed and designed advanced features including LoRA adapter serving and MCP (Model Context Protocol) integration within a 30-member cross-functional team, contributing to the LLMOps product roadmap and advancing enterprise AI infrastructure capabilities.",
+            ko: "30명 규모의 SW 개발팀 내에서 LoRA 어댑터 서빙 및 MCP (Model Context Protocol) 통합 등 고급 기능을 주도적으로 제안 및 설계하여 LLMOps 제품 로드맵 기여 및 엔터프라이즈 AI 인프라 기능 향상",
           },
         },
         {
           content: {
-            en: "Developed user-friendly distributed training and serving platform leveraging GPU Direct RDMA with high-speed Ethernet (RoCEv2) and InfiniBand on Kubernetes for seamless multi-node ML workflows.",
-            ko: "고속 이더넷 (RoCEv2) 및 InfiniBand 기반 GPU Direct RDMA를 활용하여 Kubernetes 기반에서 원활한 멀티노드 ML 워크플로우를 지원하는 사용자 친화적 분산 학습 및 서빙 플랫폼 개발",
+            en: "Architected and developed Kubernetes-based high-performance distributed training and serving infrastructure supporting GPU Direct RDMA communication with RoCEv2 and InfiniBand for ultra-fast inter-node data transfer in multi-node LLM workflows.",
+            ko: "멀티노드 LLM 워크플로우를 위한 Kubernetes 기반 고성능 분산 학습 및 서빙 인프라를 설계 및 개발하여 RoCEv2 및 InfiniBand 기반 GPU Direct RDMA 통신으로 노드 간 초고속 데이터 전송 지원",
           },
         },
         {
           content: {
-            en: "Planned, designed, and developed comprehensive backend system for Kubernetes container status monitoring and alerting, enabling end-to-end container lifecycle management through web interface.",
-            ko: "Kubernetes 컨테이너 상태 모니터링 및 알림을 위한 포괄적 백엔드 시스템 기획, 설계 및 개발로 웹 인터페이스를 통한 end-to-end 컨테이너 생명주기 관리 구현",
+            en: "Implemented Multi-Instance GPU (MIG) resource partitioning using NVIDIA GPU Operator and integrated NVIDIA Triton Inference Server to expand model serving capabilities beyond Transformers architecture, supporting diverse ML frameworks including TensorRT, ONNX, and PyTorch.",
+            ko: "NVIDIA GPU Operator를 활용한 Multi-Instance GPU (MIG) 리소스 파티셔닝 구현 및 NVIDIA Triton Inference Server 통합으로 Transformers 아키텍처를 넘어 TensorRT, ONNX, PyTorch 등 다양한 ML 프레임워크를 지원하는 모델 서빙 기능 확대",
           },
         },
         {
           content: {
-            en: "Proactively proposed and designed advanced features including LoRA adapter serving, MCP (Model Context Protocol) integration, and container monitoring system enhancements, while leading technical initiatives that significantly contributed to the LLMOps product roadmap.",
-            ko: "LoRA 어댑터 서빙, MCP (Model Context Protocol) 통합, 컨테이너 모니터링 시스템 고도화 등 고급 기능을 주도적으로 제안 및 설계하여 LLMOps 제품 로드맵에 핵심적으로 기여하는 기술 프로젝트 주도",
+            en: "Architected and implemented Prometheus-based asynchronous container status monitoring system with Redis Pub/Sub, Server-Sent Events (SSE) for real-time alerting and end-to-end container lifecycle management, while developing comprehensive Grafana dashboards to visualize LLM serving infrastructure metrics for enhanced observability.",
+            ko: "Prometheus, Redis Pub/Sub, Server-Sent Events (SSE) 기반 비동기 컨테이너 상태 모니터링 시스템 설계 및 구현으로 end-to-end 컨테이너 생명주기 관리와 Grafana 대시보드를 통한 LLM 서빙 인프라 observability 향상",
           },
         },
       ],

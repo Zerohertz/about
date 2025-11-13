@@ -17,19 +17,19 @@ const projects: Payload = {
         {
           content: {
             en: "Architected high-performance distributed training infrastructure supporting GPU Direct RDMA communication for ultra-fast inter-node data transfer with dynamic port allocation system preventing conflicts in multi-node environments.",
-            ko: "멀티노드 환경에서 충돌 방지를 위한 동적 포트 할당 시스템과 노드 간 초고속 데이터 전송용 GPU Direct RDMA 통신을 지원하는 고성능 분산 학습 인프라 아키텍처 설계",
+            ko: "멀티노드 환경에서 충돌 방지를 위한 동적 포트 할당 시스템과 노드 간 초고속 데이터 전송을 위한 GPU Direct RDMA 통신을 지원하는 고성능 분산 학습 인프라 설계",
           },
         },
         {
           content: {
-            en: "Implemented NCCL optimization with advanced network communication parameter tuning including `NCCL_NET_GDR_LEVEL` configuration, ensuring robust distributed training execution.",
-            ko: "`NCCL_NET_GDR_LEVEL` 구성을 포함한 고급 네트워크 통신 파라미터 튜닝을 통한 NCCL 최적화로 견고한 분산 학습 실행 보장",
+            en: "Implemented advanced network communication parameter tuning to ensure robust distributed training execution across multi-node environments, enabling centralized management of critical parameters through Kubernetes ConfigMap.",
+            ko: "멀티노드 환경에서 견고한 분산 학습 실행을 보장하기 위한 고급 네트워크 통신 파라미터 튜닝 구현 및 Kubernetes ConfigMap을 통한 중요 파라미터 중앙 관리 기능 개발",
           },
         },
         {
           content: {
-            en: "Developed comprehensive DeepSpeed integration with ZeRO optimization stages for large-scale model training and implemented optimized environment configuration.",
-            ko: "ZeRO 최적화 단계를 포함한 대규모 모델 학습용 포괄적 DeepSpeed 통합 개발 및 최적화된 환경 구성 구현",
+            en: "Developed Kubernetes-based comprehensive DeepSpeed integration with ZeRO optimization stages for multi-node model training, orchestrating inter-node communication and implementing optimized environment configuration.",
+            ko: "Kubernetes 기반 멀티노드 모델 학습을 위한 ZeRO 최적화 단계를 포함한 DeepSpeed 통합 개발, 노드 간 통신 조율 및 환경 구성 최적화",
           },
         },
       ],
@@ -50,6 +50,7 @@ const projects: Payload = {
         "DeepSpeed",
         "vLLM",
         "Ray",
+        "Triton Inference Server",
         "NCCL",
         "RDMA",
         "MariaDB",
@@ -70,8 +71,20 @@ const projects: Payload = {
         },
         {
           content: {
+            en: "Implemented Multi-Instance GPU (MIG) feature using NVIDIA GPU Operator to enable efficient GPU resource partitioning and multi-tenant inference workloads with isolated compute instances.",
+            ko: "NVIDIA GPU Operator를 활용한 Multi-Instance GPU (MIG) 기능 구현으로 효율적 GPU 리소스 파티셔닝 및 격리된 컴퓨팅 인스턴스 기반 멀티테넌트 추론 워크로드 지원",
+          },
+        },
+        {
+          content: {
+            en: "Integrated NVIDIA Triton Inference Server to expand model serving capabilities beyond Transformers architecture, supporting diverse ML frameworks including TensorRT, ONNX, and PyTorch for comprehensive inference optimization.",
+            ko: "NVIDIA Triton Inference Server 통합으로 Transformers 아키텍처를 넘어 TensorRT, ONNX, PyTorch 등 다양한 ML 프레임워크를 지원하는 포괄적 추론 최적화 기능으로 모델 서빙 범위 확대",
+          },
+        },
+        {
+          content: {
             en: "Conducted continuous evaluation and benchmarking of state-of-the-art LLM models to determine optimal resource requirements and configuration parameters for enterprise deployment scenarios.",
-            ko: "엔터프라이즈 배포 시나리오를 위한 최신 LLM 모델의 지속적 평가 및 벤치마킹을 통한 최적 리소스 요구사항 및 구성 매개변수 결정",
+            ko: "엔터프라이즈 배포 시나리오를 위한 최신 LLM 모델의 지속적 평가 및 벤치마킹으로 최적 리소스 요구사항과 구성 매개변수 결정",
           },
         },
         {
@@ -89,8 +102,8 @@ const projects: Payload = {
         },
         {
           content: {
-            en: "Led technical initiatives by proposing and designing advanced features including LoRA adapter serving, MCP (Model Context Protocol) integration, and container monitoring system enhancements.",
-            ko: "LoRA 어댑터 서빙, MCP (Model Context Protocol) 통합, 컨테이너 모니터링 시스템 고도화 등 고급 기능 제안 및 설계를 통한 기술적 주도",
+            en: "Proactively proposed and designed advanced features including LoRA adapter serving, MCP (Model Context Protocol) integration, and container monitoring system enhancements.",
+            ko: "LoRA 어댑터 서빙, MCP (Model Context Protocol) 통합, 컨테이너 모니터링 시스템 고도화 등 고급 기능을 주도적으로 제안 및 설계",
           },
         },
         {
@@ -126,19 +139,19 @@ const projects: Payload = {
         {
           content: {
             en: "Developed distributed microservices architecture with separate data collection and API services using `asyncio`-based message processing and RESTful endpoints with SSE streaming for real-time monitoring capabilities.",
-            ko: "`asyncio` 기반 메시지 처리와 RESTful 엔드포인트 및 SSE 스트리밍을 활용하여 데이터 수집과 API 서비스를 분리한 분산 마이크로서비스 아키텍처 개발로 실시간 모니터링 역량 구현",
+            ko: "`asyncio` 기반 메시지 처리와 RESTful 엔드포인트 및 SSE 스트리밍을 활용하여 데이터 수집과 API 서비스를 분리한 분산 마이크로서비스 아키텍처 개발로 실시간 모니터링 기능 구현",
           },
         },
         {
           content: {
-            en: "Enhanced ML lifecycle management by implementing automated alerting system for training and serving failures that improved incident response times and operational efficiency.",
-            ko: "학습 및 서빙 장애 발생 시 자동 알림 시스템 구현으로 ML 생애주기 관리를 고도화하고 장애 대응 시간 단축 및 운영 효율성 향상",
+            en: "Enhanced ML lifecycle management and operational efficiency by implementing automated alerting system for training and serving failures.",
+            ko: "학습 및 서빙 장애 발생 시 자동 알림 시스템 구현으로 ML 생애주기 관리 고도화 및 운영 효율성 향상",
           },
         },
         {
           content: {
-            en: "Enhanced observability by implementing startup probes for accurate container service health detection, enabling precise identification of actual service readiness beyond basic container status and improving system reliability through early detection of initialization failures.",
-            ko: "startup probe 구현으로 정확한 컨테이너 서비스 상태 탐지를 통해 observability를 향상시키고 기본적인 컨테이너 상태를 넘어 실제 서비스 준비 상태를 정밀하게 식별하며 초기화 장애의 조기 탐지를 통해 시스템 신뢰성 개선",
+            en: "Enhanced observability and system reliability by implementing startup probes for accurate container service health detection and early detection of initialization failures.",
+            ko: "Startup probe 구현으로 컨테이너 서비스 상태를 정확하게 탐지하여 observability 향상 및 초기화 장애 조기 탐지를 통한 시스템 신뢰성 개선",
           },
         },
       ],
@@ -146,7 +159,7 @@ const projects: Payload = {
     {
       title: {
         en: "Development and CI/CD Pipeline Construction of Python Library",
-        ko: "Python 라이브러리 개발 및 CI 및 CD 파이프라인 구축",
+        ko: "Python 라이브러리 개발 및 CI/CD 파이프라인 구축",
       },
       subTitle: "Personal Project",
       startedAt: "2023-11",
@@ -228,8 +241,8 @@ const projects: Payload = {
         },
         {
           content: {
-            en: "Utilized Docstring to document functions and classes for enhanced code clarity and team collaboration while maintaining library integrity through type hints and PyTest.",
-            ko: "Docstring 기반 함수 및 클래스 문서화로 코드 명확성과 팀 협업을 향상시키고 타입 힌트 및 PyTest를 통해 라이브러리 무결성 보장 및 코드 품질 향상",
+            en: "Utilized Docstring to document functions and classes for enhanced code clarity and team collaboration while ensuring library integrity and code quality through type hints and PyTest.",
+            ko: "Docstring 기반 함수 및 클래스 문서화로 코드 명확성과 팀 협업을 향상시키고 타입 힌트 및 PyTest를 통한 라이브러리 무결성 및 코드 품질 보장",
           },
         },
         {

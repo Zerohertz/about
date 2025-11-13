@@ -104,6 +104,13 @@ async function main(): Promise<void> {
   for (const repo of repos) {
     try {
       const svgContent = await downloadShieldSvg(repo);
+
+      // Skip if SVG contains error message
+      if (svgContent.includes("Unable to select next GitHub token from pool")) {
+        console.log(`  ⚠ ${repo}: GitHub token pool error, skipping`);
+        continue;
+      }
+
       const fileName = `${repo.replace("/", "-").replace(/\s+/g, "-").toLowerCase()}.svg`;
       const filePath = path.join(OUTPUT_DIR, fileName);
 

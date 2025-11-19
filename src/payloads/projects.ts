@@ -353,7 +353,7 @@ const projects: Payload = {
         {
           content: {
             en: "To address the high time and cost demands of large-scale data annotation requiring expert knowledge, accelerated the process by implementing pre-labeling through an ML backend using Label Studio SDK, significantly reduced annotation time and costs.",
-            ko: "전문 지식이 필요한 대규모 데이터 어노테이션의 높은 시간과 비용 문제 해결을 위한 Label Studio SDK를 활용한 ML 백엔드 기반 사전 라벨링 구현 및 어노테이션 시간과 비용 대폭 단축",
+            ko: "전문 지식이 필요한 대규모 데이터 어노테이션의 높은 시간과 비용 문제 해결을 위해 Label Studio SDK를 활용한 ML 백엔드 기반 사전 라벨링 구현 및 어노테이션 시간과 비용 대폭 단축",
           },
         },
         {

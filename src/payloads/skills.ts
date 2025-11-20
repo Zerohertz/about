@@ -26,10 +26,13 @@ const mlops: Skill = {
   category: "MLOps",
   items: [
     {
-      title: "Triton Inference Server",
+      title: "vLLM",
     },
     {
-      title: "vLLM",
+      title: "Ray",
+    },
+    {
+      title: "Triton Inference Server",
     },
     {
       title: "TensorRT",

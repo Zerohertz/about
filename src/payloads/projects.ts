@@ -164,7 +164,18 @@ const projects: Payload = {
       subTitle: "Personal Project",
       startedAt: "2023-11",
       onGoing: true,
-      keywords: ["Python", "PyTest", "Sphinx", "Kubernetes", "Jenkins", "GitHub Actions", "Codecov", "PyPI"],
+      keywords: [
+        "Python",
+        "PyTest",
+        "Sphinx",
+        "MkDocs",
+        "Read the Docs",
+        "Kubernetes",
+        "Jenkins",
+        "GitHub Actions",
+        "Codecov",
+        "PyPI",
+      ],
       descriptions: [
         {
           content: {

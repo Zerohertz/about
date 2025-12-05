@@ -54,6 +54,21 @@ const openSources: Payload = {
     },
     {
       title: {
+        en: "llm-d-incubation/llm-d-modelservice",
+        ko: "llm-d-incubation/llm-d-modelservice",
+      },
+      href: "https://github.com/llm-d-incubation/llm-d-modelservice/issues?q=author%3AZerohertz%20OR%20reviewed-by%3AZerohertz%20",
+      descriptions: [
+        {
+          content: {
+            en: "Fixed schema validation bug in Helm chart's `nodeSelector` implementation that blocked label configuration, enabling proper node placement functionality for Kubernetes deployments.",
+            ko: "label 구성을 차단하던 Helm chart `nodeSelector` 구현의 schema validation 버그 수정으로 Kubernetes 배포 환경의 적절한 노드 배치 기능 활성화",
+          },
+        },
+      ],
+    },
+    {
+      title: {
         en: "fastapi/fastapi",
         ko: "fastapi/fastapi",
       },

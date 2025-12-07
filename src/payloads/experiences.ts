@@ -31,6 +31,7 @@ const experiences: Payload = {
         "RabbitMQ",
         "Docker",
         "Kubernetes",
+        "Istio",
         "Prometheus",
         "Grafana",
         "Apache JMeter",

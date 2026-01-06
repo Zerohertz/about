@@ -11,8 +11,8 @@ const educations: Payload = {
       },
       href: "https://grad.konkuk.ac.kr/",
       subTitle: "M.S. in Mechanical Design and Production Engineering",
-      startedAt: "2021-03",
-      endedAt: "2023-02",
+      startedAt: "2021-03-01",
+      endedAt: "2023-02-22",
       keywords: ["MATLAB", "Python", "PyTorch", "C++", "LabVIEW", "Ansys"],
       descriptions: [
         {
@@ -77,8 +77,8 @@ const educations: Payload = {
       },
       href: "https://www.konkuk.ac.kr/",
       subTitle: "B.S. in Department of Mechanical Engineering",
-      startedAt: "2017-03",
-      endedAt: "2021-02",
+      startedAt: "2017-03-02",
+      endedAt: "2021-02-19",
       keywords: ["MATLAB", "Python", "PyTorch", "LabVIEW", "Ansys", "Unreal Engine", "C++"],
       descriptions: [
         {

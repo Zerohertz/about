@@ -65,8 +65,8 @@ const experiences: Payload = {
     },
     {
       title: {
-        en: "Tmax WAPL",
-        ko: "Tmax WAPL",
+        en: "Tmax CoreAI",
+        ko: "Tmax CoreAI",
       },
       href: "https://tmaxcore.ai/",
       subTitle: "Backend Engineer",

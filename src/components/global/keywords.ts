@@ -15,6 +15,7 @@ const keywordMap = new Map([
   ["Argo CD", "argo"],
   ["Amazon EC2", "amazonec2"],
   ["vLLM", "vonage"],
+  ["SGLang", "codecrafters"],
   ["DeepSpeed", "rocket"],
 ]);
 

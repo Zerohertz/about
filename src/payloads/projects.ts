@@ -6,36 +6,6 @@ const projects: Payload = {
   list: [
     {
       title: {
-        en: "RDMA-Enabled Multi-Node Distributed Training and Serving System",
-        ko: "RDMA 지원 멀티노드 분산 학습 및 서빙 시스템",
-      },
-      subTitle: "GenON",
-      startedAt: "2025-08",
-      onGoing: true,
-      keywords: ["Python", "PyTorch", "Transformers", "DeepSpeed", "vLLM", "Ray", "Kubernetes", "NCCL", "RDMA"],
-      descriptions: [
-        {
-          content: {
-            en: "Architected high-performance distributed training infrastructure supporting GPU Direct RDMA communication for ultra-fast inter-node data transfer with dynamic port allocation system preventing conflicts in multi-node environments.",
-            ko: "멀티노드 환경에서 충돌 방지를 위한 동적 포트 할당 시스템과 노드 간 초고속 데이터 전송을 위한 GPU Direct RDMA 통신을 지원하는 고성능 분산 학습 인프라 설계",
-          },
-        },
-        {
-          content: {
-            en: "Implemented advanced network communication parameter tuning to ensure robust distributed training execution across multi-node environments, enabling centralized management of critical parameters through Kubernetes ConfigMap.",
-            ko: "멀티노드 환경에서 견고한 분산 학습 실행을 보장하기 위한 고급 네트워크 통신 파라미터 튜닝 구현 및 Kubernetes ConfigMap을 통한 중요 파라미터 중앙 관리 기능 개발",
-          },
-        },
-        {
-          content: {
-            en: "Developed Kubernetes-based comprehensive DeepSpeed integration with ZeRO optimization stages for multi-node model training, orchestrating inter-node communication and implementing optimized environment configuration.",
-            ko: "Kubernetes 기반 멀티노드 모델 학습을 위한 ZeRO 최적화 단계를 포함한 DeepSpeed 통합 개발, 노드 간 통신 조율 및 환경 구성 최적화",
-          },
-        },
-      ],
-    },
-    {
-      title: {
         en: "LLMOps Solution, GenOS",
         ko: "LLMOps 솔루션, GenOS",
       },
@@ -49,6 +19,7 @@ const projects: Payload = {
         "Transformers",
         "DeepSpeed",
         "vLLM",
+        "SGLang",
         "Ray",
         "Triton Inference Server",
         "NCCL",
@@ -71,8 +42,14 @@ const projects: Payload = {
         },
         {
           content: {
-            en: "Implemented Multi-Instance GPU (MIG) feature using NVIDIA GPU Operator to enable efficient GPU resource partitioning and multi-tenant inference workloads with isolated compute instances.",
-            ko: "NVIDIA GPU Operator를 활용한 Multi-Instance GPU (MIG) 기능 구현으로 효율적 GPU 리소스 파티셔닝 및 격리된 컴퓨팅 인스턴스 기반 멀티테넌트 추론 워크로드 지원",
+            en: "Evaluated and benchmarked advanced optimization techniques for vLLM-based LLM serving infrastructure including Prefill/Decode Disaggregation (P/D), speculative decoding, prefix-aware caching, and NPU-based serving to determine optimal resource requirements and configuration parameters for enterprise deployment scenarios, while resolving various technical challenges in air-gapped customer environments.",
+            ko: "vLLM 기반 LLM 서빙 인프라를 위한 Prefill/Decode Disaggregation (P/D), speculative decoding, prefix-aware caching, NPU 기반 서빙 등 고급 최적화 기법의 평가 및 벤치마킹을 통해 엔터프라이즈 배포 시나리오를 위한 최적 리소스 요구사항과 구성 매개변수를 결정하고 폐쇄망 고객사 환경에서의 다양한 기술적 문제 해결",
+          },
+        },
+        {
+          content: {
+            en: "Integrated SGLang Diffusion to enhance image generation model serving capabilities, achieving 37.85% improvement in inference throughput for diffusion-based models.",
+            ko: "SGLang Diffusion 통합으로 이미지 생성 모델 서빙 성능 향상 및 디퓨전 기반 모델의 추론 처리량 37.85% 개선 달성",
           },
         },
         {
@@ -83,8 +60,8 @@ const projects: Payload = {
         },
         {
           content: {
-            en: "Conducted continuous evaluation and benchmarking of state-of-the-art LLM models to determine optimal resource requirements and configuration parameters for enterprise deployment scenarios.",
-            ko: "엔터프라이즈 배포 시나리오를 위한 최신 LLM 모델의 지속적 평가 및 벤치마킹으로 최적 리소스 요구사항과 구성 매개변수 결정",
+            en: "Implemented Multi-Instance GPU (MIG) feature using NVIDIA GPU Operator to enable efficient GPU resource partitioning and multi-tenant inference workloads with isolated compute instances.",
+            ko: "NVIDIA GPU Operator를 활용한 Multi-Instance GPU (MIG) 기능 구현으로 효율적 GPU 리소스 파티셔닝 및 격리된 컴퓨팅 인스턴스 기반 멀티테넌트 추론 워크로드 지원",
           },
         },
         {
@@ -106,10 +83,34 @@ const projects: Payload = {
             ko: "LoRA 어댑터 서빙, MCP (Model Context Protocol) 통합, 컨테이너 모니터링 시스템 고도화 등 고급 기능을 주도적으로 제안 및 설계",
           },
         },
+      ],
+    },
+    {
+      title: {
+        en: "RDMA-Enabled Multi-Node Distributed Training and Serving System",
+        ko: "RDMA 지원 멀티노드 분산 학습 및 서빙 시스템",
+      },
+      subTitle: "GenON",
+      startedAt: "2025-08",
+      endedAt: "2025-12",
+      keywords: ["Python", "PyTorch", "Transformers", "DeepSpeed", "vLLM", "Ray", "Kubernetes", "NCCL", "RDMA"],
+      descriptions: [
         {
           content: {
-            en: "Conducted technical reviews and benchmark testing of new open-source LLM serving technologies to evaluate performance and feasibility for production deployment.",
-            ko: "새로운 오픈 소스 LLM 서빙 기술 검토 및 벤치마크 테스트 수행으로 프로덕션 배포를 위한 성능 및 실현 가능성 평가",
+            en: "Architected high-performance distributed training infrastructure supporting GPU Direct RDMA communication for ultra-fast inter-node data transfer with dynamic port allocation system preventing conflicts in multi-node environments, achieving 92.42% reduction in training time and 23.07% improvement in serving throughput.",
+            ko: "멀티노드 환경에서 충돌 방지를 위한 동적 포트 할당 시스템과 노드 간 초고속 데이터 전송을 위한 GPU Direct RDMA 통신을 지원하는 고성능 분산 학습 인프라를 설계하고 학습 시간 92.42% 단축 및 서빙 처리량 23.07% 향상 달성",
+          },
+        },
+        {
+          content: {
+            en: "Implemented advanced network communication parameter tuning to ensure robust distributed training execution across multi-node environments, enabling centralized management of critical parameters through Kubernetes ConfigMap.",
+            ko: "멀티노드 환경에서 견고한 분산 학습 실행을 보장하기 위한 고급 네트워크 통신 파라미터 튜닝 구현 및 Kubernetes ConfigMap을 통한 중요 파라미터 중앙 관리 기능 개발",
+          },
+        },
+        {
+          content: {
+            en: "Developed Kubernetes-based comprehensive DeepSpeed integration with ZeRO optimization stages for multi-node model training, orchestrating inter-node communication and implementing optimized environment configuration.",
+            ko: "Kubernetes 기반 멀티노드 모델 학습을 위한 ZeRO 최적화 단계를 포함한 DeepSpeed 통합 개발, 노드 간 통신 조율 및 환경 구성 최적화",
           },
         },
       ],

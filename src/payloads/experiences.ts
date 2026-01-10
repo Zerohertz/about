@@ -22,6 +22,7 @@ const experiences: Payload = {
         "Transformers",
         "DeepSpeed",
         "vLLM",
+        "SGLang",
         "Ray",
         "Triton Inference Server",
         "NCCL",
@@ -39,20 +40,26 @@ const experiences: Payload = {
       descriptions: [
         {
           content: {
-            en: "Proactively proposed and designed advanced features including LoRA adapter serving and MCP (Model Context Protocol) integration within a 30-member cross-functional team, contributing to the LLMOps product roadmap and advancing enterprise AI infrastructure capabilities.",
-            ko: "30명 규모의 SW 개발팀 내에서 LoRA 어댑터 서빙 및 MCP (Model Context Protocol) 통합 등 고급 기능을 주도적으로 제안 및 설계하여 LLMOps 제품 로드맵 기여 및 엔터프라이즈 AI 인프라 기능 향상",
+            en: "Led the evaluation and introduction of advanced features including LoRA (Low-Rank Adaptation) adapter serving, MCP (Model Context Protocol) integration, Multi-Instance GPU (MIG), and NVIDIA Triton Inference Server within a 30-member cross-functional team, contributing to the LLMOps product roadmap and advancing enterprise AI infrastructure capabilities.",
+            ko: "30명 규모의 SW 개발팀 내에서 LoRA (Low-Rank Adaptation) 어댑터 서빙, MCP (Model Context Protocol) 통합, Multi-Instance GPU (MIG), NVIDIA Triton Inference Server 등 고급 기능의 검토 및 도입을 주도하여 LLMOps 제품 로드맵 기여 및 엔터프라이즈 AI 인프라 기능 향상",
           },
         },
         {
           content: {
-            en: "Architected and developed Kubernetes-based high-performance distributed training and serving infrastructure supporting GPU Direct RDMA communication with RoCEv2 and InfiniBand for ultra-fast inter-node data transfer in multi-node LLM workflows.",
-            ko: "멀티노드 LLM 워크플로우를 위한 Kubernetes 기반 고성능 분산 학습 및 서빙 인프라를 설계 및 개발하여 RoCEv2 및 InfiniBand 기반 GPU Direct RDMA 통신으로 노드 간 초고속 데이터 전송 지원",
+            en: "Evaluated and benchmarked advanced optimization techniques for vLLM-based LLM serving infrastructure including Prefill/Decode Disaggregation (P/D), speculative decoding, prefix-aware caching, and NPU-based serving to determine optimal configurations for enterprise deployment scenarios, while resolving various technical challenges in air-gapped customer environments.",
+            ko: "vLLM 기반 LLM 서빙 인프라를 위한 Prefill/Decode Disaggregation (P/D), speculative decoding, prefix-aware caching, NPU 기반 서빙 등 고급 최적화 기법의 평가 및 벤치마킹을 통해 엔터프라이즈 배포 시나리오를 위한 최적 구성을 결정하고 폐쇄망 고객사 환경에서의 다양한 기술적 문제 해결",
           },
         },
         {
           content: {
-            en: "Implemented Multi-Instance GPU (MIG) resource partitioning using NVIDIA GPU Operator and integrated NVIDIA Triton Inference Server to expand model serving capabilities beyond Transformers architecture, supporting diverse ML frameworks including TensorRT, ONNX, and PyTorch.",
-            ko: "NVIDIA GPU Operator를 활용한 Multi-Instance GPU (MIG) 리소스 파티셔닝 구현 및 NVIDIA Triton Inference Server 통합으로 Transformers 아키텍처를 넘어 TensorRT, ONNX, PyTorch 등 다양한 ML 프레임워크를 지원하는 모델 서빙 기능 확대",
+            en: "Integrated SGLang Diffusion to enhance image generation model serving capabilities, achieving 37.85% improvement in inference throughput for diffusion-based models.",
+            ko: "SGLang Diffusion 통합으로 이미지 생성 모델 서빙 성능 향상 및 디퓨전 기반 모델의 추론 처리량 37.85% 개선 달성",
+          },
+        },
+        {
+          content: {
+            en: "Architected and developed Kubernetes-based high-performance distributed training and serving infrastructure supporting GPU Direct RDMA communication with RoCEv2 and InfiniBand for ultra-fast inter-node data transfer in multi-node LLM workflows, achieving 92.42% reduction in training time and 23.07% improvement in serving throughput.",
+            ko: "멀티노드 LLM 워크플로우를 위한 Kubernetes 기반 고성능 분산 학습 및 서빙 인프라를 설계 및 개발하여 RoCEv2 및 InfiniBand 기반 GPU Direct RDMA 통신으로 노드 간 초고속 데이터 전송을 지원하고 학습 시간 92.42% 단축 및 서빙 처리량 23.07% 향상 달성",
           },
         },
         {

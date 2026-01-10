@@ -40,8 +40,8 @@ const experiences: Payload = {
       descriptions: [
         {
           content: {
-            en: "Led the evaluation and introduction of advanced features including LoRA (Low-Rank Adaptation) adapter serving, MCP (Model Context Protocol) integration, Multi-Instance GPU (MIG), and NVIDIA Triton Inference Server within a 30-member cross-functional team, contributing to the LLMOps product roadmap and advancing enterprise AI infrastructure capabilities.",
-            ko: "30명 규모의 SW 개발팀 내에서 LoRA (Low-Rank Adaptation) 어댑터 서빙, MCP (Model Context Protocol) 통합, Multi-Instance GPU (MIG), NVIDIA Triton Inference Server 등 고급 기능의 검토 및 도입을 주도하여 LLMOps 제품 로드맵 기여 및 엔터프라이즈 AI 인프라 기능 향상",
+            en: "Led the evaluation and introduction of advanced features including LoRA (Low-Rank Adaptation) adapter serving, MCP (Model Context Protocol), Multi-Instance GPU (MIG), Triton Inference Server, and SGLang Diffusion within a 30-member cross-functional team, contributing to the LLMOps product roadmap and advancing enterprise AI infrastructure capabilities.",
+            ko: "30명 규모의 SW 개발팀 내에서 LoRA (Low-Rank Adaptation) 어댑터 서빙, MCP (Model Context Protocol), Multi-Instance GPU (MIG), Triton Inference Server, SGLang Diffusion 등 고급 기능의 검토 및 도입을 주도하여 LLMOps 제품 로드맵 기여 및 엔터프라이즈 AI 인프라 기능 향상",
           },
         },
         {
@@ -52,14 +52,8 @@ const experiences: Payload = {
         },
         {
           content: {
-            en: "Integrated SGLang Diffusion to enhance image generation model serving capabilities, achieving 37.85% improvement in inference throughput for diffusion-based models.",
-            ko: "SGLang Diffusion 통합으로 이미지 생성 모델 서빙 성능 향상 및 디퓨전 기반 모델의 추론 처리량 37.85% 개선 달성",
-          },
-        },
-        {
-          content: {
-            en: "Architected and developed Kubernetes-based high-performance distributed training and serving infrastructure supporting GPU Direct RDMA communication with RoCEv2 and InfiniBand for ultra-fast inter-node data transfer in multi-node LLM workflows, achieving 92.42% reduction in training time and 23.07% improvement in serving throughput.",
-            ko: "멀티노드 LLM 워크플로우를 위한 Kubernetes 기반 고성능 분산 학습 및 서빙 인프라를 설계 및 개발하여 RoCEv2 및 InfiniBand 기반 GPU Direct RDMA 통신으로 노드 간 초고속 데이터 전송을 지원하고 학습 시간 92.42% 단축 및 서빙 처리량 23.07% 향상 달성",
+            en: "Architected and developed Kubernetes-based high-performance distributed training and serving infrastructure supporting GPU Direct RDMA communication with RoCEv2 and InfiniBand for ultra-fast inter-node data transfer in multi-node LLM workflows.",
+            ko: "멀티노드 LLM 워크플로우를 위한 Kubernetes 기반 고성능 분산 학습 및 서빙 인프라를 설계 및 개발하여 RoCEv2 및 InfiniBand 기반 GPU Direct RDMA 통신으로 노드 간 초고속 데이터 전송 지원",
           },
         },
         {

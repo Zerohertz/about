@@ -97,8 +97,8 @@ const openSources: Payload = {
       descriptions: [
         {
           content: {
-            en: "Remove duplicate declaration of pandas in `Dockerfile`.",
-            ko: "`Dockerfile`에서 pandas 중복 선언 제거",
+            en: "Remove duplicate declaration of `pandas` in `Dockerfile`.",
+            ko: "`Dockerfile`에서 `pandas` 중복 선언 제거",
           },
         },
       ],

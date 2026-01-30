@@ -14,7 +14,7 @@ const experiences: Payload = {
       href: "https://genon.ai/",
       subTitle: "Machine Learning Engineer",
       startedAt: "2024-12-16",
-      onGoing: true,
+      endedAt: "2026-03-03",
       keywords: [
         "Python",
         "FastAPI",

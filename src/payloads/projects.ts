@@ -11,7 +11,7 @@ const projects: Payload = {
       },
       subTitle: "GenON",
       startedAt: "2024-12",
-      onGoing: true,
+      endedAt: "2026-03",
       keywords: [
         "Python",
         "FastAPI",

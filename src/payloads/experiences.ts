@@ -69,7 +69,7 @@ const experiences: Payload = {
         en: "Tmax CoreAI",
         ko: "Tmax CoreAI",
       },
-      href: "https://tmaxcore.ai/",
+      href: "https://www.tmax.co.kr/tmaxai",
       subTitle: "Backend Engineer",
       startedAt: "2024-09-09",
       endedAt: "2024-11-29",

@@ -20,16 +20,9 @@ const extras: Payload = {
         ko: "전문연구요원",
       },
       href: "https://www.mma.go.kr/contents.do?mc=mma0000760",
-      subTitle: "AgileSoDA, Tmax WAPL, GenON",
+      subTitle: "AgileSoDA, Tmax CoreAI, GenON",
       startedAt: "2023-02-28",
       endedAt: "2026-02-27",
-      descriptions: [
-        {
-          content: { en: "", ko: "" },
-          image:
-            "https://img.shields.io/endpoint.svg?url=https://raw.githubusercontent.com/Zerohertz/Zerohertz/refs/heads/main/data/jmy.json",
-        },
-      ],
     },
     {
       title: {

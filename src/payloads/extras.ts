@@ -6,10 +6,20 @@ const extras: Payload = {
   list: [
     {
       title: {
+        en: "CKAD (Certified Kubernetes Application Developer)",
+        ko: "CKAD (Certified Kubernetes Application Developer)",
+      },
+      href: "https://www.credly.com/badges/90d396d2-0938-4e7d-82bd-7b1654424f22",
+      subTitle: "The Linux Foundation",
+      startedAt: "2026-02-20",
+      endedAt: "2028-02-19",
+    },
+    {
+      title: {
         en: "CKA (Certified Kubernetes Administrator)",
         ko: "CKA (Certified Kubernetes Administrator)",
       },
-      href: "https://www.credly.com/badges/8b2942ea-3d31-483b-a64a-6a6e0a4f6a5f/linked_in_profile",
+      href: "https://www.credly.com/badges/8b2942ea-3d31-483b-a64a-6a6e0a4f6a5f",
       subTitle: "The Linux Foundation",
       startedAt: "2024-05-05",
       endedAt: "2026-05-04",

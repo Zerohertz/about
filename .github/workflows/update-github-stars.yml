@@ -41,17 +41,40 @@ jobs:
         id: check
         run: |
           if [ -d "public/icons/stars" ]; then
-            git add public/icons/stars/
+            added=0
+            skipped=0
+            skipped_files=()
+            added_files=()
+            echo "──────────────────────────────────────────"
+            echo "  Scanning SVG files in public/icons/stars"
+            echo "──────────────────────────────────────────"
+            for f in public/icons/stars/*.svg; do
+              name=$(basename "$f")
+              if grep -q "invalid" "$f"; then
+                echo "  ⏭  SKIP  │ $name"
+                skipped_files+=("$name")
+                skipped=$((skipped + 1))
+              else
+                git add "$f"
+                echo "  ✅ ADD   │ $name"
+                added_files+=("$name")
+                added=$((added + 1))
+              fi
+            done
+            echo "──────────────────────────────────────────"
+            echo "  Summary: $added added, $skipped skipped"
+            echo "──────────────────────────────────────────"
             if git diff --staged --quiet; then
               echo "changed=false" >> $GITHUB_OUTPUT
-              echo "No changes detected in SVG files"
+              echo "  ℹ️  No staged changes — commit skipped"
             else
               echo "changed=true" >> $GITHUB_OUTPUT
-              echo "Changes detected in SVG files"
+              echo "  🚀 Staged changes detected — proceeding to commit"
             fi
+            echo "──────────────────────────────────────────"
           else
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No stars directory found"
+            echo "  ⚠️  Directory public/icons/stars not found"
           fi
 
       - name: Commit and push changes

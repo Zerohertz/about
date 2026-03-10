@@ -8,6 +8,18 @@ const experiences: Payload = {
   list: [
     {
       title: {
+        en: "Toss Securities",
+        ko: "Toss Securities",
+      },
+      href: "https://corp.tossinvest.com/",
+      subTitle: "Machine Learning Engineer",
+      startedAt: "2026-03-09",
+      onGoing: true,
+      keywords: [],
+      descriptions: [],
+    },
+    {
+      title: {
         en: "GenON",
         ko: "GenON",
       },

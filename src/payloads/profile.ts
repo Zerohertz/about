@@ -43,7 +43,7 @@ const profile: Payload = {
     },
     {
       title: "Coffee Chat",
-      href: "https://cal.com/zerohertz?redirect=false",
+      href: "https://cal.com/zerohertz/coffee-chat",
       icon: faCoffee,
     },
   ],

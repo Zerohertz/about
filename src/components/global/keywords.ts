@@ -1,22 +1,14 @@
-// https://simpleicons.org/
+// Values are either a https://simpleicons.org/ slug or, when simple-icons has
+// no entry, the name of an SVG in public/icons/logos
 const keywordMap = new Map([
-  ["Java", "coffeescript"],
-  ["MATLAB", "codeclimate"],
-  ["Tibero", "solid"],
-  ["Research", "internetarchive"],
-  ["Machine Learning", "openai"],
   ["Triton Inference Server", "nvidia"],
   ["NCCL", "nvidia"],
   ["RDMA", "nvidia"],
-  ["Label Studio", "materialdesignicons"],
   ["Transformers", "huggingface"],
   ["Gradio", "huggingface"],
-  ["Traefik", "traefikproxy"],
   ["Argo CD", "argo"],
-  ["Amazon EC2", "amazonec2"],
-  ["vLLM", "vonage"],
-  ["SGLang", "codecrafters"],
-  ["DeepSpeed", "rocket"],
+  ["Label Studio", "materialdesignicons"],
+  ["Tibero", "oracle"],
 ]);
 
 const getReplacedKeyword = (keyword: string): string => {

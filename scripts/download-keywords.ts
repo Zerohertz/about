@@ -12,6 +12,7 @@ import getReplacedKeyword from "../src/components/global/keywords";
 
 // Configuration
 const OUTPUT_DIR = path.join(__dirname, "../public/icons/keywords");
+const CUSTOM_LOGO_DIR = path.join(__dirname, "../public/icons/logos");
 
 // Ensure output directory exists
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -41,6 +42,55 @@ function extractKeywords(): string[] {
   return Array.from(keywords).sort();
 }
 
+// shields.io embeds a custom logo as a data URI, so any raster format it can
+// inline works; SVG stays preferred because it costs the fewest URL bytes
+const CUSTOM_LOGO_TYPES = new Map([
+  [".svg", "image/svg+xml"],
+  [".webp", "image/webp"],
+  [".png", "image/png"],
+]);
+
+/**
+ * Build the logo file name a keyword resolves to
+ * @param logoName Mapped logo name from getReplacedKeyword, e.g. "azure"
+ * @returns Base file name without extension, e.g. "c++"
+ */
+function getLogoBaseName(logoName: string): string {
+  // getReplacedKeyword pre-escapes "+" for the URL ("C++" -> "C%2B%2B"),
+  // so undo that to match the on-disk file name
+  return decodeURIComponent(logoName).replace(/\s+/g, "-").toLowerCase();
+}
+
+/**
+ * Locate the hand-maintained logo for a keyword
+ * @param logoName Mapped logo name from getReplacedKeyword, e.g. "azure"
+ * @returns Path to the logo file, or null when none exists
+ */
+function findLogoFile(logoName: string): string | null {
+  const baseName = getLogoBaseName(logoName);
+
+  for (const extension of CUSTOM_LOGO_TYPES.keys()) {
+    const filePath = path.join(CUSTOM_LOGO_DIR, `${baseName}${extension}`);
+
+    if (fs.existsSync(filePath)) {
+      return filePath;
+    }
+  }
+
+  return null;
+}
+
+/**
+ * Encode a logo file for the shields.io logo parameter
+ * @param filePath Path returned by findLogoFile
+ * @returns Base64 data URI
+ */
+function readLogoDataUri(filePath: string): string {
+  const mimeType = CUSTOM_LOGO_TYPES.get(path.extname(filePath));
+
+  return `data:${mimeType};base64,${fs.readFileSync(filePath).toString("base64")}`;
+}
+
 /**
  * Download SVG from shields.io for a given keyword
  * @param keyword Keyword to create badge for
@@ -48,8 +98,15 @@ function extractKeywords(): string[] {
  */
 function downloadKeywordSvg(keyword: string): Promise<string> {
   return new Promise((resolve, reject) => {
-    const replacedKeyword = getReplacedKeyword(keyword);
-    const url = `https://img.shields.io/badge/${keyword}-black?style=flat&logo=${replacedKeyword}`;
+    const logoPath = findLogoFile(getReplacedKeyword(keyword));
+
+    if (!logoPath) {
+      reject(new Error(`No logo in public/icons/logos for "${keyword}"`));
+      return;
+    }
+
+    const logo = encodeURIComponent(readLogoDataUri(logoPath));
+    const url = `https://img.shields.io/badge/${keyword}-black?style=flat&logo=${logo}`;
 
     https
       .get(url, (res) => {
@@ -80,6 +137,18 @@ async function main(): Promise<void> {
   const keywords = extractKeywords();
   console.log(`Found ${keywords.length} unique keywords:`);
   keywords.forEach((keyword) => console.log(`  - ${keyword}`));
+
+  const missing = keywords.filter((keyword) => findLogoFile(getReplacedKeyword(keyword)) === null);
+
+  if (missing.length > 0) {
+    const extensions = Array.from(CUSTOM_LOGO_TYPES.keys()).join(" | ");
+    console.error(`\nMissing ${missing.length} logo(s) in public/icons/logos:`);
+    missing.forEach((keyword) => {
+      console.error(`  ✗ ${keyword} -> ${getLogoBaseName(getReplacedKeyword(keyword))}[${extensions}]`);
+    });
+    console.error("\nAdd the logo, or map the keyword onto an existing one in src/components/global/keywords.ts.");
+    process.exit(1);
+  }
 
   console.log("\nDownloading SVGs from shields.io...");
   let downloadedCount = 0;

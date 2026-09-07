@@ -39,8 +39,8 @@ const experiences: Payload = {
       descriptions: [
         {
           content: {
-            en: "Developed and operated ML Gateway, the LLM access layer for company-wide services, and the in-house Kubernetes-based MLOps platform within the ML Platform team.",
-            ko: "ML 플랫폼 팀 내에서 전사 서비스의 LLM 접근 계층인 ML Gateway 및 Kubernetes 기반 사내 MLOps 플랫폼 개발 및 운영",
+            en: "Developed and operated LLM Gateway, the LLM access layer for company-wide services, and the in-house Kubernetes-based MLOps platform within the ML Platform team.",
+            ko: "ML 플랫폼 팀 내에서 전사 서비스의 LLM 접근 계층인 LLM Gateway 및 Kubernetes 기반 사내 MLOps 플랫폼 개발 및 운영",
           },
         },
         {
@@ -51,8 +51,8 @@ const experiences: Payload = {
         },
         {
           content: {
-            en: "Applied guardrails and masking to ML Gateway to meet financial industry audit requirements, and advanced Prometheus and Grafana based observability.",
-            ko: "ML Gateway의 가드레일, 마스킹 적용을 통한 금융권 감사 요건 충족 및 Prometheus, Grafana 기반 관측 체계 고도화",
+            en: "Applied guardrails and masking to LLM Gateway to meet financial industry audit requirements, and advanced Prometheus and Grafana based observability.",
+            ko: "LLM Gateway의 가드레일, 마스킹 적용을 통한 금융권 감사 요건 충족 및 Prometheus, Grafana 기반 관측 체계 고도화",
           },
         },
       ],

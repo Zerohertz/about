@@ -5,6 +5,32 @@ const publications: Payload = {
   disabled: false,
   list: [
     {
+      startedAt: "2025-08",
+      onGoing: false,
+      descriptions: [
+        {
+          content: {
+            en: "[Patent] [Apparatus for Masking-based Natural Language Generation and Driving Method](https://k-knowledge.kr/srch/read.jsp?id=282887489)",
+            ko: "[특허] [마스킹 기반 자연어 생성 장치 및 그 장치의 구동방법](https://k-knowledge.kr/srch/read.jsp?id=282887489)",
+          },
+          descriptions: [
+            {
+              content: {
+                en: "Inventor: Seok Tae Ko, Dae Woo Myung, Byung-Seok Kang, Kangsan Lee, Hyungeun Kim, Jun Chul Kim, **Hyogeun Oh**, Sungjun Lim, Seunghyun Hwang",
+                ko: "발명자: 고석태, 명대우, 강병석, 이강산, 김현근, 김준철, **오효근**, 임성준, 황승현",
+              },
+            },
+            {
+              content: {
+                en: "Application number: 1020250058961 (2025. 05. 07)",
+                ko: "출원번호: 1020250058961 (2025. 05. 07)",
+              },
+            },
+          ],
+        },
+      ],
+    },
+    {
       startedAt: "2023-09",
       onGoing: false,
       descriptions: [

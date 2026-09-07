@@ -6,6 +6,59 @@ const projects: Payload = {
   list: [
     {
       title: {
+        en: "Stable, Highly Available, and Secure LLM Gateway",
+        ko: "안정성·고가용성·보안을 갖춘 LLM 게이트웨이",
+      },
+      subTitle: "Toss Securities",
+      startedAt: "2026-03",
+      onGoing: true,
+      keywords: [
+        "Python",
+        "FastAPI",
+        "LiteLLM",
+        "Azure",
+        "AWS",
+        "GCP",
+        "Kubernetes",
+        "Istio",
+        "Prometheus",
+        "Grafana",
+        "Apache Kafka",
+        "Elasticsearch",
+        "PostgreSQL",
+        "Prisma",
+        "Redis",
+        "Terraform",
+      ],
+      descriptions: [
+        {
+          content: {
+            en: "Secured high availability by making the gateway cluster redundant and expanding single-region routing into a four-region pool with a PTU-first cascade, and improved stability with retries, fallback, and a circuit breaker.",
+            ko: "게이트웨이 클러스터 이중화 및 단일 리전에 의존하던 라우팅을 4개 리전 풀과 PTU 우선 cascade로 확장하여 고가용성 확보, retry, fallback, circuit breaker 도입으로 안정성 향상",
+          },
+        },
+        {
+          content: {
+            en: "Migrated the company-wide LLM access layer from an in-house FastAPI implementation to a LiteLLM-based proxy to secure compatibility and security across diverse models and providers, and led the expansion to Azure, AWS, and GCP.",
+            ko: "다양한 모델과 provider에 대한 호환성, 보안 확보를 위해 전사 LLM 접근 계층을 자체 FastAPI 구현에서 LiteLLM 기반 프록시로 전환 및 Azure, AWS, GCP 등 provider 확장 주도",
+          },
+        },
+        {
+          content: {
+            en: "Met financial industry audit requirements by applying guardrails and masking, and retaining full request and response payloads.",
+            ko: "가드레일, 마스킹 적용 및 요청, 응답 전문 보존으로 금융권 감사 요건 충족",
+          },
+        },
+        {
+          content: {
+            en: "Advanced Prometheus and Grafana based observability with alert channels separated by severity.",
+            ko: "Prometheus, Grafana 기반 관측 체계 고도화와 severity 기준 알럿 채널 분리",
+          },
+        },
+      ],
+    },
+    {
+      title: {
         en: "LLMOps Solution, GenOS",
         ko: "LLMOps 솔루션, GenOS",
       },
